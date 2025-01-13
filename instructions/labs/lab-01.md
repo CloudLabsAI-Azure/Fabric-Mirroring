@@ -1,4 +1,4 @@
-
+# Configure Microsoft Fabric mirrored databases from Azure SQL Database 
 
 # Enable SAMI of your Azure SQL logical server
 
