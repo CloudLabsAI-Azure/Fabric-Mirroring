@@ -78,5 +78,4 @@
 
 5. When they have finished the initial copying of the tables, a date appears in the Last refresh column.
 
-6. Now that your data is up and running, there are various analytics scenarios available across all of Fabric.
 
