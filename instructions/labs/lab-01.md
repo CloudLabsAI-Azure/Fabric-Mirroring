@@ -63,9 +63,9 @@
 
 1.  The Configure mirroring screen allows you to mirror all data in the database, by default.
 
-   - Mirror all data means that any new tables created after Mirroring is started will be mirrored.
+      - Mirror all data means that any new tables created after Mirroring is started will be mirrored.
 
-   - Optionally, choose only certain objects to mirror. Disable the Mirror all data option, then select individual tables from your database.
+      - Optionally, choose only certain objects to mirror. Disable the Mirror all data option, then select individual tables from your database.
 
 2. Select Mirror database. Mirroring begins.
 
