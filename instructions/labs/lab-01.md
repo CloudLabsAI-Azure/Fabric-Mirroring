@@ -1,5 +1,11 @@
 # Configure Microsoft Fabric mirrored databases from Azure SQL Database 
 
+# Login to azure portal 
+
+1. Login to `portal.azure.com`
+
+2. Search for the sql
+
 # Enable SAMI of your Azure SQL logical server
 
 1. To configure or verify that the SAMI is enabled, go to your logical SQL Server in the Azure portal. Under Security in the resource menu, select Identity.
