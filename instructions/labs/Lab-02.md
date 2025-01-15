@@ -42,16 +42,15 @@ Select Connect. Then, select a database to mirror.
 
 All containers in the database are mirrored.
 
-Start mirroring process
+# Start mirroring process
+
 Select Mirror database. Mirroring now begins.
 
 Wait two to five minutes. Then, select Monitor replication to see the status of the replication action.
 
 After a few minutes, the status should change to Running, which indicates that the containers are being synchronized.
 
- Tip
-
-If you can't find the containers and the corresponding replication status, wait a few seconds and then refresh the pane. In rare cases, you might receive transient error messages. You can safely ignore them and continue to refresh.
+ >**Tip** : If you can't find the containers and the corresponding replication status, wait a few seconds and then refresh the pane. In rare cases, you might receive transient error messages. You can safely ignore them and continue to refresh.
 
 When mirroring finishes the initial copying of the containers, a date appears in the last refresh column. If data was successfully replicated, the total rows column would contain the number of items replicated.
 
@@ -62,7 +61,7 @@ Once Fabric Mirroring is configured, you're automatically navigated to the Repli
 
 Here, monitor the current state of replication. For more information and details on the replication states, see Monitor Fabric mirrored database replication.
 
-Query the source database from Fabric
+# Query the source database from Fabric
 Use the Fabric portal to explore the data that already exists in your Azure Cosmos DB account, querying your source Cosmos DB database.
 
 Navigate to the mirrored database in the Fabric portal.
@@ -79,7 +78,7 @@ Run any query. For example, use SELECT COUNT(1) FROM container to count the numb
 
 All the reads on source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
 
-Analyze the target mirrored database
+# Analyze the target mirrored database
 Now, use T-SQL to query your NoSQL data that is now stored in Fabric OneLake.
 
 Navigate to the mirrored database in the Fabric portal.
