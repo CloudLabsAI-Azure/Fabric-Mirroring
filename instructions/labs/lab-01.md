@@ -1,27 +1,6 @@
 # Configure Microsoft Fabric mirrored databases from Azure SQL Database 
 
-To work with Fabric items, you will need a trial license and a workspace that has Fabric license. Let’s set this up.
-
-1. On the top right corner of the screen, select the **user** **icon**.
-
-1. Select **Free Trial**.
-
-    ![](../media/lab-01/image11.png)
-
-1. Upgrade to a free Microsoft Fabric trial dialog opens. Select **Activate**.
-
-    ![](../media/lab-01/image12.png)
-
-1. The "Successfully Upgraded to Microsoft Fabric" dialog will appear. Click on **Fabric Home Page**..  
-
-   ![c](../media/lab-01/fabrichome_1.png)
-
-1. You will be navigated back to the **Microsoft** **Fabric Home page**.
-
-    ![](../media/lab-01/image15.png)
-
-
-# Enable SAMI of your Azure SQL logical server
+## Enable SAMI of your Azure SQL logical server
 
 1. In the azure portal , search for the SQL server
    
@@ -43,7 +22,7 @@ To work with Fabric items, you will need a trial license and a workspace that ha
    SELECT * FROM sys.dm_server_managed_identities;
    ```
 
-# Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) or the mssql extension with Visual Studio Code. Connect to the master database.
+## Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) or the mssql extension with Visual Studio Code. Connect to the master database.
 
 1. Create a server login and assign the appropriate permissions.
 
