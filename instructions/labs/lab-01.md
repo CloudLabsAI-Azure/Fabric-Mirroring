@@ -20,7 +20,7 @@ To work with Fabric items, you will need a trial license and a workspace that ha
 
     ![](../media/lab-01/image15.png)
 
-## Task 4: Create a Fabric Workspace
+## Task: Create a Fabric Workspace
 
 1. Now let’s create a workspace with Fabric license. Select **Workspaces** from the navigation bar on the left.
 
@@ -54,9 +54,17 @@ To work with Fabric items, you will need a trial license and a workspace that ha
 
 # Enable SAMI of your Azure SQL logical server
 
-1. In the azure portal , search for the SQL server and select the SQL servers. 
+1. In the azure portal , search for the SQL server
+   
+   ![](../media/Lab-01/sql-servers.png)
+
+1. Select the SQL servers. 
+
+   ![](../media/Lab-01/server-1.png)
 
 1. To configure or verify that the SAMI is enabled, go to your logical SQL Server in the Azure portal. Under Security in the resource menu, select Identity.
+
+   ![](../media/Lab-01/identity.png)
 
 2. Under System assigned managed identity, select Status to On.
 
