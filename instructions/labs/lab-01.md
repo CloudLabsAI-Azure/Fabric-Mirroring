@@ -54,6 +54,8 @@ To work with Fabric items, you will need a trial license and a workspace that ha
 
 # Enable SAMI of your Azure SQL logical server
 
+1. In the azure portal , search for the SQL server and select the SQL servers. 
+
 1. To configure or verify that the SAMI is enabled, go to your logical SQL Server in the Azure portal. Under Security in the resource menu, select Identity.
 
 2. Under System assigned managed identity, select Status to On.
