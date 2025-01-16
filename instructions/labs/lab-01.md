@@ -4,7 +4,7 @@
 
 1. On your virtual machine, click on the Azure Portal icon as shown below:
 
-    ![Explore Lab Resources](../media/new-lab-01/azure-portal.png)
+    ![Explore Lab Resources](../media/Lab-01/azure-portal.png)
    
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
@@ -17,8 +17,6 @@
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/new-lab-01/sc900-image-2.png)
-
-2. Search for the sql databases in azure portal 
 
 # Login to fabric portal
 
