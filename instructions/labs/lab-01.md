@@ -4,7 +4,50 @@
 
 1. Login to `portal.azure.com`
 
-2. Search for the sql
+2. Search for the sql databases in azure portal 
+
+# Login to fabric portal
+
+1. Open the **Microsoft Edge browser** on your desktop and visit `https://app.fabric.microsoft.com/` in Incognito mode. You will be navigated to the login page.
+
+    ![](../media/lab-01/image5.png)
+
+
+1. Enter the following email/username, and then click on **Submit**.  
+
+    - **Username/Email**:<inject key="AzureAdUserEmail"></inject>
+
+      ![](../media/lab-01/image6.png)
+
+
+    - **Password**:<inject key="AzureAdUserPassword"></inject> 
+
+
+1. Click **Sign in** and follow the prompts to sign into Fabric.
+
+1. You will be navigated to the **Fabric Home**.
+
+    ![](../media/lab-01/image10.png)
+
+    To work with Fabric items, you will need a trial license and a workspace that has Fabric license. Let’s set this up.
+
+1. On the top right corner of the screen, select the **user** **icon**.
+
+1. Select **Free Trial**.
+
+    ![](../media/lab-01/image11.png)
+
+1. Upgrade to a free Microsoft Fabric trial dialog opens. Select **Activate**.
+
+    ![](../media/lab-01/image12.png)
+
+1. The "Successfully Upgraded to Microsoft Fabric" dialog will appear. Click on **Fabric Home Page**..  
+
+   ![c](../media/lab-01/fabrichome_1.png)
+
+1. You will be navigated back to the **Microsoft** **Fabric Home page**.
+
+    ![](../media/lab-01/image15.png)
 
 # Enable SAMI of your Azure SQL logical server
 
