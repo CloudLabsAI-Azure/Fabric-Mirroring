@@ -10,13 +10,12 @@
 
    ![](../media/Lab-01/server-1.png)
 
-1. To configure or verify that the SAMI is enabled, go to your logical SQL Server in the Azure portal. Under Security in the resource menu, select Identity.
+1. To enable or verify the System Assigned Managed Identity (SAMI), navigate to your logical SQL Server in the Azure portal. Under the Security section in the resource menu, select Identity, and then set the Status to "On."
 
    ![](../media/Lab-01/sqldbserver01.png)
 
-2. Under System assigned managed identity, select Status to On.
 
-3. The SAMI must be the primary identity. Verify the SAMI is the primary identity with the following T-SQL query: 
+2. The SAMI must be the primary identity. Verify the SAMI is the primary identity with the following T-SQL query: 
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
