@@ -1,8 +1,6 @@
 # Configure Microsoft Fabric mirrored databases from Azure SQL Database 
 
-
-
-    To work with Fabric items, you will need a trial license and a workspace that has Fabric license. Let’s set this up.
+To work with Fabric items, you will need a trial license and a workspace that has Fabric license. Let’s set this up.
 
 1. On the top right corner of the screen, select the **user** **icon**.
 
