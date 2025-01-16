@@ -20,14 +20,14 @@
 
 1. Open the **Microsoft Edge browser** on your desktop and visit `https://app.fabric.microsoft.com/` in Incognito mode. You will be navigated to the login page.
 
-    ![](../media/lab-01/image5.png)
+    ![](../media/Lab-01/image5.png)
 
 
 1. Enter the following email/username, and then click on **Submit**.  
 
     - **Username/Email**:<inject key="AzureAdUserEmail"></inject>
 
-      ![](../media/lab-01/image6.png)
+      ![](../media/Lab-01/image6.png)
 
 
     - **Password**:<inject key="AzureAdUserPassword"></inject> 
@@ -37,5 +37,5 @@
 
 1. You will be navigated to the **Fabric Home**.
 
-    ![](../media/lab-01/image10.png)
+    ![](../media/Lab-01/image10.png)
 
