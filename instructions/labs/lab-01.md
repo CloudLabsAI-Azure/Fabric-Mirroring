@@ -70,13 +70,65 @@
 
 # Create a mirrored Azure SQL Database
 
-1. Open the [Fabric portal](https://app.fabric.microsoft.com/home).
+1. Open the [Fabric portal](https://app.fabric.microsoft.com/home), You will be navigated to the **Fabric Home**.
 
-2. create a new workspace named Fabric_workspace
+    ![](../media/Lab-01/image10.png)
 
-3. Navigate to the Create pane. Select the Create icon.
+    To work with Fabric items, you will need a trial license and a workspace that has Fabric license. Let’s set this up.
 
-4. Scroll to the Data Warehouse section and then select Mirrored Azure SQL Database. Enter the name of your Azure SQL Database to be mirrored, then select Create.
+1. On the top right corner of the screen, select the **user** **icon**.
+
+1. Select **Free Trial**.
+
+    ![](../media/Lab-01/image11.png)
+
+1. Upgrade to a free Microsoft Fabric trial dialog opens. Select **Activate**.
+
+    ![](../media/Lab-01/image12.png)
+
+1. The "Successfully Upgraded to Microsoft Fabric" dialog will appear. Click on **Fabric Home Page**..  
+
+   ![](../media/Lab-01/fabrichome_1.png)
+
+1. You will be navigated back to the **Microsoft** **Fabric Home page**.
+
+    ![](../media/Lab-01/image10.png)
+
+1. Now let’s create a workspace with Fabric license. 
+
+1.  Now, select **Workspaces** and click on **+ New workspace**:
+
+    ![New Workspace](./Images/ws/workspace.png)
+
+2. Fill out the **Create a workspace** form with the following details:
+
+   - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
+   
+   ![name-and-desc-of-workspc](./Images/ws/workspacename.png)
+
+   >**Note**: The user ID will be unique for each user, and the workspace name must also be unique. Ensure that a green check mark with **"This name is available"** appears below the Name field.
+
+1. If you would like, you can enter a **Description** for the workspace. This is an optional field.
+
+1. Click on **Advanced** to expand the section.
+
+    ![](../media/lab-01/RTI_username.png)
+
+1. Under **License mode**, make sure **Trial** is selected. (It should be selected by default.)
+
+    ![](../media/lab-01/imag017-1.png)
+
+1. Select **Apply** to create a new workspace.
+
+    ![](../media/lab-01/imag017-1.png)
+
+    >**Note:** If the **Introducing task flows** dialog opens, click on **Got it**.
+
+    ![](../media/lab-01/image28.png)
+
+1. Navigate to the Create pane. Select the Create icon.
+
+1. Scroll to the Data Warehouse section and then select Mirrored Azure SQL Database. Enter the name of your Azure SQL Database to be mirrored, then select Create.
 
 
 # Connect to your Azure SQL Database
