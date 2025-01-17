@@ -98,14 +98,14 @@
 
 1.  Now, select **Workspaces** and click on **+ New workspace**:
 
-    ![New Workspace](./Images/ws/workspace.png)
+     ![](../media/Lab-01/workspace.png)
 
 2. Fill out the **Create a workspace** form with the following details:
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
-   
-   ![name-and-desc-of-workspc](./Images/ws/workspacename.png)
 
+      ![](../media/Lab-01/workspacename.png)
+   
    >**Note**: The user ID will be unique for each user, and the workspace name must also be unique. Ensure that a green check mark with **"This name is available"** appears below the Name field.
 
 1. If you would like, you can enter a **Description** for the workspace. This is an optional field.
