@@ -51,7 +51,7 @@
 1. Create a server login and assign the appropriate permissions.
 
 
-2. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database:
+1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database:
 
   
      ```
@@ -59,7 +59,7 @@
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
      ```
 
-3. Connect to the Azure SQL Database your plan to mirror to Microsoft Fabric, using the Azure portal query editor, SQL Server Management Studio (SSMS), Create a database user connected to the login: 
+1. Connect to the Azure SQL Database your plan to mirror to Microsoft Fabric, using the Azure portal query editor, SQL Server Management Studio (SSMS), Create a database user connected to the login: 
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
