@@ -98,7 +98,7 @@
 
 1.  Now, select **Workspaces** and click on **+ New workspace**:
 
-     ![](../media/Lab-01/workspace.png)
+     ![](../media/Lab-01/workspace-1.png)
 
 2. Fill out the **Create a workspace** form with the following details:
 
@@ -112,15 +112,9 @@
 
 1. Click on **Advanced** to expand the section.
 
-    ![](../media/lab-01/RTI_username.png)
+1. Under **License mode**, make sure **Trial** is selected,Select **Apply** to create a new workspace.
 
-1. Under **License mode**, make sure **Trial** is selected. (It should be selected by default.)
-
-    ![](../media/lab-01/imag017-1.png)
-
-1. Select **Apply** to create a new workspace.
-
-    ![](../media/lab-01/imag017-1.png)
+    ![](../media/Lab-01/imag017-1.png)
 
     >**Note:** If the **Introducing task flows** dialog opens, click on **Got it**.
 
