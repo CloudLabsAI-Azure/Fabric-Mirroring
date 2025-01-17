@@ -36,7 +36,20 @@
 
 ## Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) or the mssql extension with Visual Studio Code. Connect to the master database.
 
+1. Login to sql server , add the below creds :
+
+   - Server name : 
+
+   - Authentication : 
+
+   - Login : 
+
+   - Passoword : 
+
+    ![](../media/Lab-01/sql-login.png)
+
 1. Create a server login and assign the appropriate permissions.
+
 
 2. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database:
 
