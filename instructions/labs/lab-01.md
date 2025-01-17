@@ -14,12 +14,25 @@
 
    ![](../media/Lab-01/sqldbserver01.png)
 
+3. Go back to your query-editor, on query editor preview, login to sql server with server autentication 
+
+   - Username : `adminserver`
+
+   - Password : `Root@12345`
+
+   ![](../media/Lab-01/query-editor.png)
 
 2. The SAMI must be the primary identity. Verify the SAMI is the primary identity with the following T-SQL query: 
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
    ```
+
+   ![](../media/Lab-01/query-editor-1-1.png)
+
+    ![](../media/Lab-01/results-1.png)
+
+
 
 ## Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) or the mssql extension with Visual Studio Code. Connect to the master database.
 
