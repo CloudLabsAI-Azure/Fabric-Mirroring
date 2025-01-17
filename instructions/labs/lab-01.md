@@ -59,6 +59,8 @@
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
      ```
 
+   ![](../media/Lab-01/sql-query-1.png)
+
 1. Connect to the Azure SQL Database your plan to mirror to Microsoft Fabric, using the Azure portal query editor, SQL Server Management Studio (SSMS), Create a database user connected to the login: 
 
      ```
