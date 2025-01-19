@@ -118,7 +118,7 @@
 
     >**Note:** If the **Introducing task flows** dialog opens, click on **Got it**.
 
-    ![](../media/lab-01/image28.png)
+    ![](../media/Lab-01/image28.png)
 
 1. Navigate to the Create pane. Select the Create icon.
 
