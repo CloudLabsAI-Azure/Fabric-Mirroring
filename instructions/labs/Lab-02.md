@@ -66,12 +66,17 @@
 
 # Start the Mirroring Process
 
-1. **Begin Mirroring**
-   - Select **Mirror database**. Mirroring will now begin.
-   - Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
-   - After a few minutes, the status should change to **Running**, indicating that the containers are being synchronized.
+
+1. Select **Mirror database**. Mirroring will now begin.
+
+>**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
+
+2. After a few minutes, the status should change to **Running**, indicating that the containers are being synchronized.
+
+
    - **Tip**: If you can't find the containers and the corresponding replication status, refresh the pane after a few seconds. In rare cases, transient error messages may appear; you can safely ignore them and refresh.
-   - When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
+
+>**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
 # Monitor Fabric Mirroring
 
