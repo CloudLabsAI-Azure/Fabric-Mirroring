@@ -84,26 +84,50 @@
 
 # Query the Source Database from Fabric
 
-7. **Query the Source Database**
-   - Navigate to the mirrored database in the Fabric portal.
-   - Select **View**, then **Source database**. This action opens the Azure Cosmos DB data explorer with a read-only view of the source database.
-   - Select a container, then open the context menu and select **New SQL query**.
-   - Run any query. For example, use:
+1. Navigate to the mirrored database in the Fabric portal.
+
+   ![](../media/Lab-02/sql-endpoint.png)
+
+2. Select **View**, then **Source database**. This action opens the Azure Cosmos DB data explorer with a read-only view of the source database.
+
+
+3. Select a container, then open the context menu and select **New SQL query**.
+
+    ![](../media/Lab-02/new-sql-query.png)
+
+     - Run any query. For example, use:
+
      ```sql
-     SELECT COUNT(1) FROM container
+      SELECT TOP (100) [_rid],
+			[id],
+			[categoryId],
+			[categoryName],
+			[sku],
+			[name],
+			[description],
+			[price],
+			[tags],
+			[_ts]
+      FROM [Mirrored-SampleDB].[SampleDB].[SampleContainer]
      ```
-     to count the number of items in the container.
-   - **Note**: All the reads on the source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
+
+     ![](../media/Lab-02/new-sql-query.png)
+
+  >**Note**: All the reads on the source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
 
 # Analyze the Target Mirrored Database
 
-1. **Query NoSQL Data Stored in Fabric OneLake**
-   - Navigate to the mirrored database in the Fabric portal.
-   - Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics endpoint**.
-   - Each container in the source database should be represented in the SQL analytics endpoint as a warehouse table.
-   - Select any table, open the context menu, then select **New SQL Query**, and select **Select Top 100**.
-   - The query will execute and return 100 records in the selected table.
-   - Open the context menu for the same table, select **New SQL Query**, and write an example query that uses aggregates like **SUM**, **COUNT**, **MIN**, or **MAX**. You can also join multiple tables to execute the query across multiple containers.
+1. Navigate to the mirrored database in the Fabric portal.
+
+2. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics endpoint**.
+
+3. Each container in the source database should be represented in the SQL analytics endpoint as a warehouse table.
+
+4. Select any table, open the context menu, then select **New SQL Query**, and select **Select Top 100**.
+
+5. The query will execute and return 100 records in the selected table.
+
+6. Open the context menu for the same table, select **New SQL Query**, and write an example query that uses aggregates like **SUM**, **COUNT**, **MIN**, or **MAX**. You can also join multiple tables to execute the query across multiple containers.
    
    Example SQL query:
    ```sql
