@@ -3,6 +3,7 @@
 ## Ensure the Source Azure Cosmos DB Account is Correctly Configured
 
 1. Navigate to your Azure Cosmos DB account in the Azure portal.
+
 2. Ensure that continuous backup is enabled. 
 
 If not enabled, follow the guide at [Migrate an Existing Azure Cosmos DB Account to Continuous Backup](https://learn.microsoft.com/en-us/azure/cosmos-db/migrate-to-continuous-backup) to enable continuous backup. Note that this feature might not be available in all scenarios. For more information, see [Database and Account Limitations](https://learn.microsoft.com/en-us/azure/cosmos-db/database-account-limitations).
