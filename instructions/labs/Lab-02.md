@@ -68,7 +68,7 @@
 
 1. Select **Monitor Replication**. Mirroring will now begin.
 
-   ![](../media/Lab-02/monitor-repilcation.png)
+   ![](../media/Lab-02/monitor-replication.png)
 
 >**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
 
