@@ -3,7 +3,11 @@
 
  1. Navigate to your SQL Managed Instance in the Azure portal.
 
+     ![](../media/Lab-03/identity-1.png)
+
  2. Under **Security** in the resource menu, select **Identity**.
+
+      ![](../media/Lab-03/identity-1.png)
 
  3. Under **System assigned managed identity**, set **Status** to **On**.
  
@@ -35,15 +39,6 @@
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER <fabric_login>;
      ```
 
-   - For Microsoft Entra ID Authenticated Login:
-
-   - Run the following T-SQL script:
-
-       ```sql
-       CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER;
-       ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER [bob@contoso.com];
-       ```
-
 1. Switch Query Scope to the Database You Want to Mirror
 
    - Substitute `<mirroring_source_database>` with the name of your database and run the following T-SQL:
@@ -58,15 +53,7 @@
 1. For SQL Authenticated Logins:
        ```sql
        CREATE USER <fabric_user> FOR LOGIN <fabric_login>;
-       GRANT CONTROL TO <fabric_user>;
        ```
-
-1. For Microsoft Entra ID Logins:
-       ```sql
-       CREATE USER [bob@contoso.com] FOR LOGIN [bob@contoso.com];
-       GRANT CONTROL TO [bob@contoso.com];
-       ```
-
 # Create a Mirrored Azure SQL Managed Instance Database
 
 1. Open the Fabric Portal
@@ -133,17 +120,17 @@
 
 1. Once mirroring is configured, you'll be directed to the **Mirroring Status** page, where you can monitor the current state of replication.
 
-1. Replicating Status
+1. Replicating Status:
    
-        - **Running** – Replication is currently running, bringing snapshot and change data into OneLake.
-        - **Running with warning** – Replication is running with transient errors.
-        - **Stopping/Stopped** – Replication is stopped.
-        - **Error** – Fatal error in replication that can't be recovered.
+      - **Running** – Replication is currently running, bringing snapshot and change data into OneLake.
+      - **Running with warning** – Replication is running with transient errors.
+      - **Stopping/Stopped** – Replication is stopped.
+      - **Error** – Fatal error in replication that can't be recovered.
 
 
- 1. Table Level Monitoring**:
+ 1. Table Level Monitoring:
 
-        - **Running** – Data from the table is successfully being replicated into the warehouse.
-        - **Running with warning** – Warning of non-fatal error with replication of the data from the table.
-        - **Stopping/Stopped** – Replication has stopped.
-        - **Error** – Fatal error in replication for that table.
+      - **Running** – Data from the table is successfully being replicated into the warehouse.
+      - **Running with warning** – Warning of non-fatal error with replication of the data from the table.
+      - **Stopping/Stopped** – Replication has stopped.
+      - **Error** – Fatal error in replication for that table.
