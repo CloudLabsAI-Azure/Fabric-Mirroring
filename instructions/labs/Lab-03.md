@@ -4,7 +4,9 @@
  1. Navigate to your SQL Managed Instance in the Azure portal.
 
  2. Under **Security** in the resource menu, select **Identity**.
+
  3. Under **System assigned managed identity**, set **Status** to **On**.
+ 
  4. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query:
      ```sql
      SELECT * FROM sys.dm_server_managed_identities;
