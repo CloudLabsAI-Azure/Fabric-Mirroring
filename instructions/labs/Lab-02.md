@@ -86,33 +86,14 @@
 
 1. Navigate to the mirrored database in the Fabric portal.
 
-   ![](../media/Lab-02/sql-endpoint.png)
 
 2. Select **View**, then **Source database**. This action opens the Azure Cosmos DB data explorer with a read-only view of the source database.
 
+    ![](../media/Lab-02/source-explorer-query.png)
 
 3. Select a container, then open the context menu and select **New SQL query**.
 
-    ![](../media/Lab-02/new-sql-query.png)
-
-     - Run any query. For example, use:
-
-     ```sql
-      SELECT TOP (100) [_rid],
-			[id],
-			[categoryId],
-			[categoryName],
-			[sku],
-			[name],
-			[description],
-			[price],
-			[tags],
-			[_ts]
-      FROM [Mirrored-SampleDB].[SampleDB].[SampleContainer]
-     ```
-
-     ![](../media/Lab-02/new-sql-query.png)
-
+    
   >**Note**: All the reads on the source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
 
 # Analyze the Target Mirrored Database
@@ -121,49 +102,46 @@
 
 2. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics endpoint**.
 
+     ![](../media/Lab-02/sql-endpoint.png)
+
+
 3. Each container in the source database should be represented in the SQL analytics endpoint as a warehouse table.
 
 4. Select any table, open the context menu, then select **New SQL Query**, and select **Select Top 100**.
+
+   ![](../media/Lab-02/new-sql-query.png)
+
+   - Run any query. For example, use:
+
+        ```sql
+        SELECT TOP (100) [_rid],
+                [id],
+                [categoryId],
+                [categoryName],
+                [sku],
+                [name],
+                [description],
+                [price],
+                [tags],
+                [_ts]
+        FROM [Mirrored-SampleDB].[SampleDB].[SampleContainer]
+        ```
+
+     ![](../media/Lab-02/results-1.png)
 
 5. The query will execute and return 100 records in the selected table.
 
 6. Open the context menu for the same table, select **New SQL Query**, and write an example query that uses aggregates like **SUM**, **COUNT**, **MIN**, or **MAX**. You can also join multiple tables to execute the query across multiple containers.
    
-   Example SQL query:
-   ```sql
-   SELECT
-       d.[product_category_name],
-       t.[order_status],
-       c.[customer_country],
-       s.[seller_state],
-       p.[payment_type],
-       SUM(o.[price]) AS price,
-       SUM(o.[freight_value]) AS freight_value
-   FROM
-       [dbo].[products] p
-   INNER JOIN
-       [dbo].[OrdersDB_order_payments] o ON o.[order_id] = p.[order_id]
-   INNER JOIN
-       [dbo].[OrdersDB_order_status] t ON o.[order_id] = t.[order_id]
-   INNER JOIN
-       [dbo].[OrdersDB_customers] c ON t.[customer_id] = c.[customer_id]
-   INNER JOIN
-       [dbo].[OrdersDB_productdirectory] d ON o.product_id = d.product_id
-   INNER JOIN
-       [dbo].[OrdersDB_sellers] s ON o.seller_id = s.seller_id
-   GROUP BY
-       d.[product_category_name],
-       t.[order_status],
-       c.[customer_country],
-       s.[seller_state],
-       p.[payment_type]
-   ```
-
+  
 1. Select the query and then select Save as view. Give the view a unique name. You can access this view at any time from the Fabric portal.
+
+   
 
 1. Return back to the mirrored database in the Fabric portal.
 
 1. Select New visual query. Use the query editor to build complex queries.
+
 
 1. Screenshot of the query editor for both text-based and visual queries in Fabric.
 
