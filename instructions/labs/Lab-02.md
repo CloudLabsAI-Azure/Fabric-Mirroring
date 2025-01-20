@@ -2,39 +2,71 @@
 
 ## Ensure the Source Azure Cosmos DB Account is Correctly Configured
 
-1. Navigate to your Azure Cosmos DB account in the Azure portal.
+1. In the Azure portal home, locate the search bar at the top of the screen. 
 
-2. Ensure that continuous backup is enabled. 
+2. Type "Azure Cosmos DB" and press Enter. In the search results, select Azure Cosmos DB account.
 
-If not enabled, follow the guide at [Migrate an Existing Azure Cosmos DB Account to Continuous Backup](https://learn.microsoft.com/en-us/azure/cosmos-db/migrate-to-continuous-backup) to enable continuous backup. Note that this feature might not be available in all scenarios. For more information, see [Database and Account Limitations](https://learn.microsoft.com/en-us/azure/cosmos-db/database-account-limitations).
+     ![](../media/Lab-02/azure-cosmosdb.png)
 
-## Configure Networking Options
+3. From the left hand side , Choose **data explorer(1)** and choose **launch quick start(2)**
 
-1. Ensure that the networking options are set to **Public network access for all networks**.
-2. If not configured, follow the guide at [Configure Network Access to an Azure Cosmos DB Account](https://learn.microsoft.com/en-us/azure/cosmos-db/network-access).
+      ![](../media/Lab-02/launch-quick.png)
 
+4. This action will create a sample database. Leave all the settings as default, then click **OK** to proceed, Once after its created you can see the tables that's created
+
+    ![](../media/Lab-02/create-1.png)
+
+5. Ensure that the networking options are set to **Public network access for all networks** from the networking tab.
+
+6. On the left hand pane , select **identity(1)** and Enable system assigned status **On(2)** and then click on **save(3)** and when prompted click on yes
+
+   ![](../media/Lab-02/democosmos.png)
+   
 ## Create a Mirrored Database
 
 1. Navigate to the **Fabric portal** home.
-2. Open an existing workspace or create a new workspace.
-3. In the navigation menu, select **Create**.
-4. Under the **Data Warehouse** section, select **Mirrored Azure Cosmos DB (Preview)**.
-5. Provide a name for the mirrored database and select **Create**.
+
+    ![](../media/Lab-01/image10.png)
+
+2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
+
+3. In the navigation menu, select **+New Item**.
+
+   ![](../media/Lab-01/fabric-new.png)
+
+4. Select **Mirrored Azure Cosmos DB (Preview)**
+
+    ![](../media/Lab-02/mirrored-1.png)
 
 ## Connect to the Source Database
 
-1. In the **New Connection** section, select **Azure Cosmos DB for NoSQL**.
+1. In the **New Connection** section, select **Azure Cosmos DB v2**.
+
+   ![](../media/Lab-02/select-cosmos.png)
+
 2. Provide credentials for the Azure Cosmos DB for NoSQL account including:
+
      - **Azure Cosmos DB endpoint**: URL endpoint for the source account.
      - **Connection name**: Unique name for the connection.
      - **Authentication kind**: Select **Account key**.
      - **Account Key**: Read-write key for the source account.
-   - Select **Connect**. Then, select a database to mirror.
-   - **Note**: All containers in the database will be mirrored.
+     - Select **Connect**. Then, select a database to mirror.
+
+        ![](../media/Lab-02/cosmos-db.png)
+
+3. Under choose data , click on next and **connect**
+
+    ![](../media/Lab-02/sample-container.png)
+  
+4. Under destination , Give a name **Mirrored-SampleDB** and click on create 
+
+     ![](../media/Lab-02/mirrored-db-1.png)
+
+   >**Note**: All containers in the database will be mirrored.
 
 # Start the Mirroring Process
 
-5. **Begin Mirroring**
+1. **Begin Mirroring**
    - Select **Mirror database**. Mirroring will now begin.
    - Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
    - After a few minutes, the status should change to **Running**, indicating that the containers are being synchronized.
