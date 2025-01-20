@@ -1,5 +1,7 @@
 # Configure Microsoft Fabric mirrored databases from Azure SQL Database 
 
+In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS) or Visual Studio Code. You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
+
 ## Enable SAMI of your Azure SQL logical server
 
 1. In the azure portal , search for the SQL server
@@ -44,7 +46,7 @@
 
    - Login : 
 
-   - Passoword : 
+   - Password : 
 
     ![](../media/Lab-01/sql-login.png)
 
@@ -120,29 +122,39 @@
 
     ![](../media/Lab-01/image28.png)
 
-1. Navigate to the Create pane. Select the Create icon.
+1. Navigate to the workspace. Select the **+New item** icon.
 
-1. Scroll to the Data Warehouse section and then select Mirrored Azure SQL Database. Enter the name of your Azure SQL Database to be mirrored, then select Create.
+    ![](../media/Lab-01/fabric-new.png)
+
+1. Scroll to the Data Warehouse section and then select **Mirrored Azure SQL Database**.
+
+   ![](../media/Lab-01/mirrored-1.png)
+  
+1. Enter the **MirroredDatabase_<inject key="DeploymentID" enableCopy="false"/>****. Azure SQL Database to be mirrored, then select Create.
+
+   ![](../media/Lab-01/name-mirrored.png)
 
 
 # Connect to your Azure SQL Database
 
-1. Under New sources, select Azure SQL Database. Or, select an existing Azure SQL Database connection from the OneLake hub.
+1. Select a Azure SQL Database under **choose a database connection to get started**.
+
+   ![](../media/Lab-01/azure-sql-database.png)
 
 
-2. If you selected New connection, enter the connection details to the Azure SQL Database.
+2. Select New connection, enter the connection details to the Azure SQL Database.
 
-  - Server: You can find the Server name by navigating to the Azure SQL Database Overview page in the Azure portal. For example, server-name.database.windows.net.
-  - Database: Enter the name of your Azure SQL Database.
+  - Server: 
+  - Database: 
   - Connection: Create new connection.
-  - Connection name: An automatic name is provided. You can change it.
+  - Connection name: 
   - Authentication kind:
     - Basic (SQL Authentication)
   - Select Connect.
 
+     ![](../media/Lab-01/connection-string.png)
 
  # Start mirroring process
-
 
 1.  The Configure mirroring screen allows you to mirror all data in the database, by default.
 
@@ -156,8 +168,12 @@
 
 4. After a few minutes, the status should change to Running, which means the tables are being synchronized.
 
- >Note: If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
+ >**Note**: If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
 
 5. When they have finished the initial copying of the tables, a date appears in the Last refresh column.
+
+# Review
+
+In this lab, you have learned how to enable SAMI for your Azure SQL logical server by connecting via SQL Server Management Studio (SSMS) or Visual Studio Code with the mssql extension. After connecting to the master database, you proceed to set up and configure a mirrored Azure SQL Database. This setup ensures high availability by creating a replica of the database for failover scenarios. The process involves configuring database mirroring to maintain data synchronization between the primary and mirrored databases. Overall, the lab helps you establish disaster recovery and resilience for your Azure SQL Database environments.
 
 
