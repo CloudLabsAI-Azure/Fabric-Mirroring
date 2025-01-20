@@ -64,25 +64,23 @@
 
    >**Note**: All containers in the database will be mirrored.
 
-# Start the Mirroring Process
+# Start the Mirroring Process and Monitor Fabric Mirroring
 
+1. Select **Monitor Replication**. Mirroring will now begin.
 
-1. Select **Mirror database**. Mirroring will now begin.
+   ![](../media/Lab-02/monitor-repilcation.png)
 
 >**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
 
 2. After a few minutes, the status should change to **Running**, indicating that the containers are being synchronized.
+
+    ![](../media/Lab-02/mirrored-db.png)
 
 
    - **Tip**: If you can't find the containers and the corresponding replication status, refresh the pane after a few seconds. In rare cases, transient error messages may appear; you can safely ignore them and refresh.
 
 >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
-# Monitor Fabric Mirroring
-
-6. **Monitor the Current State of Replication**
-   - Once Fabric Mirroring is configured, you're automatically navigated to the **Replication Status** pane.
-   - Here, monitor the current state of replication. For more details on the replication states, see [Monitor Fabric Mirrored Database Replication](https://learn.microsoft.com/en-us/azure/fabric/monitor-replication).
 
 # Query the Source Database from Fabric
 
