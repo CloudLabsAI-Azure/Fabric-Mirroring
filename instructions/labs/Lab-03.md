@@ -131,7 +131,7 @@
 
 1. Once mirroring is configured, you'll be directed to the **Mirroring Status** page, where you can monitor the current state of replication.
 
-1. Replicating Statuses
+1. Replicating Status
    
         - **Running** – Replication is currently running, bringing snapshot and change data into OneLake.
         - **Running with warning** – Replication is running with transient errors.
@@ -140,6 +140,7 @@
 
 
  1. Table Level Monitoring**:
+
         - **Running** – Data from the table is successfully being replicated into the warehouse.
         - **Running with warning** – Warning of non-fatal error with replication of the data from the table.
         - **Stopping/Stopped** – Replication has stopped.
