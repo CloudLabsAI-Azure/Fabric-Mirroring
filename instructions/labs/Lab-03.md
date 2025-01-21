@@ -5,7 +5,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 ### Task-01 :Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
 
 
- 1. Navigate to your SQL Managed Instance in the Azure portal.
+ 1. Navigate to the SQL Managed Instance in the Azure portal.
 
      ![](../media/Lab-05/sqlmi.png)
 
