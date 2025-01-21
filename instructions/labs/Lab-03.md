@@ -9,14 +9,10 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
      ![](../media/Lab-05/sqlmi.png)
 
- 3. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On**.
+ 1. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On**.
 
       ![](../media/Lab-05/sqlmi00.png)
 
- 4. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query:
-     ```sql
-     SELECT * FROM sys.dm_server_managed_identities;
-     ```
 
 1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the master database add the below creds :
 
@@ -29,6 +25,12 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
    - Password :
 
      ![](../media/Lab-01/sql-login.png)
+
+1. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query:
+
+     ```sql
+     SELECT * FROM sys.dm_server_managed_identities;
+     ```
 
 1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database by right clicking and selecting the new query
 
@@ -49,6 +51,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 1. Switch Query Scope to the Database You Want to Mirror
 
    - Substitute `<mirroring_source_database>` with the name of your database and run the following T-SQL:
+
      ```sql
      USE [<mirroring_source_database>];
      ```
@@ -81,9 +84,8 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
    >**Note**: You can't use existing connections of type "SQL Server". Only connections of type "SQL Managed Instance" are supported for mirroring Azure SQL Managed Instance data.
 
-8. Enter Connection Details
 
-9. If you selected **New connection**, enter the following details:
+9. Select **New connection**, enter the following details:
 
      - **Server**: Find the Server name by navigating to the **Azure SQL Managed Instance** Networking page in the Azure portal under **Security**.
 
