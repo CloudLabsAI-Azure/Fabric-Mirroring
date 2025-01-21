@@ -1,4 +1,4 @@
-## Lab-03 Configure Microsoft Fabric mirrored databases from Azure SQL Managed Instance (Preview)
+# Lab-03 Configure Microsoft Fabric mirrored databases from Azure SQL Managed Instance (Preview)
 
 In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configure SAMI (SQL Server Always On Managed Instance) for mirroring. You will create a mirrored database on the primary instance, enable synchronization with the secondary, and start the mirroring process. Finally, you will monitor the mirroring status using Azure tools to ensure high availability.
 
