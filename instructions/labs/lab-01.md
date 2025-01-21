@@ -1,14 +1,14 @@
-# Configure Microsoft Fabric mirrored databases from Azure SQL Database 
+# Lab –01 Configure Microsoft Fabric mirrored databases from Azure SQL Database
 
 In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS) or Visual Studio Code. You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
 
-## Enable SAMI of your Azure SQL logical server
+## Task-01  Enable SAMI of your Azure SQL logical server
 
 1. In the azure portal , search for the SQL server
    
    ![](../media/Lab-01/sql-servers.png)
 
-1. Select the SQL servers. 
+1. Select the SQL servers that's been created. 
 
    ![](../media/Lab-01/server-1.png)
 
@@ -32,11 +32,8 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    ![](../media/Lab-01/query-editor-1-1.png)
 
-    ![](../media/Lab-01/results-1.png)
+   ![](../media/Lab-01/results-1.png)
 
-
-
-## Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) Connect to the master database.
 
 1. Login to sql server , add the below creds :
 
@@ -75,7 +72,7 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
      CREATE USER fabric_user FOR LOGIN fabric_login;
      ```
 
-# Create a mirrored Azure SQL Database
+## Task-02 Create a mirrored Azure SQL Database
 
 1. Open the [Fabric portal](https://app.fabric.microsoft.com/home), You will be navigated to the **Fabric Home**.
 
@@ -140,8 +137,6 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
    ![](../media/Lab-01/name-mirrored.png)
 
 
-# Connect to your Azure SQL Database
-
 1. Select a Azure SQL Database under **choose a database connection to get started**.
 
    ![](../media/Lab-01/azure-sql-database.png)
@@ -163,7 +158,7 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
      ![](../media/Lab-01/sqldb.png)
 
- # Start mirroring process
+ ## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
 1.  The Configure mirroring screen allows you to mirror all data in the database, by default.
 
