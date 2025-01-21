@@ -1,4 +1,9 @@
+# Lab –05 Configure Microsoft Fabric open mirrored databases
+
+In this lab, you will learn how to configure Microsoft Fabric open mirrored databases. You will start by creating an open mirrored database within the Fabric environment. Then, you'll write change data into the landing zone to ensure synchronization. After that, you will initiate the mirroring process to enable data replication. Finally, you’ll monitor the mirroring process to ensure data consistency and resolve any issues that arise during synchronization.
+
 ## Task01: Create an Open mirrored database 
+
 1. Navigate to the **Fabric portal** home.
 
     ![](../media/Lab-01/image10.png)
@@ -39,14 +44,16 @@
     
 1. Select **Mirror database**. The mirroring process begins.
 
-    >Note: Wait for 2-5 minutes.Select **Monitor replication** to see the status.
+    >**Note**: Wait for 2-5 minutes.Select **Monitor replication** to see the status.
 
  1. After a few minutes, the status should change to **Running**, which indicates that the tables are being synchronized.
 
  1. If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
 
+1. Once mirroring is configured, you will be directed to the **Mirroring Status** page.
 
+## Review
 
-2. Once mirroring is configured, you will be directed to the **Mirroring Status** page.
+In this lab, you learned how to configure Microsoft Fabric open mirrored databases. You started by creating an open mirrored database within the Fabric environment. Next, you wrote change data into the landing zone to ensure proper synchronization. You then initiated the mirroring process to enable data replication across systems. Finally, you monitored the mirroring process to maintain data consistency and resolve any issues encountered during synchronization.
 
 
