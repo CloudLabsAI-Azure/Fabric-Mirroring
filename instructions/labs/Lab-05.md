@@ -2,19 +2,21 @@
 
 In this section, we provide a brief overview of how to create a new open mirrored database in the Fabric portal. Alternatively, you could use the **Create mirrored database REST API** together with the JSON definition example of open mirroring for creation.
 
-1. Select or Create a Workspace
+1. Navigate to the **Fabric portal** home.
 
-1. Use an existing workspace or create a new workspace.
+    ![](../media/Lab-01/image10.png)
 
-1. From your workspace, navigate to the **Create hub**.
+2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-1. Select **Create**.
+3. In the navigation menu, select **+New Item**.
 
-1. Create the Mirrored Database
+    ![](../media/Lab-01/fabric-new.png)
 
 1. Locate and select the **Mirrored Database** card.
 
-1. Enter a name for the new mirrored database.
+    ![](../media/Lab-01/fabric-new.png)
+
+1. Enter a name for the new mirrored database as Mirrored Database
 
 1.Select **Create**.
 
