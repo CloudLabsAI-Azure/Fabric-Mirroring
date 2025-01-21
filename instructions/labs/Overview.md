@@ -6,7 +6,6 @@ With the most up-to-date data in a queryable format in OneLake, you can now use 
 
 Mirroring in Fabric allows users to enjoy a highly integrated, end-to-end, and easy-to-use product that is designed to simplify your analytics needs. Built for openness and collaboration between Microsoft, and technology solutions that can read the open-source Delta Lake table format, Mirroring is a low-cost and low-latency turnkey solution that allows you to create a replica of your data in OneLake which can be used for all your analytical needs.
 
-The Delta tables can then be used everywhere Fabric, allowing users to accelerate their journey into Fabric.
 
 
 ## Types of Mirroring 
