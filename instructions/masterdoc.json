@@ -6,7 +6,7 @@
     "BaseURL": "",
     "Files": [
        {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/gettting-started-page.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/getting-started-page.md",
         "Order": 1
       },
       {
