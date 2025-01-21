@@ -44,7 +44,7 @@
       "subnetname": "subnet",
       "misubnetname": "sqlmisubnet",
       "subnetRef": "[concat(variables('vnetID'),'/subnets/', variables('subnetname'))]",
-      "sqlServerName": "samplesqldemo",
+      "sqlServerName": "[concat('sqlserver-',parameters('DeploymentID'))]",
       "sqlDatabaseName": "samplesqldemodb",
       "sqlAdminUsername": "adminuser",
       "sqlAdminPassword": "root@123456",
