@@ -45,7 +45,7 @@
 
  1. If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
 
-1. Monitor Replication Status
+
 
 2. Once mirroring is configured, you will be directed to the **Mirroring Status** page.
 
