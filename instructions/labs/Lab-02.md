@@ -1,4 +1,4 @@
-# Lab –02 Configure Microsoft Fabric mirrored database for Azure Cosmos DB
+# Lab –02 Configure Microsoft Fabric mirrored database from Azure Cosmos DB
 
 
 In this lab, you will configure an Azure Cosmos DB account and set up a mirrored database in Azure Fabric for data replication. You will connect Fabric to the source Cosmos DB and initiate the mirroring process, ensuring proper synchronization by monitoring its progress. Once the mirroring is complete, you will query the source database directly from Fabric. You will then analyze the mirrored database to gain insights and validate the replication process. Finally, you will explore how to leverage the mirrored data for reporting and analytics.
