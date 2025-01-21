@@ -36,7 +36,7 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
 
 
-## Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) or the mssql extension with Visual Studio Code. Connect to the master database.
+## Connect to your Azure SQL logical server using SQL Server Management Studio (SSMS) Connect to the master database.
 
 1. Login to sql server , add the below creds :
 
@@ -48,12 +48,14 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    - Password : 
 
-    ![](../media/Lab-01/sql-login.png)
+      ![](../media/Lab-01/sql-login.png)
 
 1. Create a server login and assign the appropriate permissions.
 
 
-1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database:
+1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database by right clicking and selecting the new query
+
+- Provide the "strong password" as desired
 
   
      ```
@@ -63,11 +65,14 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    ![](../media/Lab-01/sql-query-1.png)
 
+4. You will be able to see a fabric_login that's been created under logins 
+
+    ![](../media/Lab-01/fabric-login.png)
+
 1. Connect to the Azure SQL Database your plan to mirror to Microsoft Fabric, using the Azure portal query editor, SQL Server Management Studio (SSMS), Create a database user connected to the login: 
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
-     GRANT CONTROL TO fabric_user;
      ```
 
 # Create a mirrored Azure SQL Database
@@ -154,21 +159,47 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
      ![](../media/Lab-01/connection-string.png)
 
+ 3. On the choose data pane , review that by default its selected all. 
+
+     ![](../media/Lab-01/sqldb.png)
+
  # Start mirroring process
 
 1.  The Configure mirroring screen allows you to mirror all data in the database, by default.
 
-      - Mirror all data means that any new tables created after Mirroring is started will be mirrored.
-
-      - Optionally, choose only certain objects to mirror. Disable the Mirror all data option, then select individual tables from your database.
-
 2. Select Mirror database. Mirroring begins.
+
+    ![](../media/Lab-01/mirrored-db.png)
 
 3. Wait for 2-5 minutes. Then, select Monitor replication to see the status.
 
 4. After a few minutes, the status should change to Running, which means the tables are being synchronized.
 
- >**Note**: If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
+     ![](../media/Lab-01/sales-lt.png)
+
+6. Open SQL Server Management Studio (SSMS), navigate to the toolbar, click on **New Query**, and paste the following code to create a table for mirroring.
+
+   ```
+   CREATE TABLE [dbo].[YourNewTableName] (
+    [Id] INT IDENTITY(1,1) PRIMARY KEY, -- Auto-increment primary key
+    [Column1] NVARCHAR(100) NOT NULL,  -- Example column
+    [Column2] INT NULL,                -- Example column
+    [Column3] DATETIME DEFAULT GETDATE() -- Example column with default value);
+
+    ```
+
+    ![](../media/Lab-01/create-table-1.png)
+
+   7. You can view the newly created database under the list of databases in the database explorer.
+
+      ![](../media/Lab-01/new-table-1.png)
+
+   8. Return to the Fabric environment, navigate to the mirrored database, and refresh it. You should be able to see the newly created table.
+
+      ![](../media/Lab-01/new-table-2.png)
+     
+
+   >**Note**: If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
 
 5. When they have finished the initial copying of the tables, a date appears in the Last refresh column.
 
