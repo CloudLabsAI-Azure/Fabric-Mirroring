@@ -77,7 +77,6 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     ![](../media/Lab-03/sqlmi-1-1.png)
 
-
 6. Connect to the Azure SQL Managed Instance
 
 7. Under **New sources**, select **Azure SQL Managed Instance**, or select an existing Azure SQL Managed Instance connection from the OneLake catalog.
