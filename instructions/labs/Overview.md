@@ -78,4 +78,5 @@ Microsoft Fabric provides several types of mirroring, allowing organizations to 
 
 
 ### Conclusion  
+
 The types of mirroring in Microsoft Fabric cater to a range of network monitoring scenarios, from port-level analysis to network-wide security inspections. Each type serves a specific purpose, ensuring flexibility and precision in traffic monitoring. By combining these mirroring options with advanced analysis tools, organizations can enhance their visibility into network behavior, strengthen security, and optimize overall performance.
