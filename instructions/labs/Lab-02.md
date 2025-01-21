@@ -86,12 +86,15 @@
 
 1. Navigate to the mirrored database in the Fabric portal.
 
+    ![](../media/Lab-02/mirrored-db-1.png)
 
 2. Select **View**, then **Source database**. This action opens the Azure Cosmos DB data explorer with a read-only view of the source database.
 
     ![](../media/Lab-02/source-explorer-query.png)
 
 3. Select a container, then open the context menu and select **New SQL query**.
+
+    ![](../media/Lab-02/new-sql-query.png)
 
     
   >**Note**: All the reads on the source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
@@ -131,9 +134,27 @@
 
 5. The query will execute and return 100 records in the selected table.
 
-6. Open the context menu for the same table, select **New SQL Query**, and write an example query that uses aggregates like **SUM**, **COUNT**, **MIN**, or **MAX**. You can also join multiple tables to execute the query across multiple containers.
-   
-  
+6. Open the context menu for the same table, select **New SQL Query**.
+
+     ```
+   CREATE VIEW [dbo].[Merged_orders]
+   AS
+   (select [$Table].[_rid] as [_rid],
+      [$Table].[id] as [id],
+      [$Table].[categoryId] as [categoryId],
+      [$Table].[categoryName] as [categoryName],
+      [$Table].[sku] as [sku],
+      [$Table].[name] as [name],
+      [$Table].[description] as [description],
+      [$Table].[price] as [price],
+      [$Table].[tags] as [tags],
+      [$Table].[_ts] as [_ts]
+   from [OrdersDB_1].[OrdersDB].[Orderstatus] as [$Table])
+ 
+   ```
+
+   [](../media/Lab-02/results-1.png)
+
 1. Select the query and then select Save as view. Give the view a unique name. You can access this view at any time from the Fabric portal.
 
    
