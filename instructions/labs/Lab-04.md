@@ -30,15 +30,14 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
    | Connection Setting | Description |
    |------------------------|-----------------|
    | **Server**             | dlhdzca-bab11165snowflakecomputing.com|
-   | **Warehouse**          |  |
-   | **Connection**         |  |
-   | **Connection name**    | |
+   | **Warehouse**          | NEWWAREHOUSE |
+   | **Connection**         | Create new connection |
+   | **Connection name**    | Default |
    | **Authentication kind** | Snowflake |
    | **Username**           | |
    | **Password**           | |
-   | **Database**           |  |
+   | **Database**           | FABRIC_MIRRORING|
 
-5. Start the Mirroring Process
    
 1. The **Configure mirroring** screen will allow you to mirror all data in the database by default.
 
