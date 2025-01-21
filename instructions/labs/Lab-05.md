@@ -1,5 +1,4 @@
-# Create a Mirrored Database
-
+## Task01: Create an Open mirrored database 
 1. Navigate to the **Fabric portal** home.
 
     ![](../media/Lab-01/image10.png)
@@ -22,7 +21,7 @@
 
      ![](../media/Lab-05/landing-zone-1.png)
 
-# Write Change Data into the Landing Zone
+## Task-02  Write Change Data into the Landing Zone(Read-Only)
 
 1. Write Data into the Landing Zone.
 
@@ -32,7 +31,7 @@
 
 1. Review the **Open mirroring landing zone requirements** and format specifications.
 
-# Start the Mirroring Process
+## Task -03: Start and Monitor the Replication Process
 
 1. The **Configure mirroring** screen allows you to mirror all data in the database by default.
 
@@ -40,11 +39,7 @@
     
 1. Select **Mirror database**. The mirroring process begins.
 
-## Monitor the Replication Status
-
- 1. Wait for 2-5 minutes.
-
- 1. Select **Monitor replication** to see the status.
+    >Note: Wait for 2-5 minutes.Select **Monitor replication** to see the status.
 
  1. After a few minutes, the status should change to **Running**, which indicates that the tables are being synchronized.
 
@@ -54,4 +49,4 @@
 
 2. Once mirroring is configured, you will be directed to the **Mirroring Status** page.
 
-3. Here, you can monitor the current state of replication.
+
