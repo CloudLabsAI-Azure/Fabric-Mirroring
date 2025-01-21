@@ -455,6 +455,10 @@
     "type": "string",
     "value": "[variables('sqlServerName')]"
 },
+"SQL databases Name": {
+    "type": "string",
+    "value": "[variables('sqlDatabaseName')]"
+},
       "Trainer Password": {
         "type": "string",
         "value": "[parameters('adminPassword')]"
