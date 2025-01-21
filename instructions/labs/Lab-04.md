@@ -1,43 +1,42 @@
-# Create a Mirrored Database
+# Lab-04 Mirroring Snowflake in Microsoft Fabric
 
 In this section, we'll provide a brief overview of how to create a new mirrored database to use with your mirrored Snowflake data source.
 
-1. **Select or Create a Workspace**
+1. Navigate to the **Fabric portal** home.
 
-1. You can use an existing workspace 
+    ![](../media/Lab-01/image10.png)
 
-1. From your workspace, navigate to the **Create hub**
-.
-1. After selecting the workspace you would like to use, click **Create**.
+2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
+3. In the navigation menu, select **+New Item**.
 
-1. Scroll down and select the **Mirrored Snowflake** card.
+   ![](../media/Lab-01/fabric-new.png)
 
-1. Enter a name for the new database.
+4. **Scroll down** and select the **Mirrored Snowflake** card.
 
-1. Click **Create**.
+     ![](../media/Lab-04/mirrored-db.png)
+
+1. Enter a name as **Mirrored_<inject key="DeploymentID" enableCopy="false"/>** and Click on create **Create**
+
+     ![](../media/Lab-04/md-1.png)
 
 # Connect to Your Snowflake Instance in Any Cloud
 
-1. Set up the Connection
+1. Select **Snowflake** under **New connection** . 
 
-   >**Note**: You might need to alter the firewall cloud to allow Mirroring to connect to the Snowflake instance.
-
-1. Select **Snowflake** under **New connection** or select an existing connection if available.
-
-4. **Configure Connection Settings**
+2. **Configure Connection Settings**
    If you selected **New connection**, enter the following connection details:
 
-   | **Connection Setting** | **Description** |
+   | Connection Setting | Description |
    |------------------------|-----------------|
-   | **Server**             | You can find your server name by navigating to the accounts section in the Snowflake resource menu. Hover over the account name and copy the server name. Remove the `https://` prefix from the server name. |
-   | **Warehouse**          | From the **Warehouses** section in the resource menu in Snowflake, select the **Snowflake Warehouse** (Compute) and not the database. |
-   | **Connection**         | Create a new connection. |
-   | **Connection name**    | This should be automatically filled out, but you can change it to a name that you would like to use. |
+   | **Server**             | dlhdzca-bab11165snowflakecomputing.com|
+   | **Warehouse**          |  |
+   | **Connection**         |  |
+   | **Connection name**    | |
    | **Authentication kind** | Snowflake |
-   | **Username**           | Your Snowflake username that you created to sign into Snowflake.com. |
-   | **Password**           | Your Snowflake password that you created when you created your login information for Snowflake.com. |
-   | **Database**           | Select your database from the dropdown list. |
+   | **Username**           | |
+   | **Password**           | |
+   | **Database**           |  |
 
 5. Start the Mirroring Process
    
