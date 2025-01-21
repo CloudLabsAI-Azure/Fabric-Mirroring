@@ -1,1 +1,38 @@
 
+[
+  {
+    "Name": "Fabric-Mirroring",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/gettting-started-page.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/lab-01.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/Lab-02.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/Lab-03.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/Lab-04.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Fabric-Mirroring/refs/heads/main/instructions/labs/Lab-05.md",
+        "Order": 7
+      }
+    ]
+  }
+]
