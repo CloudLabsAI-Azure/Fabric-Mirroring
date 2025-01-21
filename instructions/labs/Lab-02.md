@@ -1,4 +1,7 @@
-# Configure Your Azure Cosmos DB Account
+# Lab –02 Configure Microsoft Fabric mirrored database for Azure Cosmos DB
+
+
+In this lab, you will configure an Azure Cosmos DB account and set up a mirrored database in Azure Fabric for data replication. You will connect Fabric to the source Cosmos DB and initiate the mirroring process, ensuring proper synchronization by monitoring its progress. Once the mirroring is complete, you will query the source database directly from Fabric. You will then analyze the mirrored database to gain insights and validate the replication process. Finally, you will explore how to leverage the mirrored data for reporting and analytics.
 
 ## Ensure the Source Azure Cosmos DB Account is Correctly Configured
 
@@ -12,9 +15,14 @@
 
       ![](../media/Lab-02/launch-quick.png)
 
-4. This action will create a sample database. Leave all the settings as default, then click **OK** to proceed, Once after its created you can see the tables that's created
+4. Give the Databaseid name as **OrderDB** and container id as **Orderitems** . Leave all the settings as default, then click **OK** to proceed, Once after its created you can see the tables that's created
 
-    ![](../media/Lab-02/create-1.png)
+    ![](../media/Lab-02/ordersdb-new.png)
+
+
+5. Choose **launch quick start** and create an other container id as **Orderstatus**. Select use existing and from the drop-down choose **OrderDB**. Then click **OK**
+
+      ![](../media/Lab-02/orderdb-exist.png)
 
 5. Ensure that the networking options are set to **Public network access for all networks** from the networking tab.
 
@@ -56,7 +64,7 @@
 
 3. Under choose data , click on next and **connect**
 
-    ![](../media/Lab-02/sample-container.png)
+    ![](../media/Lab-02/orderdb.png)
   
 4. Under destination , Give a name **Mirrored-SampleDB** and click on create 
 
@@ -74,7 +82,7 @@
 
 2. After a few minutes, the status should change to **Running**, indicating that the containers are being synchronized.
 
-    ![](../media/Lab-02/mirrored-db.png)
+   ![](../media/Lab-02/mointor-replication.png)
 
 
    - **Tip**: If you can't find the containers and the corresponding replication status, refresh the pane after a few seconds. In rare cases, transient error messages may appear; you can safely ignore them and refresh.
@@ -86,15 +94,11 @@
 
 1. Navigate to the mirrored database in the Fabric portal.
 
-    ![](../media/Lab-02/mirrored-db-1.png)
+    ![](../media/Lab-02/mirrored-db02.png)
 
 2. Select **View**, then **Source database**. This action opens the Azure Cosmos DB data explorer with a read-only view of the source database.
 
     ![](../media/Lab-02/source-explorer-query.png)
-
-3. Select a container, then open the context menu and select **New SQL query**.
-
-    ![](../media/Lab-02/new-sql-query.png)
 
     
   >**Note**: All the reads on the source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
@@ -110,7 +114,9 @@
 
 3. Each container in the source database should be represented in the SQL analytics endpoint as a warehouse table.
 
-4. Select any table, open the context menu, then select **New SQL Query**, and select **Select Top 100**.
+4. Select Orderstatus, open the context menu, then select **New SQL Query**, and select **Select Top 100**.The query will execute and return 100 records in the selected table . 
+
+   - Now, Select Orderitems then select **New SQL Query**, and select **Select Top 100**.
 
    ![](../media/Lab-02/new-sql-query.png)
 
@@ -132,8 +138,6 @@
 
      ![](../media/Lab-02/results-1.png)
 
-5. The query will execute and return 100 records in the selected table.
-
 6. Open the context menu for the same table, select **New SQL Query**.
 
      ```
@@ -153,7 +157,7 @@
  
    ```
 
-   [](../media/Lab-02/results-1.png)
+   ![](../media/Lab-02/results-1.png)
 
 1. Select the query and then select Save as view. Give the view a unique name. You can access this view at any time from the Fabric portal.
 
@@ -161,12 +165,51 @@
 
 1. Return back to the mirrored database in the Fabric portal.
 
-1. Select New visual query. Use the query editor to build complex queries.
+1. Select New visual query. Use the query editor .
+
+     ![](../media/Lab-02/new-visual-query.png)
+
+1. Drag and Drop the orderstatus and orderitem tables into the right query editor
+
+     ![](../media/Lab-02/both-orders.png)
+
+1. Click on the + icon from the first query and choose merge query as new
+
+     ![](../media/Lab-02/merge-as-view.png)
+
+1. From the right table for merge choose Orderitemsand select id and click on ok
+
+      ![](../media/Lab-02/merge-query-011.png)
+
+1. The visual query once merged
+
+     ![](../media/Lab-02/order-final.png)
 
 
-1. Screenshot of the query editor for both text-based and visual queries in Fabric.
+1. From the Tool bar choose reporting tab
+
+     ![](../media/Lab-02/new-report-1.png)
+
+1. When the New data with all avaialble data. Pop-up appears click on continue
+
+      ![](../media/Lab-02/new-report-0.png)
+
+1. Expand the Data Pane, Select Sum of _ts, categoryid and sum of price
+
+     ![](../media/Lab-02/data-panel.png)
+
+1. From the visualization pane, choose Clustered Column chart
+
+     ![](../media/Lab-02/choosevis.png)
 
 
-Build BI reports on the SQL queries or views
-Select the query or view and then select Explore this data (preview). This action explores the query in Power BI directly using Direct Lake on OneLake mirrored data.
-Edit the charts as needed and save the report.
+1. The final report of the orderDB .Save as **Orders-reports**
+
+    ![](../media/Lab-02/final-report.png)
+
+    ![](../media/Lab-02/saveas.png)
+
+
+# Review
+
+  In this lab, you configured your Azure Cosmos DB account and created a mirrored database in Azure Fabric for data replication. You connected Fabric to the source Cosmos DB, started the mirroring process, and monitored its progress. Once synchronized, you queried the source database directly from Fabric. Finally, you analyzed the mirrored database in Fabric for insights and reporting.
