@@ -358,28 +358,14 @@
               "sampleName": "AdventureWorksLT"
             },
             "sku": {
-              "name": "Standard",
-              "tier": "Standard"
+              "name": "GP_S_Gen5_2",     // General Purpose, Serverless, 2 vCores
+              "tier": "GeneralPurpose",
+              "family": "Gen5",
+              "capacity": 2
             }
           }
         ]
-      },
-      {
-        "type": "Microsoft.DocumentDB/databaseAccounts",
-        "apiVersion": "2015-04-08",
-        "name": "[variables('cosmosDbAccountName')]",
-        "location": "[resourceGroup().location]",
-        "kind": "GlobalDocumentDB",
-        "properties": {
-          "databaseAccountOfferType": "Standard",
-          "locations": [
-            {
-              "locationName": "[resourceGroup().location]",
-              "failoverPriority": 0
-            }
-          ]
-        }
-      },
+      },      
       {
         "type": "Microsoft.Sql/managedInstances",
         "apiVersion": "2015-05-01-preview",
