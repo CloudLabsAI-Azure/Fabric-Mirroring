@@ -1,8 +1,8 @@
-# Lab –01 Configure Microsoft Fabric mirrored databases from Azure SQL Database
+# Lab 01: Configure Microsoft Fabric mirrored databases from Azure SQL Database
 
 In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS) or Visual Studio Code. You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
 
-## Task-01  Enable SAMI of your Azure SQL logical server
+## Task 01:  Enable SAMI of your Azure SQL logical server
 
 1. In the azure portal , search for the **SQL server (1)** and select **SQL servers (2)**
    
@@ -34,8 +34,7 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    ![](../media/Lab-01/query-editor-1-1.png)
 
-1. Now search for SQL Server Management Studio 20 
- and click on it to open. 
+1. Now click on windows button and search for SQL Server Management Studio 20 and click on it to open. 
  
 1. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
@@ -64,7 +63,7 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    ![](../media/Lab-01/sql-query-1.png)
 
-4. You will be able to see a fabric_login that's been created under logins. 
+4. You will be able to see a **fabric_login** login account that's been created under logins. 
 
     ![](../media/Lab-01/fabric-login.png)
 
@@ -72,15 +71,15 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
      ![](../media/Lab-01/s3.png)
 
-1. Open a new query window, connect to the Azure SQL Database you plan to mirror to Microsoft Fabric (using the Azure portal query editor or SQL Server Management Studio), and create a database user connected to the login:
+1. Open a new query window,  and create a database user connected to the login:
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
      ```
 
-## Task-02 Create a mirrored Azure SQL Database
+## Task 02: Create a mirrored Azure SQL Database
 
-1. Open the [Fabric portal](https://app.fabric.microsoft.com/home), You will be navigated to the **Fabric Home**.
+1. Open the ```https://app.fabric.microsoft.com```, You will be navigated to the **Fabric Home**.
 
     ![](../media/Lab-01/image10.png)
 
