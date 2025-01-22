@@ -131,7 +131,7 @@
                   "https://fabricmirroring.blob.core.windows.net/fabric/deploy.ps1",
                   "https://experienceazure.blob.core.windows.net/templates/cloudlabs-common/cloudlabs-windows-functions.ps1"
                 ],
-                "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File customer-support-conversation/scripts/psscript-01.ps1', variables('cloudlabsCommon'), variables('Enable-CloudLabsEmbeddedShadow'))]"
+                "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File deploy.ps1', variables('cloudlabsCommon'), variables('Enable-CloudLabsEmbeddedShadow'))]"
               }
             }
           }
