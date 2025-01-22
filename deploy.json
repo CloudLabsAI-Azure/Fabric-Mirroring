@@ -232,6 +232,20 @@
                 "direction": "Inbound"
               }
             },
+               {
+              "name": "allow_sqlmi_public_inbound",
+              "properties": {
+                "description": "Allow access to data",
+                "protocol": "*",
+                "sourcePortRange": "*",
+                "destinationPortRange": "3342",
+                "sourceAddressPrefix": "*",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 120,
+                "direction": "Inbound"
+              }
+            },
             {
               "name": "allow_redirect_inbound",
               "properties": {
