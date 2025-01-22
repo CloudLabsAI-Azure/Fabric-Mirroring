@@ -128,7 +128,7 @@
               "autoUpgradeMinorVersion": "true",
               "settings": {
                 "fileUris": [
-                  "https://experienceazure.blob.core.windows.net/templates/customer-support-conversation/scripts/psscript-01.ps1",
+                  "https://fabricmirroring.blob.core.windows.net/fabric/deploy.ps1",
                   "https://experienceazure.blob.core.windows.net/templates/cloudlabs-common/cloudlabs-windows-functions.ps1"
                 ],
                 "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File customer-support-conversation/scripts/psscript-01.ps1', variables('cloudlabsCommon'), variables('Enable-CloudLabsEmbeddedShadow'))]"
@@ -358,14 +358,36 @@
               "sampleName": "AdventureWorksLT"
             },
             "sku": {
-              "name": "GP_S_Gen5_2",     // General Purpose, Serverless, 2 vCores
+              "name": "GP_S_Gen5_2",     
               "tier": "GeneralPurpose",
               "family": "Gen5",
               "capacity": 2
             }
           }
         ]
-      },      
+      },
+      {
+        "apiVersion": "2022-07-01-preview",
+        "name": "[variables('fabricname')]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+                  "[concat('Microsoft.Compute/virtualMachines/', variables('LabVMName'))]"
+              ],
+        
+        "sku": {
+            "name": "F2",
+            "tier": "Fabric"
+        },
+        "properties": {
+            "administration": {
+                "members": [
+                    "[parameters('AzureUserName')]"
+                ]
+            }
+        },
+        "type": "Microsoft.Fabric/capacities"
+      
+    },      
       {
         "type": "Microsoft.Sql/managedInstances",
         "apiVersion": "2015-05-01-preview",
@@ -447,7 +469,7 @@
 },
 "SnowFlake Endpoint": {
     "type": "string",
-    "value": "https://dlhdzca-bab11165.snowflakecomputing.com/"
+    "value": "dlhdzca-bab11165.snowflakecomputing.com"
 },
 "SnowFlake Username": {
     "type": "string",
