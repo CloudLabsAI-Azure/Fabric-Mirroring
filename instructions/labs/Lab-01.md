@@ -138,12 +138,11 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
 1. Scroll to the Data Warehouse section and then select **Mirrored Azure SQL Database**.
 
-   ![](../media/Lab-01/mirrored-1.png)
+   ![](../media/Lab-01/s5.png)
 
 1. Select a Azure SQL Database under **choose a database connection to get started**.
 
    ![](../media/Lab-01/azure-sql-database.png)
-
 
 2. Select New connection, enter the connection details to the Azure SQL Database.
 
@@ -156,12 +155,16 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
    - Password : **<inject key="SQL Server Password" enableCopy="false"/> (6)**
    - Select **Connect (7)**.
 
-     ![](../media/Lab-01/connection-string.png)
+     ![](../media/Lab-01/s6.png)
 
  3. On the **Choose Data** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect**.
  
 
      ![](../media/Lab-01/sqldb.png)
+
+ 1. On the Destination pane, ensure your database name is present and click on **Create mirrored database**.
+
+     ![](../media/Lab-01/s7.png)
 
  ## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
@@ -177,14 +180,19 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
      ![](../media/Lab-01/sales-lt.png)
 
-1. To create a table for mirroring, open SQL Server Management Studio (SSMS), navigate to the toolbar, click on **New Query**, and paste the following code.
+   **Note:** Click on Refresh to see the synchronized tables
 
+1. To create a table for mirroring, open SQL Server Management Studio (SSMS), navigate to the toolbar, click on **New Query** by right-clicking on your database, and paste the following code and run it by clicking on **Execute** button.
+  
+   ![](../media/Lab-01/s8.png)
+  
    ```
    CREATE TABLE [dbo].[YourNewTableName] (
     [Id] INT IDENTITY(1,1) PRIMARY KEY, -- Auto-increment primary key
     [Column1] NVARCHAR(100) NOT NULL,  -- Example column
     [Column2] INT NULL,                -- Example column
-    [Column3] DATETIME DEFAULT GETDATE() -- Example column with default value);
+    [Column3] DATETIME DEFAULT GETDATE() -- Example column with default value
+    );
 
     ```
 

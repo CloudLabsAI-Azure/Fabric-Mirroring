@@ -4,13 +4,13 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
 ## Task 1 : Ensure the Source Azure Cosmos DB Account is Correctly Configured
 
-1. In the Azure portal, locate the search bar at the top of the screen. 
+1. In the Azure portal, locate the search bar at the top of the screen and Type "Azure Cosmos DB", in the search results, select Azure Cosmos DB account.
 
-2. Type "Azure Cosmos DB", in the search results, select Azure Cosmos DB account.
+   ![](../media/Lab-02/azure-cosmosdb.png)
 
-     ![](../media/Lab-02/azure-cosmosdb.png)
+1. Select cosmosdb-<inject key="DeploymentID" enableCopy="false"/>  
 
-3. From the left hand side , Choose **data explorer(1)** and choose **launch quick start(2)**
+3. From the left pane, Choose **data explorer(1)** and choose **launch quick start(2)**
 
       ![](../media/Lab-02/launch-quick.png)
 
@@ -19,17 +19,17 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
     ![](../media/Lab-02/ordersdb-new.png)
 
 
-5. Choose **launch quick start** and create an other container id as **Orderstatus**. Select use existing and from the drop-down choose **OrderDB**. Then click **OK**
+5. Again ,Choose **launch quick start** and create an other container id as **Orderstatus**. Select use existing and from the drop-down choose **OrderDB**. Then click **OK**
 
       ![](../media/Lab-02/orderdb-exist.png)
 
-5. Ensure that the networking options are set to **Public network access for all networks** from the networking tab.
+5. Ensure that the networking options under settings are set to **Public network access for all networks** from the networking tab.
 
-6. On the left hand pane , select **identity(1)** and Enable system assigned status **On(2)** and then click on **save(3)** and when prompted click on yes
+6. On the left pane , select **identity (1)** and Enable system assigned status **On (2)** and then click on **save (3)** and when prompted click on **yes**.
 
    ![](../media/Lab-02/democosmos.png)
    
-## Create a Mirrored Database
+## Task 2 : Create a Mirrored Database
 
 1. Navigate to the **Fabric portal** home.
 
@@ -37,7 +37,7 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
 2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-3. In the navigation menu, select **+New Item**.
+3. In the navigation menu, select **+ New Item**.
 
    ![](../media/Lab-01/fabric-new.png)
 
@@ -45,7 +45,7 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
     ![](../media/Lab-02/mirrored-1.png)
 
-## Connect to the Source Database
+## Task 3 : Connect to the Source Database
 
 1. In the **New Connection** section, select **Azure Cosmos DB v2**.
 
@@ -56,12 +56,17 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
      - **Azure Cosmos DB endpoint**: URL endpoint for the source account.
      - **Connection name**: Unique name for the connection.
      - **Authentication kind**: Select **Account key**.
-     - **Account Key**: Read-write key for the source account.
+     - **Account Key**: Primary key
      - Select **Connect**. Then, select a database to mirror.
 
-        ![](../media/Lab-02/cosmos-db.png)
+       ![](../media/Lab-02/cosmos-db.png)
 
-3. Under choose data , click on next and **connect**
+       **Note :** From Azure portal, Navigate to your Cosmos DB, select keys from the left pane and copy the key and URL End point. 
+
+       ![](../media/Lab-02/s10.png)
+
+1. In New connection pane, select OrderDB and click on **Connect**.
+3. Under choose data , click on **connect**
 
     ![](../media/Lab-02/orderdb.png)
   
@@ -69,9 +74,18 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
      ![](../media/Lab-02/mirrored-db-1.png)
 
-   >**Note**: All containers in the database will be mirrored.
+     >**Note**: All containers in the database will be mirrored.
 
-# Start the Mirroring Process and Monitor Fabric Mirroring
+     > **Note :** If see error related to Continous backup needs to be enabled, perform the below steps and click on **Save (4)** then reperform from step 1.
+
+      - Navigate to your Azure Cosmos DB and select **Backup & Restore (1)** from the left pane.
+      - Click on **Change (2)** to change the Backup policy Mode.
+      - Select **Continous (30 days) (3)**
+
+        ![](../media/Lab-02/s11.png)
+
+
+## Task 4 : Start the Mirroring Process and Monitor Fabric Mirroring
 
 1. Select **Monitor Replication**. Mirroring will now begin.
 
@@ -89,7 +103,7 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
      >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
 
-# Query the Source Database from Fabric
+## Task 5 : Query the Source Database from Fabric
 
 1. Navigate to the mirrored database in the Fabric portal.
 
@@ -102,7 +116,7 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
     
   >**Note**: All the reads on the source database are routed to Azure and will consume Request Units (RUs) allocated on the account.
 
-# Analyze the Target Mirrored Database
+## Task 6 : Analyze the Target Mirrored Database
 
 1. Navigate to the mirrored database in the Fabric portal.
 
@@ -117,54 +131,28 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
    - Now, Select Orderitems then select **New SQL Query**, and select **Select Top 100**.
 
-     ![](../media/Lab-02/new-sql-query.png)
-
    - Run any query. For example, use:
 
         ```sql
-        SELECT TOP (100) [_rid],
-                [id],
-                [categoryId],
-                [categoryName],
-                [sku],
-                [name],
-                [description],
-                [price],
-                [tags],
-                [_ts]
-        FROM [Mirrored-SampleDB].[SampleDB].[SampleContainer]
+          SELECT TOP (100) [_rid],
+                         [id],
+                         [categoryId],
+                         [categoryName],
+                         [sku],
+                         [name],
+                         [description],
+                         [price],
+                         [tags],
+                         [_ts]
+          FROM [OrderDB].[OrderDB].[Orderitems]
         ```
 
      ![](../media/Lab-02/results-1.png)
 
-6. Open the context menu for the same table, select **New SQL Query**.
 
-     ```
-   CREATE VIEW [dbo].[Merged_orders]
-   AS
-   (select [$Table].[_rid] as [_rid],
-      [$Table].[id] as [id],
-      [$Table].[categoryId] as [categoryId],
-      [$Table].[categoryName] as [categoryName],
-      [$Table].[sku] as [sku],
-      [$Table].[name] as [name],
-      [$Table].[description] as [description],
-      [$Table].[price] as [price],
-      [$Table].[tags] as [tags],
-      [$Table].[_ts] as [_ts]
-   from [OrdersDB_1].[OrdersDB].[Orderstatus] as [$Table])
- 
-   ```
+1. Return back to the SQL Analytics Endpoint in the Fabric portal.
 
-   ![](../media/Lab-02/results-1.png)
-
-1. Select the query and then select Save as view. Give the view a unique name. You can access this view at any time from the Fabric portal.
-
-   
-
-1. Return back to the mirrored database in the Fabric portal.
-
-1. Select New visual query. Use the query editor .
+1. Select **New visual query**. Use the query editor .
 
      ![](../media/Lab-02/new-visual-query.png)
 
@@ -172,11 +160,11 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
      ![](../media/Lab-02/both-orders.png)
 
-1. Click on the + icon from the first query and choose merge query as new
+1. Click on the **+** icon from the first query and choose **Merge query as new**.
 
      ![](../media/Lab-02/merge-as-view.png)
 
-1. From the right table for merge choose Orderitemsand select id and click on ok
+1. From the right table for merge choose **Orderitems** and select **id** and click on **ok**.
 
       ![](../media/Lab-02/merge-query-011.png)
 
@@ -185,11 +173,11 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
      ![](../media/Lab-02/order-final.png)
 
 
-1. From the Tool bar choose reporting tab
+1. From the Tool bar choose **reporting** tab and click on **New report**.
 
      ![](../media/Lab-02/new-report-1.png)
 
-1. When the New data with all avaialble data. Pop-up appears click on continue
+1. When the New data with all avaialble data. Pop-up appears click on **continue**.
 
       ![](../media/Lab-02/new-report-0.png)
 
