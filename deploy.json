@@ -316,6 +316,19 @@
           }
         }
       },
+        {
+            "type": "Microsoft.Resources/deploymentScripts",
+            "apiVersion": "2020-10-01",
+            "kind": "AzurePowerShell",
+            "name": "WaitSection",
+            "location": "[parameters('location')]",
+            "properties": {
+                "azPowerShellVersion": "9.7",
+                "scriptContent": "start-sleep -Seconds 180",
+                "cleanupPreference": "Always",
+                "retentionInterval": "PT1H"
+            }
+        },
       {
         "apiVersion": "2017-06-01",
         "type": "Microsoft.Network/publicIPAddresses",
