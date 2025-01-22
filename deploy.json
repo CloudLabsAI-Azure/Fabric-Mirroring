@@ -451,11 +451,11 @@
 },
 "SnowFlake Username": {
     "type": "string",
-    "value": "FABRIC_MIRRORING"
+    "value": "SpektraSnowflake"
 },
 "SnowFlake Password": {
     "type": "string",
-    "value": "8UpfRpExVDXv2AC"
+    "value": "Flake@spektra2024"
 },
       "Trainer Password": {
         "type": "string",
