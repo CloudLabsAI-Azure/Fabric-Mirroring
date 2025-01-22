@@ -4,25 +4,27 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
 ## Task-01  Enable SAMI of your Azure SQL logical server
 
-1. In the azure portal , search for the SQL server
+1. In the azure portal , search for the **SQL server (1)** and select **SQL servers (2)**
    
    ![](../media/Lab-01/sql-servers.png)
 
-1. Select the SQL servers that's been created. 
+1. Select the SQL server : sqlserver-<inject key="DeploymentID" enableCopy="false"/>  
 
    ![](../media/Lab-01/server-1.png)
 
-1. To enable or verify the System Assigned Managed Identity (SAMI), navigate to your logical SQL Server in the Azure portal. Under the Security section in the resource menu, select Identity, and then set the Status to "On."
+1. To enable or verify the System Assigned Managed Identity (SAMI), go to your logical SQL Server in the Azure portal. In the resource menu, navigate to the **Security** section and select **Identity (1)**. Under the **System Assigned Managed Identity** option, ensure the **Status** is set to **On (2)**, and click **Save**.  
 
    ![](../media/Lab-01/sqldbserver01.png)
 
-3. Go back to your query-editor, on query editor preview, login to sql server with server autentication 
+3. Now click on SQL Databases under Settings and select the database **samplesqldb** then click on Query editor (preview) from left pane.
 
-   - Username : `adminserver`
+1. In the query editor (preview), log in to the SQL Server with server authentication:  
 
-   - Password : `Root@12345`
+   - Username : <inject key="SQL Server Username" enableCopy="false"/> 
 
-   ![](../media/Lab-01/query-editor.png)
+   - Password : <inject key="SQL Server Password" enableCopy="false"/>
+
+     ![](../media/Lab-01/query-editor.png)
 
 2. The SAMI must be the primary identity. Verify the SAMI is the primary identity with the following T-SQL query: 
 
@@ -32,29 +34,29 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    ![](../media/Lab-01/query-editor-1-1.png)
 
-   ![](../media/Lab-01/results-1.png)
+1. Now search for SQL Server Management Studio 20 
+ and click on it to open. 
+ 
+1. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
+   - Server name : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
 
-1. Login to sql server , add the below creds :
+   - Authentication : **SQL Server Authentication (2)**
 
-   - Server name : 
+   - Login : **<inject key="SQL Server Username" enableCopy="false"/> (3)**
 
-   - Authentication : 
+   - Password : **<inject key="SQL Server Password" enableCopy="false"/> (4)**
 
-   - Login : 
+     ![](../media/s1.png)
 
-   - Password : 
+1. Open a **New Query** from top menu to assign permissions. 
+ 
+   ![](../media/Lab-01/s2.png)
 
-      ![](../media/Lab-01/sql-login.png)
+1. Create a SQL-authenticated login named fabric_login. Use a strong password of your choice. Run the following T-SQL script in the master database by clicking Execute: 
 
-1. Create a server login and assign the appropriate permissions.
+   **Note :** Provide the "strong password" as desired
 
-
-1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database by right clicking and selecting the new query
-
-- Provide the "strong password" as desired
-
-  
      ```
      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
@@ -62,11 +64,15 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
    ![](../media/Lab-01/sql-query-1.png)
 
-4. You will be able to see a fabric_login that's been created under logins 
+4. You will be able to see a fabric_login that's been created under logins. 
 
     ![](../media/Lab-01/fabric-login.png)
 
-1. Connect to the Azure SQL Database your plan to mirror to Microsoft Fabric, using the Azure portal query editor, SQL Server Management Studio (SSMS), Create a database user connected to the login: 
+    **Note :** If you are unable to see the fabric_login just refresh the pane.
+
+     ![](../media/Lab-01/s3.png)
+
+1. Open a new query window, connect to the Azure SQL Database you plan to mirror to Microsoft Fabric (using the Azure portal query editor or SQL Server Management Studio), and create a database user connected to the login:
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
@@ -98,6 +104,10 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
     ![](../media/Lab-01/image10.png)
 
+1. On the Microsoft Fabric Home page , select **Power BI**
+
+    ![](../media/Lab-01/s4.png)
+
 1. Now let’s create a workspace with Fabric license. 
 
 1.  Now, select **Workspaces** and click on **+ New workspace**:
@@ -110,32 +120,25 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
       ![](../media/Lab-01/workspacename.png)
    
-   >**Note**: The user ID will be unique for each user, and the workspace name must also be unique. Ensure that a green check mark with **"This name is available"** appears below the Name field.
+      >**Note**: The user ID will be unique for each user, and the workspace name must also be unique. Ensure that a green check mark with **"This name is available"** appears below the Name field.
 
 1. If you would like, you can enter a **Description** for the workspace. This is an optional field.
 
-1. Click on **Advanced** to expand the section.
+1. Click on **Advanced** to expand the section and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
 
-1. Under **License mode**, make sure **Trial** is selected,Select **Apply** to create a new workspace.
-
-    ![](../media/Lab-01/imag017-1.png)
+    ![](../media/Lab-01/f4.png)
 
     >**Note:** If the **Introducing task flows** dialog opens, click on **Got it**.
 
     ![](../media/Lab-01/image28.png)
 
-1. Navigate to the workspace. Select the **+New item** icon.
+1. Navigate to the workspace. Select the **+ New item** icon.
 
     ![](../media/Lab-01/fabric-new.png)
 
 1. Scroll to the Data Warehouse section and then select **Mirrored Azure SQL Database**.
 
    ![](../media/Lab-01/mirrored-1.png)
-  
-1. Enter the **MirroredDatabase_<inject key="DeploymentID" enableCopy="false"/>****. Azure SQL Database to be mirrored, then select Create.
-
-   ![](../media/Lab-01/name-mirrored.png)
-
 
 1. Select a Azure SQL Database under **choose a database connection to get started**.
 
@@ -144,17 +147,19 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
 2. Select New connection, enter the connection details to the Azure SQL Database.
 
-  - Server: 
-  - Database: 
-  - Connection: Create new connection.
-  - Connection name: 
-  - Authentication kind:
-    - Basic (SQL Authentication)
-  - Select Connect.
+   - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
+   - Database : **samplesqldb (2)**
+   - Connection: Create new connection.
+   - Connection name: **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net;samplesqldb (3)**
+   - Authentication kind: **Basic (SQL Authentication) (4)**
+   - Username : **<inject key="SQL Server Username" enableCopy="false"/> (5)**
+   - Password : **<inject key="SQL Server Password" enableCopy="false"/> (6)**
+   - Select **Connect (7)**.
 
      ![](../media/Lab-01/connection-string.png)
 
- 3. On the choose data pane , review that by default its selected all. 
+ 3. On the **Choose Data** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect**.
+ 
 
      ![](../media/Lab-01/sqldb.png)
 
@@ -162,17 +167,17 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
 1.  The Configure mirroring screen allows you to mirror all data in the database, by default.
 
-2. Select Mirror database. Mirroring begins.
+2. Choose the Mirror database option to initiate the mirroring process.
 
     ![](../media/Lab-01/mirrored-db.png)
 
-3. Wait for 2-5 minutes. Then, select Monitor replication to see the status.
+3. Please wait for 2 to 5 minutes. After that, click on "Monitor Replication" to check the status.
 
-4. After a few minutes, the status should change to Running, which means the tables are being synchronized.
+4. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
 
      ![](../media/Lab-01/sales-lt.png)
 
-6. Open SQL Server Management Studio (SSMS), navigate to the toolbar, click on **New Query**, and paste the following code to create a table for mirroring.
+1. To create a table for mirroring, open SQL Server Management Studio (SSMS), navigate to the toolbar, click on **New Query**, and paste the following code.
 
    ```
    CREATE TABLE [dbo].[YourNewTableName] (
@@ -185,18 +190,17 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 
     ![](../media/Lab-01/create-table-1.png)
 
-   7. You can view the newly created database under the list of databases in the database explorer.
+7. You can view the newly created database under the list of databases in the database explorer.
 
       ![](../media/Lab-01/new-table-1.png)
 
-   8. Return to the Fabric environment, navigate to the mirrored database, and refresh it. You should be able to see the newly created table.
+1. Return to the Fabric environment, go to the mirrored database, and refresh the view. The newly created table should now be visible.
 
-      ![](../media/Lab-01/new-table-2.png)
+   ![](../media/Lab-01/new-table-2.png)
      
+   >**Note**: If the tables and replication status do not appear immediately, wait a few seconds and refresh the panel again.
 
-   >**Note**: If you don't see the tables and the corresponding replication status, wait a few seconds and then refresh the panel.
-
-5. When they have finished the initial copying of the tables, a date appears in the Last refresh column.
+5. Once the initial table copying is complete, a date will appear in the Last refresh column.
 
 # Review
 

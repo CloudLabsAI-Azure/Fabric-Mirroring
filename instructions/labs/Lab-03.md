@@ -101,9 +101,9 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
         - **Authentication kind**: Choose from the following:
             - Basic (SQL Authentication)
        
-      - Select **Connect**.
+        - Select **Connect**.
 
-        ![](../media/Lab-03/new-source-connect.png)
+         ![](../media/Lab-03/new-source-connect.png)
 
 ## Task -04: Start the Mirroring Process and Monitor Fabric Mirroring
 
