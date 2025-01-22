@@ -45,7 +45,7 @@
       "misubnetname": "sqlmisubnet",
       "subnetRef": "[concat(variables('vnetID'),'/subnets/', variables('subnetname'))]",
       "sqlServerName": "[concat('sqlserver-',parameters('DeploymentID'))]",
-      "sqlDatabaseName": "samplesqldemodb",
+      "sqlDatabaseName": "samplesqldb",
       "sqlAdminUsername": "adminuser",
       "sqlAdminPassword": "root@123456",
       "cosmosDbAccountName": "[concat('cosmosdb-',parameters('DeploymentID'))]",
@@ -437,19 +437,19 @@
   },
   "Sqlmi administrator login": {
       "type": "String",
-      "value": "[parameters('sqlMiAdminUsername')]"
+      "value": "[variables('sqlMiAdminUsername')]"
   },
   "Sqlmi administrator password": {
       "type": "String",
-      "value": "[parameters('sqlMiAdminPassword')]"
+      "value": "[variables('sqlMiAdminPassword')]"
   },
   "SQL Server Username": {
     "type": "string",
-    "value": "[parameters('sqlAdminUsername')]"
+    "value": "[variables('sqlAdminUsername')]"
 },
 "SQL Server Password": {
     "type": "string",
-    "value": "[parameters('sqlAdminPassword')]"
+    "value": "[variables('sqlAdminPassword')]"
 },
 "SQL Server Name": {
     "type": "string",
@@ -458,6 +458,18 @@
 "SQL databases Name": {
     "type": "string",
     "value": "[variables('sqlDatabaseName')]"
+},
+"SnowFlake Endpoint": {
+    "type": "string",
+    "value": "https://dlhdzca-bab11165.snowflakecomputing.com/"
+},
+"SnowFlake Username": {
+    "type": "string",
+    "value": "FABRIC_MIRRORING"
+},
+"SnowFlake Password": {
+    "type": "string",
+    "value": "8UpfRpExVDXv2AC"
 },
       "Trainer Password": {
         "type": "string",
