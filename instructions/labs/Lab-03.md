@@ -5,28 +5,34 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 ### Task-01 :Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
 
 
- 1. Navigate to the SQL Managed Instance in the Azure portal.
+ 1. Navigate to Azure portal and search for **SQL Managed Instance (1)** and select **SQL Managed Instance (2)**.
 
      ![](../media/Lab-05/sqlmi.png)
 
- 1. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On**.
+1. Select **sqlmi-<inject key="DeploymentID" enableCopy="false"/>**
+
+ 1. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On** and click on **Save**.
 
       ![](../media/Lab-05/sqlmi00.png)
 
+1. Click on **Networking (1)** under Security, **Enable (2)** Public endpoint(data) and click on **Save (3)**.
+
+   ![](../media/Lab-03/s12.png)
 
 1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the master database add the below creds :
 
-   - Server name : 
+   - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (3)**
 
-   - Authentication : SQL Authentication
+   - Authentication : **SQL Server Authentication (2)**
 
-   - Login : 
+   - Login : **<inject key="Sqlmi administrator login" enableCopy="false"/> (3)**
 
-   - Password :
+   - Password : **<inject key="Sqlmi administrator password" enableCopy="false"/> (4)**
+
 
      ![](../media/Lab-01/sql-login.png)
 
-1. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query:
+1. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query.
 
      ```sql
      SELECT * FROM sys.dm_server_managed_identities;
@@ -46,7 +52,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
 1. You will be able to see a fabric_login that's been created under logins 
 
-    ![](../media/Lab-01/fabric-login.png)
+    ![](../media/Lab-03/s13.png)
 
 1. Switch Query Scope to the Database You Want to Mirror
 
@@ -61,7 +67,8 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
      ```
-## Task-02: Create a Mirrored Azure SQL Managed Instance Database
+
+## Task 02: Create a Mirrored Azure SQL Managed Instance Database
 
 1. Navigate to the **Fabric portal** home.
 
@@ -69,7 +76,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
 2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-3. In the navigation menu, select **+New Item**.
+3. In the navigation menu, select **+ New Item**.
 
    ![](../media/Lab-01/fabric-new.png)
 
@@ -88,22 +95,25 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
      - **Server**: Find the Server name by navigating to the **Azure SQL Managed Instance** Networking page in the Azure portal under **Security**.
 
-       - Example: `<managed_instance_name>.public.<dns_zone>.database.windows.net,3342`
+     - Example: `<managed_instance_name>.public.<dns_zone>.database.windows.net,3342`
 
          ![](../media/Lab-03/endpoint.png)
 
-        - **Database**: Enter the name of the database you wish to mirror.
+     - **Database**: Enter the name of the database you wish to mirror.
 
-        - **Connection**: Create a new connection.
+     - **Connection**: Create a new connection.
 
-        - **Connection name**: An automatic name is provided, but you can change it for easier identification
+     - **Connection name**: An automatic name is provided, but you can change it for easier identification
         .
-        - **Authentication kind**: Choose from the following:
-            - Basic (SQL Authentication)
-       
-        - Select **Connect**.
+     - **Authentication kind**: Basic (SQL Authentication)
 
-         ![](../media/Lab-03/new-source-connect.png)
+     - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**
+
+     - **Password** : **<inject key="Sqlmi administrator password" enableCopy="false"/>**
+       
+     - Select **Connect**.
+
+       ![](../media/Lab-03/new-source-connect.png)
 
 ## Task -04: Start the Mirroring Process and Monitor Fabric Mirroring
 
