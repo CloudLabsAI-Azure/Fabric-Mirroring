@@ -366,29 +366,7 @@
             }
           }
         ]
-      },
-      {
-        "apiVersion": "2022-07-01-preview",
-        "name": "[variables('fabricname')]",
-        "location": "[parameters('location')]",
-        "dependsOn": [
-                  "[concat('Microsoft.Compute/virtualMachines/', variables('LabVMName'))]"
-              ],
-        
-        "sku": {
-            "name": "F2",
-            "tier": "Fabric"
-        },
-        "properties": {
-            "administration": {
-                "members": [
-                    "[parameters('AzureUserName')]"
-                ]
-            }
-        },
-        "type": "Microsoft.Fabric/capacities"
-      
-    },      
+      },      
       {
         "type": "Microsoft.Sql/managedInstances",
         "apiVersion": "2015-05-01-preview",
