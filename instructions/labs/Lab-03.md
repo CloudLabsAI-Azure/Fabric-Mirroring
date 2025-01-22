@@ -110,6 +110,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
      - **Password** : **<inject key="Sqlmi administrator password" enableCopy="false"/>**
        
      - Select **Connect**.
+       
 
        ![](../media/Lab-03/new-source-connect.png)
 
