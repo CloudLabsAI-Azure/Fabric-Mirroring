@@ -40,7 +40,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
    | Connection Setting | Description |
    |------------------------|-----------------|
-   | **Server (1)**             | dlhdzca-bab11165snowflakecomputing.com|
+   | **Server (1)**             | dlhdzca-bab11165.snowflakecomputing.com|
    | **Warehouse (2)**          | FABRICWAREHOUSE |
    | **Connection**         | Create new connection |
    | **Connection name**    | Default |
