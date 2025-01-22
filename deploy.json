@@ -499,11 +499,11 @@
 },
 "SnowFlake Username": {
     "type": "string",
-    "value": "SpektraSnowflake"
+    "value": "FABRIC_MIRRORING"
 },
 "SnowFlake Password": {
     "type": "string",
-    "value": "Flake@spektra2024"
+    "value": "8UpfRpExVDXv2AC"
 },
       "Trainer Password": {
         "type": "string",
