@@ -87,8 +87,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 8. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
  
-
- 
 # Login to fabric portal
 
 1. Open the **Microsoft Edge browser** on your desktop and visit `https://app.fabric.microsoft.com/` in Incognito mode. You will be navigated to the login page.

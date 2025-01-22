@@ -1,13 +1,12 @@
 # Lab –02 Configure Microsoft Fabric mirrored database from Azure Cosmos DB
 
-
 In this lab, you will configure an Azure Cosmos DB account and set up a mirrored database in Azure Fabric for data replication. You will connect Fabric to the source Cosmos DB and initiate the mirroring process, ensuring proper synchronization by monitoring its progress. Once the mirroring is complete, you will query the source database directly from Fabric. You will then analyze the mirrored database to gain insights and validate the replication process. Finally, you will explore how to leverage the mirrored data for reporting and analytics.
 
-## Ensure the Source Azure Cosmos DB Account is Correctly Configured
+## Task 1 : Ensure the Source Azure Cosmos DB Account is Correctly Configured
 
-1. In the Azure portal home, locate the search bar at the top of the screen. 
+1. In the Azure portal, locate the search bar at the top of the screen. 
 
-2. Type "Azure Cosmos DB" and press Enter. In the search results, select Azure Cosmos DB account.
+2. Type "Azure Cosmos DB", in the search results, select Azure Cosmos DB account.
 
      ![](../media/Lab-02/azure-cosmosdb.png)
 
@@ -87,7 +86,7 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
    - **Tip**: If you can't find the containers and the corresponding replication status, refresh the pane after a few seconds. In rare cases, transient error messages may appear; you can safely ignore them and refresh.
 
->**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
+     >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
 
 # Query the Source Database from Fabric
@@ -118,7 +117,7 @@ In this lab, you will configure an Azure Cosmos DB account and set up a mirrored
 
    - Now, Select Orderitems then select **New SQL Query**, and select **Select Top 100**.
 
-   ![](../media/Lab-02/new-sql-query.png)
+     ![](../media/Lab-02/new-sql-query.png)
 
    - Run any query. For example, use:
 
