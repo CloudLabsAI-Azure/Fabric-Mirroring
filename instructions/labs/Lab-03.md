@@ -28,9 +28,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
    - Login : **<inject key="Sqlmi administrator login" enableCopy="false"/> (3)**
 
    - Password : **<inject key="Sqlmi administrator password" enableCopy="false"/> (4)**
-
-
-     ![](../media/Lab-01/sql-login.png)
+       ![](../media/Lab-01/sql-login.png)
 
 1. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query.
 
@@ -99,7 +97,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
          ![](../media/Lab-03/endpoint.png)
 
-     - **Database**: Enter the name of the database you wish to mirror.
+     - **Database**: **SampleDatabase**
 
      - **Connection**: Create a new connection.
 
