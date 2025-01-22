@@ -52,7 +52,6 @@
       "sqlMiName": "[concat('sqlmi-',parameters('DeploymentID'))]",
       "sqlMiAdminUsername": "miadminuser",
       "sqlMiAdminPassword": "Root@12345678901",
-      "fabricname": "[concat('fabric',parameters('DeploymentID'))]",
       "routeTableName": "[concat('routetable-',parameters('DeploymentID'))]"
     },
     "resources": [
