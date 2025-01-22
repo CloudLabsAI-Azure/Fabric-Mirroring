@@ -88,7 +88,7 @@
                 }
             },
             "type": "Microsoft.Fabric/capacities"
-        }
+        },
       {
         "name": "[variables('winvirtualMachineName')]",
         "type": "Microsoft.Compute/virtualMachines",
