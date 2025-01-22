@@ -41,7 +41,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
    | Connection Setting | Description |
    |------------------------|-----------------|
    | **Server (1)**             | dlhdzca-bab11165.snowflakecomputing.com|
-   | **Warehouse (2)**          | FABRICWAREHOUSE |
+   | **Warehouse (2)**          | FABRICMIRRORING |
    | **Connection**         | Create new connection |
    | **Connection name**    | Default |
    | **Authentication kind (3)** | Snowflake |
