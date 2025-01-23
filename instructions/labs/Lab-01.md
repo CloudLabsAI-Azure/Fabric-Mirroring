@@ -1,18 +1,18 @@
 # Lab 01: Configure Microsoft Fabric mirrored databases from Azure SQL Database
 
-In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS) or Visual Studio Code. You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
+In this lab, the focus is on enabling System assigned managed identity (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS). You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
 
 ## Task 01:  Enable SAMI of your Azure SQL logical server
 
-1. In the azure portal , search for the **SQL server (1)** and select **SQL servers (2)**
+1. In the Azure portal, search for **SQL servers (1)** and choose **SQL servers (2)**.
    
    ![](../media/Lab-01/sql-servers.png)
 
-1. Select the SQL server : sqlserver-<inject key="DeploymentID" enableCopy="false"/>  
+1. Select the SQL servers **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
 
    ![](../media/Lab-01/server-1.png)
 
-1. To enable or verify the System Assigned Managed Identity (SAMI), go to your logical SQL Server in the Azure portal. In the resource menu, navigate to the **Security** section and select **Identity (1)**. Under the **System Assigned Managed Identity** option, ensure the **Status** is set to **On (2)**, and click **Save**.  
+1. In the resource menu, go to **Identity** under the **Security** section, **toggle on** the System Assigned Managed Identity (SAMI), and **save** the changes.
 
    ![](../media/Lab-01/sqldbserver01.png)
 
@@ -82,32 +82,6 @@ In this lab, the focus is on enabling SQL Analytics Monitoring Integration (SAMI
 1. Open the ```https://app.fabric.microsoft.com```, You will be navigated to the **Fabric Home**.
 
     ![](../media/Lab-01/image10.png)
-
-    To work with Fabric items, you will need a trial license and a workspace that has Fabric license. Let’s set this up.
-
-1. On the top right corner of the screen, select the **user** **icon**.
-
-1. Select **Free Trial**.
-
-    ![](../media/Lab-01/image11.png)
-
-1. Upgrade to a free Microsoft Fabric trial dialog opens. Select **Activate**.
-
-    ![](../media/Lab-01/image12.png)
-
-1. The "Successfully Upgraded to Microsoft Fabric" dialog will appear. Click on **Fabric Home Page**..  
-
-   ![](../media/Lab-01/fabrichome_1.png)
-
-1. You will be navigated back to the **Microsoft** **Fabric Home page**.
-
-    ![](../media/Lab-01/image10.png)
-
-1. On the Microsoft Fabric Home page , select **Power BI**
-
-    ![](../media/Lab-01/s4.png)
-
-1. Now let’s create a workspace with Fabric license. 
 
 1.  Now, select **Workspaces** and click on **+ New workspace**:
 
