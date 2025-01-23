@@ -413,7 +413,23 @@
             }
           }
         ]
-      },      
+      },
+       {
+        "type": "Microsoft.DocumentDB/databaseAccounts",
+        "apiVersion": "2015-04-08",
+        "name": "[variables('cosmosDbAccountName')]",
+        "location": "[resourceGroup().location]",
+        "kind": "GlobalDocumentDB",
+        "properties": {
+          "databaseAccountOfferType": "Standard",
+          "locations": [
+            {
+              "locationName": "[resourceGroup().location]",
+              "failoverPriority": 0
+            }
+          ]
+        }
+      },     
       {
         "type": "Microsoft.Sql/managedInstances",
         "apiVersion": "2015-05-01-preview",
