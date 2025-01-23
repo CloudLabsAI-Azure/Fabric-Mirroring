@@ -10,15 +10,14 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
 1. Select the SQL servers **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
 
-   ![](../media/Lab-01/fbdb.png)
+   ![](../media/Lab-01/fbdb-1.png)
 
-1. In the resource menu, go to **Identity** under the **Security** section, **toggle on** the System Assigned Managed Identity (SAMI), and **save** the changes.
+1. In the resource menu, go to **Identity(1)** under the **Security** section, **toggle on(2)** the System Assigned Managed Identity (SAMI), and **save(3)** the changes.
 
    ![](../media/Lab-01/sami-on.png)
 
-3. Now click on SQL Databases under Settings and select the database **samplesqldb** then click on Query editor (preview) from left pane.
 
-1. In the query editor (preview), log in to the SQL Server with server authentication:  
+1. From the left pane, select the **Query Editor (Preview)** and log in to the SQL Server using server authentication.
 
    - Username : <inject key="SQL Server Username" enableCopy="false"/> 
 
@@ -26,7 +25,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/query-editor.png)
 
-2. The SAMI must be the primary identity. Verify the SAMI is the primary identity with the following T-SQL query: 
+2. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
@@ -34,7 +33,9 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/query-editor-1-1.png)
 
-1. Now click on windows button and search for SQL Server Management Studio 20 and click on it to open. 
+1. In the Windows VM search bar, type **SSMS (1)** and **Select SQL server management studio (SSMS)(2)** to open SQL Server Management Studio.
+
+    ![](../media/Lab-01/ssms.png)
  
 1. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
@@ -54,7 +55,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
 1. Create a SQL-authenticated login named fabric_login. Use a strong password of your choice. Run the following T-SQL script in the master database by clicking Execute: 
 
-   **Note :** Provide the "strong password" as desired
+   >**Note :** Provide the "strong password" as desired
 
      ```
      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
@@ -63,11 +64,11 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/sql-query-1.png)
 
-4. You will be able to see a **fabric_login** login account that's been created under logins. 
+4. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
     ![](../media/Lab-01/fabric-login.png)
 
-    **Note :** If you are unable to see the fabric_login just refresh the pane.
+    >**Note :** If you are unable to see the fabric_login just refresh the pane.
 
      ![](../media/Lab-01/s3.png)
 
@@ -135,27 +136,28 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/sqldb.png)
 
- 1. On the Destination pane, ensure your database name is present and click on **Create mirrored database**.
+ 1. On the Destination pane, ensure **samplesqdb** database is present and click on **Create mirrored database**.
 
      ![](../media/Lab-01/s7.png)
 
  ## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
-1.  The Configure mirroring screen allows you to mirror all data in the database, by default.
 
-2. Choose the Mirror database option to initiate the mirroring process.
+1. Choose the Mirror database option to initiate the mirroring process.
 
-    ![](../media/Lab-01/mirrored-db.png)
+    ![](../media/Lab-01/.png)
 
-3. Please wait for 2 to 5 minutes. After that, click on "Monitor Replication" to check the status.
+   >**Note**: Please wait for 2 to 5 minutes. After that, click on "Monitor Replication" to check the status.
 
-4. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
+3. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
 
      ![](../media/Lab-01/sales-lt.png)
 
-   **Note:** Click on Refresh to see the synchronized tables
+   >**Note:** Click on Refresh to see the synchronized tables
 
-1. To create a table for mirroring, open SQL Server Management Studio (SSMS), navigate to the toolbar, click on **New Query** by right-clicking on your database, and paste the following code and run it by clicking on **Execute** button.
+4. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
+
+5. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
   
    ![](../media/Lab-01/s8.png)
   
@@ -171,20 +173,20 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
     ![](../media/Lab-01/create-table-1.png)
 
-7. You can view the newly created database under the list of databases in the database explorer.
+5. The newly created table will appear in the list of tables in the Database Explorer.
 
       ![](../media/Lab-01/new-table-1.png)
 
-1. Return to the Fabric environment, go to the mirrored database, and refresh the view. The newly created table should now be visible.
+6. Go back to the Fabric environment, navigate to the mirrored database, and refresh the view. The newly created table should now appear.
 
    ![](../media/Lab-01/new-table-2.png)
      
    >**Note**: If the tables and replication status do not appear immediately, wait a few seconds and refresh the panel again.
 
-5. Once the initial table copying is complete, a date will appear in the Last refresh column.
+7. After the initial table copy is complete, a date will appear in the **Last Completed** column.
 
 # Review
 
-In this lab, you have learned how to enable SAMI for your Azure SQL logical server by connecting via SQL Server Management Studio (SSMS) or Visual Studio Code with the mssql extension. After connecting to the master database, you proceed to set up and configure a mirrored Azure SQL Database. This setup ensures high availability by creating a replica of the database for failover scenarios. The process involves configuring database mirroring to maintain data synchronization between the primary and mirrored databases. Overall, the lab helps you establish disaster recovery and resilience for your Azure SQL Database environments.
+In this lab, you have learned how to enable SAMI for your System assigned managed identity by connecting via SQL Server Management Studio (SSMS) or Visual Studio Code with the mssql extension. After connecting to the master database, you proceed to set up and configure a mirrored Azure SQL Database. This setup ensures high availability by creating a replica of the database for failover scenarios. The process involves configuring database mirroring to maintain data synchronization between the primary and mirrored databases. Overall, the lab helps you establish disaster recovery and resilience for your Azure SQL Database environments.
 
 
