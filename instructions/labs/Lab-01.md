@@ -10,11 +10,11 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
 1. Select the SQL servers **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
 
-   ![](../media/Lab-01/server-1.png)
+   ![](../media/Lab-01/fbdb.png)
 
 1. In the resource menu, go to **Identity** under the **Security** section, **toggle on** the System Assigned Managed Identity (SAMI), and **save** the changes.
 
-   ![](../media/Lab-01/sqldbserver01.png)
+   ![](../media/Lab-01/sami-on.png)
 
 3. Now click on SQL Databases under Settings and select the database **samplesqldb** then click on Query editor (preview) from left pane.
 
