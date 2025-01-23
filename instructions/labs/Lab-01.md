@@ -145,8 +145,6 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
 1. Choose the Mirror database option to initiate the mirroring process.
 
-    ![](../media/Lab-01/.png)
-
    >**Note**: Please wait for 2 to 5 minutes. After that, click on "Monitor Replication" to check the status.
 
 3. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
