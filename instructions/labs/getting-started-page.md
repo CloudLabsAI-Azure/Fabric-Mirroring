@@ -73,7 +73,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 4. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Password :** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/sc900-image-2.png)
 
@@ -101,7 +101,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
         ![](../media/Lab-01/image6.png)
 
 
-     - **Password**: <inject key="AzureAdUserPassword"></inject>
+      - **Password :** <inject key="AzureAdUserPassword"></inject>
 
 
  1. Click **Sign in** and follow the prompts to sign into Fabric.
