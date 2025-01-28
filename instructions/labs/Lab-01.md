@@ -109,7 +109,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
 1. Open the ```https://app.fabric.microsoft.com```, You will be navigated to the **Fabric Home**.
 
-    ![](../media/Lab-01/image10.png)
+    ![](../media/Lab-01/power-bi.png)
 
 1.  Now, select **Workspaces** and click on **+ New workspace**:
 
@@ -158,21 +158,22 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/s6.png)
 
- 3. On the **Choose Data** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect**.
+ 3. On the **Choose Data (2)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (3)**.
  
+     ![](../media/Lab-01/select-db.png)
 
-     ![](../media/Lab-01/sqldb.png)
+ 1. On the Destination pane, ensure **samplesqdb (1)** database is present and click on **Create mirrored database (2)**.
 
- 1. On the Destination pane, ensure **samplesqdb** database is present and click on **Create mirrored database**.
-
-     ![](../media/Lab-01/s7.png)
+     ![](../media/Lab-01/sql-1-1.png)
 
  ## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
 
-1. Choose the Mirror database option to initiate the mirroring process.
+1. Creating your mirrored database.
 
-   >**Note**: Please wait for 2 to 5 minutes. After that, click on "Monitor Replication" to check the status.
+    ![](../media/Lab-01/mirrored-1.png)
+
+   >**Note**: Please wait for 2 to 5 minutes. 
 
 3. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
 
