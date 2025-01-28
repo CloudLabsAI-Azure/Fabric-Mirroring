@@ -12,7 +12,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/fbdb-1.png)
 
-1. In the resource menu, go to **Identity(1)** under the **Security** section, **toggle on(2)** the System Assigned Managed Identity (SAMI), and **save(3)** the changes.
+1. In the resource menu, go to **Identity(1)** under the **Security** section, **ON(2)** the System Assigned Managed Identity (SAMI), and **Save(3)** the changes.
 
    ![](../media/Lab-01/sami-on.png)
 
