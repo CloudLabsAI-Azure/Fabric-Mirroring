@@ -16,21 +16,31 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/sami-on.png)
 
- >**Note**: **Please wait until SAMI is turned on; it might take some time.**
+   >**Note**: **Please wait until SAMI is turned on; it might take some time.**
 
-1. Under **security**, Choose **Networking** and add a **firewall rule**.
+1. Under **Security**, Choose **Networking (1)** and **add a firewall rule (2)**.
+
+    ![](../media/Lab-01/add_firewall.png)
 
 
 1. Fill the details as shown below:
 
-   - Rule name : `Allowall`
+   - Rule name : `Allowall`(1)
 
-   - Start IPV4 address : `0.0.0.0`
+   - Start IPV4 address : `0.0.0.0`(2)
 
-   - End IPV4 address : `255.255.255.255`
+   - End IPV4 address : `255.255.255.255`(3)
 
+      ![](../media/Lab-01/allowall.png)
   
-1. On the search resources, services and docs of azure , search for SQL database and select the database **samplesqldb**
+1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database(1)** and **select it (2)**
+
+     ![](../media/Lab-01/sqldb.png)
+
+
+1. Select the **samplesqldb** database.
+
+     ![](../media/Lab-01/sampledb-1.png)
 
 1. From the left pane, select the **Query Editor (Preview)** and log in to the SQL Server using server authentication.
 
@@ -46,9 +56,9 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
    SELECT * FROM sys.dm_server_managed_identities;
    ```
 
-   ![](../media/Lab-01/query-editor-1-1.png)
+   ![](../media/Lab-01/add-1.png)
 
-1. In the Windows VM search bar, type **SSMS (1)** and **Select SQL server management studio (SSMS)(2)** to open SQL Server Management Studio.
+1. In the Windows VM search bar, type **SSMS** and select **SQL Server Management Studio (SSMS)** to open it.
 
     ![](../media/Lab-01/ssms.png)
  
@@ -64,11 +74,11 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/s1.png)
 
-1. Open a **New Query** from top menu to assign permissions. 
+1. Click on **New Query** in the toolbar to run the query.
  
    ![](../media/Lab-01/s2.png)
 
-1. Create a SQL-authenticated login named fabric_login. Use a strong password of your choice. Run the following T-SQL script in the master database by clicking Execute: 
+1. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
 
    >**Note :** Provide the "strong password" as desired
 
@@ -87,11 +97,13 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/s3.png)
 
-1. Open a new query window,  and create a database user connected to the login:
+1. In the same query, paste the code, highlight it, and execute the highlighted section. 
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
      ```
+
+     ![](../media/Lab-01/create-user.png)
 
 ## Task 02: Create a mirrored Azure SQL Database
 
