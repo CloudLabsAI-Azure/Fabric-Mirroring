@@ -16,6 +16,21 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/sami-on.png)
 
+ >**Note**: **Please wait until SAMI is turned on; it might take some time.**
+
+1. Under **security**, Choose **Networking** and add a **firewall rule**.
+
+
+1. Fill the details as shown below:
+
+   - Rule name : `Allowall`
+
+   - Start IPV4 address : `0.0.0.0`
+
+   - End IPV4 address : `255.255.255.255`
+
+  
+1. On the search resources, services and docs of azure , search for SQL database and select the database **samplesqldb**
 
 1. From the left pane, select the **Query Editor (Preview)** and log in to the SQL Server using server authentication.
 
