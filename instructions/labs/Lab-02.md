@@ -92,7 +92,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 ## Task 4 : Start the Mirroring Process and Monitor Fabric Mirroring
 
-1. Select ****. Mirroring will now begin.
+1. Select **Monitor Replication**. Mirroring will now begin.
 
    ![](../media/Lab-02/monitor-replication.png)
 
