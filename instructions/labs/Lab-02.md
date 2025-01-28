@@ -31,9 +31,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
    
 ## Task 2: Set Up a Mirrored Database
 
-1. Go to the **Fabric portal** home page.
+1. Go to the **Fabric portal** home page of powerbi.
 
-   ![](../media/Lab-01/image10.png)
+   ![](../media/Lab-01/power-bi.png)
 
 2. Open the existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -72,16 +72,18 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
     ![](../media/Lab-02/orderdb.png)
   
-5. In the **Destination** section, enter the name **Mirrored-SampleDB** and click **Create**.
+5. In the **Destination** section, enter the name **Mirrored-SampleDB** and click **Create mirrored database**.
 
      ![](../media/Lab-02/mirrored-db-1.png)
 
-     > **Note**: All containers within the selected database will be mirrored.
+      > **Note**: All containers within the selected database will be mirrored.
 
      > **Note**: If you encounter an error about needing to enable continuous backup, follow these steps, then click **Save (4)** and return to Step 1:
      
      - Navigate to your Azure Cosmos DB account and select **Backup & Restore (1)** from the left-hand pane.
+
      - Click **Change (2)** to modify the Backup policy mode.
+
      - Choose **Continuous (30 days) (3)**.
 
         ![](../media/Lab-02/s11.png)
@@ -90,11 +92,11 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 ## Task 4 : Start the Mirroring Process and Monitor Fabric Mirroring
 
-1. Select **Monitor Replication**. Mirroring will now begin.
+1. Select ****. Mirroring will now begin.
 
    ![](../media/Lab-02/monitor-replication.png)
 
->**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
+   >**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
 
 2. After a few minutes, the status should change to **Running**, indicating that the containers are being synchronized.
 
