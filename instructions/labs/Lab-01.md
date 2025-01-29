@@ -50,7 +50,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/query-editor.png)
 
-2. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
+1. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
@@ -89,7 +89,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/sql-query-1.png)
 
-4. You will be able to see a **fabric_login** login account that's been created under **logins**. 
+1. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
     ![](../media/Lab-01/fabric-login.png)
 
@@ -115,7 +115,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/workspace-1.png)
 
-2. Fill out the **Create a workspace** form with the following details:
+1. Fill out the **Create a workspace** form with the following details:
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -145,7 +145,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/azure-sql-database.png)
 
-2. Select New connection, enter the connection details to the Azure SQL Database.
+1. Select New connection, enter the connection details to the Azure SQL Database.
 
    - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
    - Database : **samplesqldb (2)**
@@ -158,7 +158,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/s6.png)
 
- 3. On the **Choose Data (2)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (3)**.
+ 1. On the **Choose Data (2)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (3)**.
  
      ![](../media/Lab-01/select-db.png)
 
@@ -166,8 +166,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/sql-1-1.png)
 
- ## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
-
+## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
 1. Creating your mirrored database.
 
@@ -175,7 +174,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    >**Note**: Please wait for 2 to 5 minutes. 
 
-3. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
+1. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
 
      ![](../media/Lab-01/sales-lt.png)
 
