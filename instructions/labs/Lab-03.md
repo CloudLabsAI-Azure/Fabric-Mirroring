@@ -115,7 +115,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     >**Note**:After 2-5 minutes, select **Monitor replication** to see the replication status.
 
-    
+    ![](../media/Lab-03/monitor-replication-1.png)
 
 1. The status should change to **Running**, which means the tables are being synchronized.
 
