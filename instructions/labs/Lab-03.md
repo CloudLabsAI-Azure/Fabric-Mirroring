@@ -31,12 +31,6 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
      
        ![](../media/Lab-01/sql-login.png)
 
-1. Ensure that SAMI is the primary identity. Verify this by running the following T-SQL query.
-
-     ```sql
-     SELECT * FROM sys.dm_server_managed_identities;
-     ```
-
 1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database by right clicking and selecting the new query
 
     - Provide the "strong password" as desired
@@ -71,7 +65,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
 1. Navigate to the **Fabric portal** home.
 
-    ![](../media/Lab-01/image10.png)
+    ![](../media/Lab-01/power-bi.png)
 
 2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -98,13 +92,13 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
          ![](../media/Lab-03/endpoint.png)
 
-     - **Database**: **SampleDatabase**
+     - **Database**: `SampleDatabase`
 
      - **Connection**: Create a new connection.
 
      - **Connection name**: An automatic name is provided, but you can change it for easier identification
         .
-     - **Authentication kind**: Basic (SQL Authentication)
+     - **Authentication kind**: Basic 
 
      - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**
 
@@ -121,7 +115,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     >**Note**:After 2-5 minutes, select **Monitor replication** to see the replication status.
 
-    ![](../media/Lab-02/monitor-replication.png)
+    
 
 1. The status should change to **Running**, which means the tables are being synchronized.
 
