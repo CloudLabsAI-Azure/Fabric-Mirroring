@@ -98,15 +98,15 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
      - **Username/Email**: <inject key="AzureAdUserEmail"></inject>
 
-        ![](../media/Lab-01/image6.png)
+       ![](../media/Lab-01/image6.png)
 
 
-      - **Password :** <inject key="AzureAdUserPassword"></inject>
+     - **Password :** <inject key="AzureAdUserPassword"></inject>
 
 
  1. Click **Sign in** and follow the prompts to sign into Fabric.
 
- 1. You will be navigated to the **Fabric Home**.
+ 1. You will be navigated to the **Fabric   Home**.
 
      ![](../media/Lab-01/image10.png)
 
