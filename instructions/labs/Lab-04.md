@@ -8,7 +8,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 1. Navigate to the **Fabric portal** home.
 
-    ![](../media/Lab-01/image10.png)
+    ![](../media/Lab-01/power-bi.png)
 
 2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
