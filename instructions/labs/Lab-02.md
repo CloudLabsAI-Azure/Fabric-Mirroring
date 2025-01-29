@@ -66,9 +66,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
        ![](../media/Lab-02/s10.png)
 
-3. In the **New Connection** pane, select **OrderDB** and click **Connect**.
-
-4. Under the **Choose Data** section, click **Connect**.
+3. Under the **Choose Data** section, click **Connect**.
 
     ![](../media/Lab-02/orderdb.png)
   
@@ -123,75 +121,88 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 ## Task 6 : Analyze the Target Mirrored Database
 
-1. Navigate to the mirrored database within the Fabric portal.
 
-2. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics Endpoint**.
+1. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics Endpoint**.
 
      ![](../media/Lab-02/sql-endpoint.png)
 
-3. Each container from the source database will appear as a warehouse table in the SQL Analytics Endpoint.
+2. Each container from the source database will appear as a warehouse table in the SQL Analytics Endpoint.
 
-4. Select **Orderstatus**, open the context menu, and click on **New SQL Query**, then choose **Select Top 100**. The query will run and return the top 100 records from the selected table.
+3. Select **Orderstatus**, open the context menu, and click on **New SQL Query**, then choose **Select Top 100**. The query will run and return the top 100 records from the selected table.
 
    - Next, select **Orderitems**, click **New SQL Query**, and choose **Select Top 100**.
 
    - Run the following sample query:
 
         ```sql
-          SELECT TOP (100) [_rid],
-                         [id],
-                         [categoryId],
-                         [categoryName],
-                         [sku],
+         SELECT TOP (100)[_rid],
+                           [id],
+                   [categoryId],
+                 [categoryName],
+                          [sku],
                          [name],
-                         [description],
-                         [price],
+                  [description],
+                        [price],
                          [tags],
-                         [_ts]
-          FROM [OrderDB].[OrderDB].[Orderitems]
+                          [_ts]
+         FROM [OrderDB].[OrderDB].[Orderitems]
         ```
 
      ![](../media/Lab-02/results-1.png)
 
-5. Return to the **SQL Analytics Endpoint** in the Fabric portal.
+5. Select **New Visual Query** to open the query editor from     
 
-6. Select **New Visual Query** to open the query editor.
+      ![](../media/Lab-02/query-1.png)
 
-     ![](../media/Lab-02/new-visual-query.png)
-
-7. Drag and drop both the **Orderstatus** and **Orderitems** tables into the query editor.
+6. Drag and drop both the **Orderstatus** and **Orderitems** tables into the query editor.
 
      ![](../media/Lab-02/both-orders.png)
 
-8. Click the **+** icon in the first query and choose **Merge query as new**.
+7. Click the **+** icon in the first query and choose **Merge query as new**.
 
      ![](../media/Lab-02/merge-as-view.png)
 
-9. For the merge, select **Orderitems** from the right table and choose **id**, then click **OK**.
+8. For the merge, select **Orderitems** from the right table and choose **id**, then click **OK**.
 
       ![](../media/Lab-02/merge-query-011.png)
 
-10. Once merged, your visual query will appear as follows:
+9. Once merged, your visual query will appear as follows:
 
      ![](../media/Lab-02/order-final.png)
 
-11. From the toolbar, go to the **Reporting** tab and click on **New Report**.
+10. On the query editor pane , select **save as view**.
+
+     ![](../media/Lab-02/save-as-view.png)
+
+11. In the **Save As** window, select **OrderDB (1)** as the schema and name the view as **Merged_orders (2)**,then click **OK (3)**.
+
+     ![](../media/Lab-02/save-as-1.png)
+
+10. From the toolbar, go to the **Reporting** tab and click on **New Report**.
 
      ![](../media/Lab-02/new-report-1.png)
 
-12. When the pop-up appears displaying all available data, click **Continue**.
+11. When the pop-up appears displaying all available data, click **Continue**.
 
-      ![](../media/Lab-02/new-report-0.png)
+      ![](../media/Lab-02/new-report.png)
 
-13. Expand the **Data Pane** and select the **Sum of _ts**, **categoryid**, and **Sum of price**.
+12. When the pop-up appears, select **Try Free** to upgrade to a paid Power BI license.
 
-     ![](../media/Lab-02/data-panel.png)
+      ![](../media/Lab-02/powerbi.png)
 
-14. In the **Visualization Pane**, select the **Clustered Column Chart**.
+13. Click on **Got it**.
+
+      ![](../media/Lab-02/powerbi0.png)
+
+12. Expand the **Data Pane** and select the **Sum of _ts**, **categoryid**, and **Sum of price**.
+
+     ![](../media/Lab-02/data.png)
+
+13. In the **Visualization Pane**, select the **Clustered Column Chart**.
 
      ![](../media/Lab-02/choosevis.png)
 
-15. Finally, the generated report for **OrderDB** will be displayed. Save the report as **Orders-reports**.
+14. Finally, the generated report for **OrderDB** will be displayed. Save the report as **Orders-reports**.
 
     ![](../media/Lab-02/final-report.png)
 
