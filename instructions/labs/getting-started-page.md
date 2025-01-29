@@ -89,24 +89,21 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 # Login to fabric portal
 
- 1. Open the **Microsoft Edge browser** on your desktop and visit `https://app.fabric.microsoft.com/` in Incognito mode. You will be navigated to the login page.
+1. Open the **Microsoft Edge browser** on your desktop and visit `https://app.fabric.microsoft.com/` in Incognito mode. You will be navigated to the login page.
 
      ![](../media/Lab-01/image5.png)
 
-
- 1. Enter the following email/username, and then click on **Submit**.  
+1. Enter the following email/username, and then click on **Submit**.  
 
      - **Username/Email**: <inject key="AzureAdUserEmail"></inject>
 
-       ![](../media/Lab-01/image6.png)
-
+        ![](../media/Lab-01/image6.png)
 
      - **Password :** <inject key="AzureAdUserPassword"></inject>
 
+1. Click **Sign in** and follow the prompts to sign into Fabric.
 
- 1. Click **Sign in** and follow the prompts to sign into Fabric.
-
- 1. You will be navigated to the **Fabric   Home**.
+1. You will be navigated to the **Fabric Home**.
 
      ![](../media/Lab-01/image10.png)
 
