@@ -1,4 +1,4 @@
-# Lab-04 Mirroring Snowflake in Microsoft Fabric
+# Lab 04: Mirroring Snowflake in Microsoft Fabric
 
 In this lab, you’ll create a mirrored database in Microsoft Fabric and connect to your Snowflake instance on any cloud platform. You’ll start the mirroring process to replicate the Snowflake database into Fabric. Finally, you’ll monitor and view the status of the Fabric Snowflake mirroring process to ensure successful replication and synchronization.
 
