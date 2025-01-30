@@ -1,8 +1,8 @@
 # Lab 03: Configure Microsoft Fabric mirrored databases from Azure SQL Managed Instance (Preview)
 
-In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configure SAMI (SQL Server Always On Managed Instance) for mirroring. You will create a mirrored database on the primary instance, enable synchronization with the secondary, and start the mirroring process. Finally, you will monitor the mirroring status using Azure tools to ensure high availability.
+In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configure SAMI for mirroring. You will create a mirrored database on the primary instance, enable synchronization with the secondary, and start the mirroring process. Finally, you will monitor the mirroring status using Azure tools to ensure high availability.
 
-### Task-01 :Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
+### Task 01: Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
 
 
  1. Navigate to Azure portal and search for **SQL Managed Instance (1)** and select **SQL Managed Instance (2)**.
@@ -109,7 +109,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
        ![](../media/Lab-03/new-source-connect.png)
 
-## Task -04: Start the Mirroring Process and Monitor Fabric Mirroring
+## Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
 
 1. The **Monitor Replication** screen will allow you to mirror all data in the database by default.
 
@@ -145,4 +145,4 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
 ## Review
 
-In this lab, you have set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configured SAMI (SQL Server Always On Managed Instance) for mirroring. You have created a mirrored database on the primary instance, enabled synchronization with the secondary, and started the mirroring process. Finally, you have monitored the mirroring status using Azure tools to ensure high availability.
+In this lab, you have set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configured SAMI for mirroring. You have created a mirrored database on the primary instance, enabled synchronization with the secondary, and started the mirroring process. Finally, you have monitored the mirroring status using Azure tools to ensure high availability.

@@ -60,7 +60,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
    ![](../media/Lab-02/mirrored-1.png)
 
 
-## Task 03 : Connect to the Source Database
+## Task 03: Connect to the Source Database
 
 1. In the **New Connection** section, choose **Azure Cosmos DB v2**.
 
@@ -97,7 +97,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 
 
-## Task 04 : Start the Mirroring Process and Monitor Fabric Mirroring
+## Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
 
 1. Select **Monitor Replication**. Mirroring will now begin.
 
@@ -115,7 +115,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
      >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
 
-## Task 05 : Query the Source Database from Fabric
+## Task 05: Query the Source Database from Fabric
 
 1. Go to the mirrored database in the Fabric portal.
 
@@ -128,7 +128,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
   > **Note**: All read operations on the source database are routed to Azure and will consume Request Units (RUs) allocated to the account.
 
 
-## Task 06 : Analyze the Target Mirrored Database
+## Task 06: Analyze the Target Mirrored Database
 
 
 1. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics Endpoint**.
