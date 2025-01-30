@@ -16,14 +16,6 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
    ![](../media/Lab-01/fabric-new.png)
 
-4. **Scroll down** and select the **Mirrored Snowflake (preview)** card.
-
-     ![](../media/Lab-04/mirrored-db.png)
-
-1. Enter a name as **Mirrored_<inject key="DeploymentID" enableCopy="false"/>** and Click on create **Create**
-
-     ![](../media/Lab-04/md-1.png)
-
 
 ## Task-02 Connect to your Snowflake instance in any cloud 
 
