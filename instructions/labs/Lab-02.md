@@ -32,6 +32,16 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
       ![](../media/Lab-02/s10.png)
 
+9. Now select **Backup & Restore (1)** from the left-hand pane.
+
+     - Click **Change (2)** to modify the Backup policy mode.
+
+     - Choose **Continuous (30 days) (3)**.
+
+     - Click on **Save (4)**
+
+        ![](../media/Lab-02/s11.png)
+
    
 ## Task 02: Set Up a Mirrored Database
 
@@ -83,15 +93,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
       > **Note**: All containers within the selected database will be mirrored.
 
-     > **Note**: If you encounter an error about needing to enable continuous backup, follow these steps, then click **Save (4)** and return to Step 1:
      
-     - Navigate to your Azure Cosmos DB account and select **Backup & Restore (1)** from the left-hand pane.
-
-     - Click **Change (2)** to modify the Backup policy mode.
-
-     - Choose **Continuous (30 days) (3)**.
-
-        ![](../media/Lab-02/s11.png)
 
 
 
