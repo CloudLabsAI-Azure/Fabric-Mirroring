@@ -103,9 +103,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. Click **Sign in** and follow the prompts to sign into Fabric.
 
-1. You will be navigated to the **Fabric Home**.
+1. You will be navigated to the **Fabric Home** and choose powerbi.
 
-     ![](../media/Lab-01/image10.png)
+     ![](../media/Lab-01/powerbi-1.png)
 
 ## Support Contact
 
