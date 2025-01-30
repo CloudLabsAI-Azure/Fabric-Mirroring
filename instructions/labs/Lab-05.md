@@ -2,7 +2,7 @@
 
 In this lab, you will learn how to configure Microsoft Fabric open mirrored databases. You will start by creating an open mirrored database within the Fabric environment. Then, you'll write change data into the landing zone to ensure synchronization. After that, you will initiate the mirroring process to enable data replication. Finally, you’ll monitor the mirroring process to ensure data consistency and resolve any issues that arise during synchronization.
 
-## Task-01: Create an Open mirrored database 
+## Task 01: Create an Open mirrored database 
 
 1. Navigate to the **Fabric portal** home.
 
@@ -26,14 +26,14 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
 
      ![](../media/Lab-05/landing-zone-1.png)
 
-## Task-02  Write Change Data into the Landing Zone(Read-Only)
+## Task 02  Write Change Data into the Landing Zone(Read-Only)
 
 1. Write data to the landing zone.
 1. Your application can now write both initial load and incremental change data to the landing zone.
 1. Connect to Microsoft OneLake to authorize and write data to the mirrored database landing zone in OneLake.
 1. Review the **Open Mirroring Landing Zone Requirements** and the associated format specifications.
 
-## Task -03: Start and Monitor the Replication Process
+## Task 03: Start and Monitor the Replication Process
 
 1. On the Configure Mirroring screen, the default setting mirrors all data in the database.
 

@@ -17,7 +17,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
    ![](../media/Lab-01/fabric-new.png)
 
 
-## Task 02 Connect to your Snowflake instance in any cloud 
+## Task 02: Connect to your Snowflake instance in any cloud 
 
 1. Navigate back to your workspaace and create a new item.
 
@@ -51,7 +51,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
       ![](../media/Lab-04/destination-1-1.png)
       
-## Task 03 Start mirroring process for Snowflake database 
+## Task 03: Start mirroring process for Snowflake database 
 
 1. Click Mirror database to start the mirroring process.
 
@@ -65,7 +65,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 1. Once the initial table copying is complete, a date will appear in the Last refresh column.
 
-## Task 4 : Monitor & View of the Fabric Snowflake Mirroring 
+## Task 04: Monitor & View of the Fabric Snowflake Mirroring 
 
 1. Observe the replication process and view the active Fabric operations.
 
