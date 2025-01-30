@@ -2,7 +2,7 @@
 
 In this lab, you will set up an Azure Cosmos DB account and configure a mirrored database in Azure Fabric for data replication. You will link Fabric to the source Cosmos DB and initiate the mirroring process while ensuring proper synchronization by tracking its progress. Once the mirroring process is completed, you will query the source database directly from Fabric. You will then examine the mirrored database to gain insights and verify the replication. Finally, you will explore how to use the mirrored data for reporting and analytics.
 
-### Task 1: Verify the Configuration of the Source Azure Cosmos DB Account
+### Task 01: Verify the Configuration of the Source Azure Cosmos DB Account
 
 1. In the Azure portal, type **"Azure Cosmos DB"** in the search bar at the top of the page, and select the **Azure Cosmos DB account** from the search results.
 
@@ -28,8 +28,12 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
    ![](../media/Lab-02/democosmos.png)
 
+8. Select **Keys** from the left-hand pane, then copy the **endpoint URL** and **primary key** and paste them in a notepad for use in the further steps.
+
+      ![](../media/Lab-02/s10.png)
+
    
-## Task 2: Set Up a Mirrored Database
+## Task 02: Set Up a Mirrored Database
 
 1. Go to the **Fabric portal** home page of powerbi.
 
@@ -46,7 +50,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
    ![](../media/Lab-02/mirrored-1.png)
 
 
-## Task 3 : Connect to the Source Database
+## Task 03 : Connect to the Source Database
 
 1. In the **New Connection** section, choose **Azure Cosmos DB v2**.
 
@@ -54,17 +58,20 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 2. Enter the credentials for your Azure Cosmos DB for NoSQL account, including the following details:
 
-     - **Azure Cosmos DB endpoint**: The URL endpoint for the source account.
+     - **Azure Cosmos DB endpoint**: Paste the endpoint URL that you save in the notepad earlier.
+
      - **Connection name**: A unique name for this connection.
-     - **Authentication kind**: Select **Account key**.
-     - **Account Key**: Enter the primary key.
+
+     - **Authentication kind**: Select
+     **Account key**.
+
+     - **Account Key**: Paste the account key that you saved in the notepad earlier.
+     
      - Click **Connect**. 
 
        ![](../media/Lab-02/cosmos-db.png)
 
-       >**Note**: To find the necessary credentials, go to the Azure portal, navigate to your Cosmos DB account, select **Keys** from the left-hand pane, and copy the endpoint URL and primary key.
-
-       ![](../media/Lab-02/s10.png)
+   
 
 3. Under the **Choose Data** section, click **Connect**.
 
@@ -88,7 +95,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 
 
-## Task 4 : Start the Mirroring Process and Monitor Fabric Mirroring
+## Task 04 : Start the Mirroring Process and Monitor Fabric Mirroring
 
 1. Select **Monitor Replication**. Mirroring will now begin.
 
@@ -106,7 +113,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
      >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
 
-## Task 5 : Query the Source Database from Fabric
+## Task 05 : Query the Source Database from Fabric
 
 1. Go to the mirrored database in the Fabric portal.
 
@@ -119,7 +126,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
   > **Note**: All read operations on the source database are routed to Azure and will consume Request Units (RUs) allocated to the account.
 
 
-## Task 6 : Analyze the Target Mirrored Database
+## Task 06 : Analyze the Target Mirrored Database
 
 
 1. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics Endpoint**.
@@ -130,7 +137,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 3. Select **Orderstatus**, open the context menu, and click on **New SQL Query**, then choose **Select Top 100**. The query will run and return the top 100 records from the selected table.
 
-   - Next, select **Orderitems**, click **New SQL Query**, and choose **Select Top 100**.
+
+
+4. Next, select **Orderitems**, click **New SQL Query**, and choose **Select Top 100**.
 
    - Run the following sample query:
 
@@ -150,9 +159,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
      ![](../media/Lab-02/results-1.png)
 
-5. Select **New Visual Query** to open the query editor from     
+5. Select **New Visual Query** to open the query editor from the tool bar.    
 
-      ![](../media/Lab-02/query-1.png)
+      ![](../media/Lab-02/new-visual-query.png)
 
 6. Drag and drop both the **Orderstatus** and **Orderitems** tables into the query editor.
 

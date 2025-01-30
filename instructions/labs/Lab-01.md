@@ -166,7 +166,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
      ![](../media/Lab-01/sql-1-1.png)
 
-## Task-03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
+## Task 03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
 1. Creating your mirrored database.
 
