@@ -2,7 +2,7 @@
 
 In this lab, you’ll create a mirrored database in Microsoft Fabric and connect to your Snowflake instance on any cloud platform. You’ll start the mirroring process to replicate the Snowflake database into Fabric. Finally, you’ll monitor and view the status of the Fabric Snowflake mirroring process to ensure successful replication and synchronization.
 
-## Task-01: Create a mirrored database in Microsoft Fabric 
+## Task 01: Create a mirrored database in Microsoft Fabric 
 
 In this section, we'll provide a brief overview of how to create a new mirrored database to use with your mirrored Snowflake data source.
 
@@ -17,7 +17,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
    ![](../media/Lab-01/fabric-new.png)
 
 
-## Task-02 Connect to your Snowflake instance in any cloud 
+## Task 02 Connect to your Snowflake instance in any cloud 
 
 1. Navigate back to your workspaace and create a new item.
 
@@ -32,32 +32,26 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
    | Connection Setting | Description |
    |------------------------|-----------------|
-   | **Server (1)**             | dlhdzca-bab11165.snowflakecomputing.com|
-   | **Warehouse (2)**          | FABRICMIRRORING |
-   | **Connection**         | Create new connection |
-   | **Connection name**    | Default |
+   | **Server (1)**| lg70717.west-us-2.azure.snowflakecomputing.com|
+   | **Warehouse (2)**| ICEBERGSAMPLE_WH |
+   | **Connection**| Create new connection |
+   | **Connection name** | Default |
    | **Authentication kind (3)** | Snowflake |
-   | **Username (4)**           | <inject key="SnowFlake Username" enableCopy="false"/> |
-   | **Password (5)**           | <inject key="SnowFlake Password" enableCopy="false"/> |
-   | **Database**           | FABRIC_MIRRORING|
+   | **Username (4)**| ICEBERGUSER |
+   | **Password (5)**| Adminuser@12345|
+   | **Database**| |
 
-      ![](../media/Lab-04/s16.png)
+      ![](../media/Lab-04/snowflake-1.png)
 
-1. Select **FABRIC_MIRRORING** database from dropdown list and click on **Connect**.
-
-      ![](../media/Lab-04/fabric-mirroring.png)
-
-1. View the tablets that's selected and then click on **Connect**.
-
-      ![](../media/Lab-04/choose-data.png)
-   
-1. The **Configure mirroring** screen will allow you to mirror all data in the database by default.
+  1. View the tablets that's selected and then click on **Connect**.
      
-     ![](../media/Lab-04/choose-data.png)
+     ![](../media/Lab-04/ice-berg-1.png)
 
-1. In Destination pane ensure **FABRIC_MIRRORING** is selected and click on **Create mirrored database**.
+1. Select **ICEBERGSAMPLE_DB** database from dropdown list and click on **Connect mirrored database**.
+
+      ![](../media/Lab-04/destination-1-1.png)
       
-## Task-03 Start mirroring process for Snowflake database 
+## Task 03 Start mirroring process for Snowflake database 
 
 1. Click Mirror database to start the mirroring process.
 
