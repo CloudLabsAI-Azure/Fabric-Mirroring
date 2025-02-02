@@ -19,64 +19,83 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 ## Task 02: Connect to your Snowflake instance in any cloud 
 
-1. Navigate back to your workspaace and create a new item.
-
 1. Select **Mirrored Snowflake** under get data.
 
    ![](../media/Lab-04/s14.png)
 
 1. Select **Snowflake** under **Choose a database connection**. 
 
+    ![](../media/Lab-04/snowflake.png)
+
 2. **Configure Connection Settings**
    If you selected **New connection**, enter the following connection details and click on **Connect (6)**
 
    | Connection Setting | Description |
    |------------------------|-----------------|
-   | **Server (1)**| lg70717.west-us-2.azure.snowflakecomputing.com|
-   | **Warehouse (2)**| ICEBERGSAMPLE_WH |
+   | **Server (1)**| flutkda-rq11962.snowflakecomputing.com|
+   | **Warehouse (2)**| ICEBERG_WH |
    | **Connection**| Create new connection |
-   | **Connection name** | Default |
+   | **Connection name** | SNOWFLAKE |
    | **Authentication kind (3)** | Snowflake |
-   | **Username (4)**| ICEBERGUSER |
-   | **Password (5)**| Adminuser@12345|
-   | **Database**| |
+   | **Username (4)**| SNOWFLAKEUSER |
+   | **Password (5)**| Adminuser@12345 |
+  
 
-      ![](../media/Lab-04/snowflake-1.png)
+      ![](../media/Lab-04/connection-1.png)
 
-  1. View the tablets that's selected and then click on **Connect**.
+  1. **Select all** , then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
      
-     ![](../media/Lab-04/ice-berg-1.png)
+     ![](../media/Lab-04/table-1.png)
 
-1. Select **ICEBERGSAMPLE_DB** database from dropdown list and click on **Connect mirrored database**.
+1. In the **New connection** pane, select **ICEBERG_DB (1)** from the drop-down, then **click on Connect (2)**.
 
-      ![](../media/Lab-04/destination-1-1.png)
+    ![](../media/Lab-04/new-con.png)
+
+1. Select **ICEBERG_DB (1)** database from dropdown list and click on **Connect mirrored database (2)**.
+
+      ![](../media/Lab-04/iceberg-demo-1.png)
       
-## Task 03: Start mirroring process for Snowflake database 
+## Task 03: Initiate the mirroring process for the Snowflake database, and monitor and view the Snowflake Fabric mirroring.
 
-1. Click Mirror database to start the mirroring process.
+1. The **Creation of mirrored database** begins.
+
+    ![](../media/Lab-04/created-mirrored.png)
 
 1. After configuring mirroring, you'll be redirected to the Mirroring Status page, where you can monitor the replication status.
 
    > **Note:** Allow 2-5 minutes, then click Monitor replication to check the status.
 
-1. Within a few minutes, the status should update to Running, indicating that the tables are being synchronized.
+1. Within a few minutes, the status will update to **Running**, indicating that the tables are being synchronized. Once the initial table copying is complete, a date will appear in the **Last Refresh** column.
 
-1. If the tables and replication status are not immediately visible, wait a few seconds and refresh the panel.
+      ![](../media/Lab-04/iceberg-schema.png)
 
-1. Once the initial table copying is complete, a date will appear in the Last refresh column.
+>**Note**: If the tables and replication status are not immediately visible, wait a few seconds and refresh the panel.
 
-## Task 04: Monitor & View of the Fabric Snowflake Mirroring 
 
-1. Observe the replication process and view the active Fabric operations.
+## Task 04: Query and view the mirrored data
 
-   ![](../media/Lab-04/public-demo.png)
+1. Open **Query in T-SQL** by selecting it from the **Monitor Replication** window.
 
-1. Table Level Monitoring:
+    ![](../media/Lab-03/query-1.png)
 
-      - **Running** – Data from the table is successfully being replicated into the warehouse.
-      - **Running with warning** – Warning of non-fatal error with replication of the data from the table.
-      - **Stopping/Stopped** – Replication has stopped.
-      - **Error** – Fatal error in replication for that table.
+
+1. In the **Explorer** pane, expand **Iceberg_schema** > **Tables**, and you will see the **Sales** table.
+
+     ![](../media/Lab-04/sales-1.png)
+
+1. From the ellipses on the **Sales (1)** table, **click** on it, **select New SQL Query(2)**, and choose **Show Top 100 (3)**.
+
+     ![](../media/Lab-04/selettop.png)
+
+1. Now, the query will run automatically.
+
+     ![](../media/Lab-04/run-1-1.png)
+
+1. From the **Results**, you can view all the **Top 100** rows.
+
+     ![](../media/Lab-04/results.png)
+
+
 
    ## Review
    
