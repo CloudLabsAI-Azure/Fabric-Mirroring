@@ -445,7 +445,9 @@
           "licenseType": "LicenseIncluded",
           "vCores": 4,
           "storageSizeInGB": 32,
-          "collation": "SQL_Latin1_General_CP1_CI_AS"
+          "collation": "SQL_Latin1_General_CP1_CI_AS",
+          "databaseFormat": "AlwaysUpToDate",
+          "publicDataEndpointEnabled": true
         },
         "resources": [
           {
