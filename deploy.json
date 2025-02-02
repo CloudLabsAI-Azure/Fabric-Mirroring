@@ -448,11 +448,10 @@
           "collation": "SQL_Latin1_General_CP1_CI_AS",
           "databaseFormat": "AlwaysUpToDate",
           "publicDataEndpointEnabled": true,
-          "authenticationMetadata": "AzureAD"
+          "updatePolicy": {
+          "autoApply": "AlwaysUpToDate"       
+        }
         },
-        "updatePolicy": {
-            "autoApply": "AlwaysUpToDate"  
-          },
         "resources": [
           {
             "type": "databases",
