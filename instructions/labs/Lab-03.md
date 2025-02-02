@@ -19,6 +19,10 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
    ![](../media/Lab-03/s12.png)
 
+1. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later for creating the mirrored database in Fabric.
+
+   ![](../media/Lab-03/endpoint.png)
+
 1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the  database add the below creds :
 
    - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (3)**
@@ -31,12 +35,19 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
      
        ![](../media/Lab-01/sql-login.png)
 
-1. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
+1. Click on **New Query** in the toolbar to run the query.
+ 
+   ![](../media/Lab-01/s2.png)
+
+1. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor(1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
    ```
-1. In the Same query , run the follwoing and create a table in sampledb database to mirror
+
+   ![](../media/Lab-03/sqlmi-mi-1.png)
+
+1. In the same query window, run the following command to create a `Sales` table in the `SampleDatabase`, which will be used for database mirroring.
 
     ```
     CREATE TABLE Sales (
@@ -48,7 +59,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
    );
    ```
 
-1. You can insert 50 rows of data into the Sales table. Below is an example that generates random sales data:
+1. You can insert 50 rows of data into the `Sales` table. Below is an example that generates sales data:
 
     ```
     DECLARE @i INT = 1;
@@ -98,11 +109,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
 9. Select **New connection**, enter the following details:
 
-     - **Server**: Find the Server name by navigating to the **Azure SQL Managed Instance** Networking page in the Azure portal under **Security** (1).
-
-     - Example: `<managed_instance_name>.public.<dns_zone>.database.windows.net,3342`
-
-         ![](../media/Lab-03/endpoint.png)
+     - **Server** : Paste the public endpoint that you copied and saved in the notepad during the previous steps (1)
 
      - **Database**: `SampleDatabase`(2)
 
@@ -168,7 +175,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     ```
     -- Query to get the number of rows and the last ingestion date
-    
+
     SELECT 
         COUNT(*) AS TotalRows,                     
         MAX(SaleDate) AS LastIngestionDate        
