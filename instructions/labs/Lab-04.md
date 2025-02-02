@@ -43,13 +43,15 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
       ![](../media/Lab-04/connection-1.png)
 
-  1. **Select all** , then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
-     
-     ![](../media/Lab-04/table-1.png)
-
+  
 1. In the **New connection** pane, select **ICEBERG_DB (1)** from the drop-down, then **click on Connect (2)**.
 
     ![](../media/Lab-04/new-con.png)
+
+  1. **Select all** from the choose data pane , then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
+     
+     ![](../media/Lab-04/table-1.png)
+
 
 1. Select **ICEBERG_DB (1)** database from dropdown list and click on **Connect mirrored database (2)**.
 
