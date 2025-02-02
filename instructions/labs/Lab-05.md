@@ -113,7 +113,7 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
 
     ![](../media/Lab-05/upload-1-1.png)
 
-1. In the **Upload Files** pane, **select** the **"..."** (ellipsis) to browse for files. Then, go to **This PC/Downloads**, **select** the **`00000000....1.parquet`** file, and **open** it to upload.
+1. In the **Upload Files** pane, **select** the **"..."** (ellipsis) to browse for files. Then, go to **C:\Downloads\Labfiles**, **select** the **`00000000....1.parquet`** file, and **open** it to upload.
    
      ![](../media/Lab-05/001-ipload.png)
 
