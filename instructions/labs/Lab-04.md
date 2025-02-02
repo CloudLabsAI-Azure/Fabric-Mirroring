@@ -28,7 +28,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
     ![](../media/Lab-04/snowflake.png)
 
 2. **Configure Connection Settings**
-   If you selected **New connection**, enter the following connection details and click on **Connect (6)**
+   on the **New connection**, enter the following connection details and click on **Connect (6)**
 
    | Connection Setting | Description |
    |------------------------|-----------------|
