@@ -15,9 +15,6 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
       ![](../media/Lab-05/sqlmi00.png)
 
-1. Click on **Networking (1)** under Security, **Enable (2)** Public endpoint(data) and click on **Save (3)**.
-
-   ![](../media/Lab-03/s12.png)
 
 1. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later for creating the mirrored database in Fabric.
 
