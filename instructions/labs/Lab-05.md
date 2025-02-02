@@ -44,7 +44,7 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
 4. On the **sign-in** page, select the account **<inject key="AzureAdUserEmail"></inject>**. A pop-up will prompt you to close the window. After logging in, Once you're logged in, close the pop-up and return to **Azure Storage Explorer**.
 
 
-    ![](../media/Lab-05/odl-1.png)
+     ![](../media/Lab-05/odl-1.png)
 
 5. You'll be able to view the resources, resource groups, and subscriptions.
 
