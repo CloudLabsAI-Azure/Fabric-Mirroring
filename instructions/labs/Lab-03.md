@@ -19,7 +19,7 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
    ![](../media/Lab-03/s12.png)
 
-1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the master database add the below creds :
+1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the  database add the below creds :
 
    - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (3)**
 
@@ -31,35 +31,26 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
      
        ![](../media/Lab-01/sql-login.png)
 
-1. Create a SQL Authenticated login named fabric_login. You can choose any name for this login. Provide your own strong password. Run the following T-SQL script in the master database by right clicking and selecting the new query
+1. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
 
-    - Provide the "strong password" as desired
+   ```
+   SELECT * FROM sys.dm_server_managed_identities;
+   ```
+1. In the Same query , run the follwoing and create a table in sampledb database to mirror
 
-  
-     ```
-     CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
-     ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
-     ```
+    ```
+    CREATE TABLE Sales (
+    SaleID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductName VARCHAR(100),
+    QuantitySold INT,
+    SaleDate DATE,
+    SaleAmount DECIMAL(10, 2)
+);
 
-   ![](../media/Lab-01/sql-query-1.png)
+ ```
 
-1. You will be able to see a fabric_login that's been created under logins 
 
-    ![](../media/Lab-03/s13.png)
 
-1. Switch Query Scope to the Database You Want to Mirror
-
-   - Substitute `<mirroring_source_database>` with the name of your database and run the following T-SQL:
-
-     ```sql
-     USE [<mirroring_source_database>];
-     ```
-
-1. Connect to the Azure SQL Database your plan to mirror to Microsoft Fabric, using the Azure portal query editor, SQL Server Management Studio (SSMS), Create a database user connected to the login: 
-
-     ```
-     CREATE USER fabric_user FOR LOGIN fabric_login;
-     ```
 
 ## Task 02: Create a Mirrored Azure SQL Managed Instance Database
 
