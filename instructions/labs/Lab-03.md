@@ -45,9 +45,29 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
     QuantitySold INT,
     SaleDate DATE,
     SaleAmount DECIMAL(10, 2)
-);
+   );
+   ```
 
- ```
+1. You can insert 50 rows of data into the Sales table. Below is an example that generates random sales data:
+
+    ```
+    DECLARE @i INT = 1;
+
+    WHILE @i <= 50
+    BEGIN
+    INSERT INTO Sales (ProductName, QuantitySold, SaleDate, SaleAmount)
+    VALUES 
+    (
+        'Product ' + CAST(@i AS VARCHAR),               
+        FLOOR(RAND() * 10) + 1,                         
+        DATEADD(DAY, -(@i), GETDATE()),                
+        ROUND(RAND() * 100 + 10, 2)                     
+    );
+
+    SET @i = @i + 1;
+    END
+
+   ```
 
 
 
@@ -68,37 +88,46 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     ![](../media/Lab-03/sqlmi-1-1.png)
 
-6. Connect to the Azure SQL Managed Instance
+7. Under **New sources**, select **Azure SQL Managed Instance**.
 
-7. Under **New sources**, select **Azure SQL Managed Instance**, or select an existing Azure SQL Managed Instance connection from the OneLake catalog.
+    ![](../media/Lab-03/sqlmi-1.png)
+
 
    >**Note**: You can't use existing connections of type "SQL Server". Only connections of type "SQL Managed Instance" are supported for mirroring Azure SQL Managed Instance data.
 
 
 9. Select **New connection**, enter the following details:
 
-     - **Server**: Find the Server name by navigating to the **Azure SQL Managed Instance** Networking page in the Azure portal under **Security**.
+     - **Server**: Find the Server name by navigating to the **Azure SQL Managed Instance** Networking page in the Azure portal under **Security** (1).
 
      - Example: `<managed_instance_name>.public.<dns_zone>.database.windows.net,3342`
 
          ![](../media/Lab-03/endpoint.png)
 
-     - **Database**: `SampleDatabase`
+     - **Database**: `SampleDatabase`(2)
 
      - **Connection**: Create a new connection.
 
-     - **Connection name**: An automatic name is provided, but you can change it for easier identification
+     - **Connection name**: `newconnection`(3)
         .
      - **Authentication kind**: Basic 
 
-     - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**
+     - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**(4)
 
-     - **Password** : **<inject key="Sqlmi administrator password" enableCopy="false"/>**
+     - **Password** : **<inject key="Sqlmi administrator password" enableCopy="false"/>**(5)
        
-     - Select **Connect**.
+     - Select **Connect**(6)
        
 
-       ![](../media/Lab-03/new-source-connect.png)
+       ![](../media/Lab-03/connection-1.png)
+
+ 1. Review the available databases by selecting **Databases** from the list. You will see the database that is selected by default. Click on **connect**.
+
+       ![](../media/Lab-03/connection-2.png)
+
+1. Under the destination tab, leave the name as default and select the option to create mirrored databases.
+
+    ![](../media/Lab-03/connection-3.png)
 
 ## Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
 
@@ -106,17 +135,11 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     >**Note**:After 2-5 minutes, select **Monitor replication** to see the replication status.
 
-    ![](../media/Lab-03/monitor-replication-1.png)
+    ![](../media/Lab-03/creating-mirrored-db.png)
 
 1. The status should change to **Running**, which means the tables are being synchronized.
 
-    >**Note**: If you don't see the tables and corresponding replication status, wait a few seconds and refresh the pane.
-
-1. When the initial copying of the tables is finished, a date will appear in the **Last refresh** column.
-
-    - **Important**: Any granular security settings in the source database must be re-configured in the mirrored database in Microsoft Fabric.
-
-1. Once mirroring is configured, you'll be directed to the **Mirroring Status** page, where you can monitor the current state of replication.
+    ![](../media/Lab-03/mirrored-db.png)
 
 1. Replicating Status:
    
@@ -124,14 +147,36 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
       - **Running with warning** – Replication is running with transient errors.
       - **Stopping/Stopped** – Replication is stopped.
       - **Error** – Fatal error in replication that can't be recovered.
+    >**Note**: If you don't see the tables and corresponding replication status, wait a few seconds and refresh the pane.
+
+1. When the initial copying of the tables is finished, a date will appear in the **Last refresh** column.
+
+1. Choose **Query in T-SQL**.
+
+    ![](../media/Lab-03/query-1.png)
+
+1. Navigate to the query and expand the **dbo** schema. Then, expand the **Tables** section and select the **Sales** table in the query editor pane to view the data preview.
+ 
+     ![](../media/Lab-03/sales-preview.png)
 
 
- 1. Table Level Monitoring:
+1. Open a **New SQL query** window from the toolbar.
 
-      - **Running** – Data from the table is successfully being replicated into the warehouse.
-      - **Running with warning** – Warning of non-fatal error with replication of the data from the table.
-      - **Stopping/Stopped** – Replication has stopped.
-      - **Error** – Fatal error in replication for that table.
+     ![](../media/Lab-03/new-sql-1.png)
+
+1. Run the sample query to determine the number of rows that have been replicated and the time of the last ingestion.
+
+    ```
+    -- Query to get the number of rows and the last ingestion date
+    
+    SELECT 
+        COUNT(*) AS TotalRows,                     
+        MAX(SaleDate) AS LastIngestionDate        
+    FROM 
+        Sales;
+    ```
+
+   ![](../media/Lab-03/run-sample.png)
 
 
 ## Review
