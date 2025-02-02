@@ -447,8 +447,11 @@
           "storageSizeInGB": 32,
           "collation": "SQL_Latin1_General_CP1_CI_AS",
           "databaseFormat": "AlwaysUpToDate",
-          "publicDataEndpointEnabled": true
+          "publicDataEndpointEnabled": true,
         },
+        "updatePolicy": {
+            "autoApply": "AlwaysUpToDate"  // Ensures the SQL MI is always updated
+          },
         "resources": [
           {
             "type": "databases",
