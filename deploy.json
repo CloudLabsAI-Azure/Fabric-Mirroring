@@ -450,7 +450,7 @@
           "publicDataEndpointEnabled": true,
         },
         "updatePolicy": {
-            "autoApply": "AlwaysUpToDate"  // Ensures the SQL MI is always updated
+            "autoApply": "AlwaysUpToDate"  
           },
         "resources": [
           {
