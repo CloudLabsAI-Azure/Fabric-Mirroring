@@ -13,7 +13,9 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 50 minutes
 
-### Task 01:  Enable SAMI of your Azure SQL logical server
+### Task 01: Enable SAMI of your Azure SQL logical server
+
+In this task, you will enable the **System assigned managed Identity (SAMI)** feature on your Azure SQL logical server to allow automatic scaling and management of your database instances within the Microsoft Fabric environment.
 
 1. In the Azure portal, search for **SQL servers (1)** and choose **SQL servers (2)**.
    
@@ -117,6 +119,8 @@ In this lab, you will complete the following tasks:
      ![](../media/Lab-01/create-user.png)
 
 ### Task 02: Create a mirrored Azure SQL Database
+ 
+In this task, you will create a mirrored Azure SQL database by setting up replication between a source and target database, ensuring high availability and data redundancy within your Microsoft Fabric environment.
 
 1. Open the ```https://app.fabric.microsoft.com```, You will be navigated to the **Fabric Home**.
 
@@ -178,6 +182,8 @@ In this lab, you will complete the following tasks:
      ![](../media/Lab-01/sql-1-1.png)
 
 ### Task 03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
+
+In this task, you will start the mirroring process for Azure SQL databases, monitor the replication status to ensure synchronization, and apply security measures to protect data during the mirroring process within Microsoft Fabric.
 
 1. Creating your mirrored database.
 
