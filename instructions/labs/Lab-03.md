@@ -186,3 +186,5 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 ## Review
 
 In this lab, you have set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configured SAMI for mirroring. You have created a mirrored database on the primary instance, enabled synchronization with the secondary, and started the mirroring process. Finally, you have monitored the mirroring status using Azure tools to ensure high availability.
+
+### Congratulations! You have successfully finished the lab. Click Next >> to Proceed to the next lab.
