@@ -95,9 +95,9 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
 
    ![](../media/Lab-05/upload-1.png)
 
-1. Go to the path **This PC/Downloads**, **select** the **`metadata.json`(1)** file, and **open(2)** it to upload.
+1. Go to the path**C:\Downloads\Labfiles**, **select** the **`metadata.json`(1)** file, and **open(2)** it to upload.
 
-    ![](../media/Lab-05/metadata-1.png)
+     ![](../media/Lab-05/new-11.png)
 
 1. Navigate Back to **Mirrored Database_<inject key="DeploymentID" enableCopy="false"/>** in fabric portal .
 
@@ -115,7 +115,7 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
 
 1. In the **Upload Files** pane, **select** the **"..."** (ellipsis) to browse for files. Then, go to **C:\Downloads\Labfiles**, **select** the **`00000000....1.parquet`** file, and **open** it to upload.
    
-     ![](../media/Lab-05/001-ipload.png)
+     ![](../media/Lab-05/new34.png)
 
 1. Leave all the settings as default in the **Upload Files** pane and click **Upload**.
 
