@@ -1,24 +1,24 @@
 # Microsoft Fabric Mirroring
 
+### Overall Estimated Duration: 4 Hours
+
 ## Overview
+
 Mirroring in Microsoft Fabric is a cost-effective, low-latency solution for replicating data from Azure databases and external sources into OneLake. It enables continuous replication, providing up-to-date, queryable data for analytics. With this data in OneLake, you can leverage Fabric services like Spark, notebooks, data engineering, and Power BI for analytics and visualization. Designed for simplicity and integration, Fabric Mirroring supports open-source Delta Lake table formats, ensuring seamless collaboration and analytics. This turnkey solution accelerates your analytics journey by creating a replica of your data for use across all Fabric services.
 
 ## Objective
+
 The objective of this training is to provide participants with comprehensive knowledge and hands-on experience in configuring and managing Microsoft Fabric Mirroring across different database platforms, including Azure SQL Database, Azure Cosmos DB, Azure SQL Managed Instance, and Snowflake. By the end of this course, participants will be able to:
 
-1. Understand the concepts of Microsoft Fabric Mirroring, including its types and features.
+1. **Configure Microsoft Fabric mirrored databases from Azure SQL Database** : The goal of this hands-on exercise is to demonstrate how to configure Microsoft Fabric mirrored databases using Azure SQL Database for enhanced data availability and redundancy.
 
-2. Configure and manage mirrored databases in Microsoft Fabric from various sources such as Azure SQL Database, Azure Cosmos DB, Azure SQL Managed Instance, and Snowflake.
+2. **Configure Microsoft Fabric Mirrored Database from Azure Cosmos DB** : The goal of this hands-on exercise is to demonstrate how to configure Microsoft Fabric mirrored databases using Azure Cosmos DB to ensure high availability and data replication across regions.
 
-3. Enable and monitor the mirroring process in the Fabric portal, ensuring data synchronization and security.
+3. **Configure Microsoft Fabric mirrored databases from Azure SQL Managed Instance** : The goal of this hands-on exercise is to demonstrates how to configure Microsoft Fabric mirrored databases using Azure SQL Managed Instance for high availability and disaster recovery across different environments.
 
-4. Implement the process of querying and analyzing data from both source and target mirrored databases.
+4. **Mirroring Snowflake in Microsoft Fabric**: The goal of this hands-on exercise is to demonstrate how to configure Snowflake data mirroring in Microsoft Fabric to enable seamless data replication and synchronization across platforms for improved availability and performance.
 
-5. Apply best practices for securing and optimizing mirrored database configurations.
-
-6. Gain practical experience through step-by-step instructions on setting up mirroring and troubleshooting common issues.
-
-This training will equip participants with the necessary skills to configure, monitor, and secure mirrored databases within Microsoft Fabric to enhance data availability, consistency, and performance across different platforms.
+5. **Configure Microsoft Fabric open mirrored databases** : The goal of this hands-on exercise is to demonstarte how to configure open mirrored databases in Microsoft Fabric to enable data replication and high availability across different environments.
 
 ## Getting Started with the Lab
 
