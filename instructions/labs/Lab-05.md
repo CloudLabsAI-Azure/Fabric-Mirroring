@@ -172,10 +172,12 @@ In this task, you will write change data to the landing zone and monitor the rep
 
     ![](../media/Lab-05/lab-5-last.png)
 
+## Summary:
 
-## Review
+In this lab, you have accomplished the following:
 
-In this lab, you learned how to configure Microsoft Fabric open mirrored databases. You started by creating an open mirrored database within the Fabric environment. Next, you wrote change data into the landing zone to ensure proper synchronization. You then initiated the mirroring process to enable data replication across systems. Finally, you monitored the mirroring process to maintain data consistency and resolve any issues encountered during synchronization.
+- **Created an open mirrored database** to enable real-time data synchronization across different environments.
+- **Written change data to the landing zone** and **monitored the replication process** to ensure successful data synchronization and consistency.
 
 
 ### Congratulations! You have successfully finished the lab.

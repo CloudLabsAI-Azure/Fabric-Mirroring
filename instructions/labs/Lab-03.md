@@ -7,8 +7,8 @@ In this lab, you will configure mirrored databases within Microsoft Fabric using
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 01: Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance.
-- Task 02: Create a Mirrored Azure SQL Managed Instance Database.
+- Task 01: Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
+- Task 02: Create a Mirrored Azure SQL Managed Instance Database
 - Task 03: Start the Mirroring Process and Monitor Fabric Mirroring
 
 ## Estimated time: 50 minutes
@@ -197,8 +197,12 @@ In this task, you will initiate the database mirroring process and monitor the s
    ![](../media/Lab-03/run-sample.png)
 
 
-## Review
+### Summary:
 
-In this lab, you have set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configured SAMI for mirroring. You have created a mirrored database on the primary instance, enabled synchronization with the secondary, and started the mirroring process. Finally, you have monitored the mirroring status using Azure tools to ensure high availability.
+In this lab, you have accomplished the following:
+
+- **Enabled System Assigned Managed Identity (SAMI)** for your **Azure SQL Managed Instance** to securely authenticate and access Azure resources.
+- **Created a mirrored Azure SQL Managed Instance database** to ensure high availability and data replication.
+- **Started the mirroring process** and **monitored Fabric mirroring** to ensure successful synchronization and data consistency.
 
 ### Congratulations! You have successfully finished the lab. Click Next >> to Proceed to the next lab.

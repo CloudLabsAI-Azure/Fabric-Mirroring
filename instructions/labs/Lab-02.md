@@ -237,9 +237,15 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
     ![](../media/Lab-02/saveas.png)
 
+ # Summary:
 
-# Review
+In this lab, you have accomplished the following:
 
-  In this lab, you configured your Azure Cosmos DB account and created a mirrored database in Azure Fabric for data replication. You connected Fabric to the source Cosmos DB, started the mirroring process, and monitored its progress. Once synchronized, you queried the source database directly from Fabric. Finally, you analyzed the mirrored database in Fabric for insights and reporting.
+- **Verified the configuration** of the **Source Azure Cosmos DB Account** to ensure it is set up correctly.
+- **Set up a mirrored database** for replication to enhance data availability.
+- **Connected to the source database** to enable data synchronization and mirroring.
+- **Started the mirroring process** and **monitored Fabric mirroring** to ensure successful data replication.
+- **Queried the source database** from Fabric to verify data access and synchronization.
+- **Analyzed the target mirrored database** to confirm data consistency and integrity across environments.
 
 ### Congratulations! You have successfully finished the lab. Click Next >> to Proceed to the next lab.

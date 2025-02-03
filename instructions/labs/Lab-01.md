@@ -7,9 +7,9 @@ In this lab, you will configure mirrored databases within Microsoft Fabric using
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 01:  Enable SAMI of your Azure SQL logical server.
-- Task 02: Create a mirrored Azure SQL Database.
-- Task 03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases.
+- Task 01:  Enable SAMI of your Azure SQL logical server
+- Task 02: Create a mirrored Azure SQL Database
+- Task 03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
 ## Estimated time: 50 minutes
 
@@ -227,9 +227,14 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
 7. After the initial table copy is complete, a date will appear in the **Last Completed** column.
 
-## Review
+## Summary
 
-In this lab, you have learned how to enable System assigned managed identity (SAMI) by connecting via SQL Server Management Studio (SSMS). After connecting to the master database, you proceed to set up and configure a mirrored Azure SQL Database. This setup ensures high availability by creating a replica of the database for failover scenarios. The process involves configuring database mirroring to maintain data synchronization between the primary and mirrored databases. Overall, the lab helps you establish disaster recovery and resilience for your Azure SQL Database environments.
+In this lab, you have accomplished the following:
+
+- **Enabled SAMI** on your **Azure SQL logical server** for secure authentication and access to Azure resources.
+- **Created a mirrored Azure SQL Database** to ensure high availability and data replication.
+- **Initiated, monitored, and secured Microsoft Fabric mirroring** for Azure SQL Databases to ensure data consistency and real-time synchronization.
+
 
 ## Congratulations! You have successfully finished the lab. Click Next >> to Proceed to the next lab.
 

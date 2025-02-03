@@ -283,9 +283,15 @@ In the Properties Menu, copy the URL.
 1. Navigate the folder structure and select the checkbox next to your Iceberg table folder to select it as the shortcut target location. Do not select the checkboxes for "data" or "metadata" subfolders.
 
 1. Click Next and Create your shortcut.
+ 
+## Summary:
 
-   ## Review
-   
-   In this lab, you have completed creating a mirrored database in Microsoft Fabric and connected it to your Snowflake instance. You successfully initiated the mirroring process to replicate the Snowflake database into Fabric. Additionally, you monitored and reviewed the status of the Fabric Snowflake mirroring process. This ensured that the database replication and synchronization were performed correctly.
+In this lab, you have accomplished the following:
+
+- **Created a mirrored database** in **Microsoft Fabric** for data synchronization and high availability.
+- **Connected to your Snowflake instance** in any cloud to enable data integration.
+- **Initiated the mirroring process** for the Snowflake database, and monitored **Snowflake Fabric mirroring** to ensure real-time synchronization.
+- **Queried and viewed the mirrored data** to verify successful replication and consistency.
+- **Gotten started with Apache Iceberg** in the Lakehouse environment to optimize data storage and querying.
 
 ### Congratulations! You have successfully finished the lab. Click Next >> to Proceed to the next lab.
