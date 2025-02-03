@@ -73,7 +73,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 >**Note**: If the tables and replication status are not immediately visible, wait a few seconds and refresh the panel.
 
->****Note**: **If the tables are not replicated after 5-10 minutes, please go ahead and recreate the connection. This could be due to a backend issue where the API hasn't accepted the request or the process is still in a queued state. Perform from Task 2 again to build the new connection.**
+>**Note**: **If the tables are not replicated after 5-10 minutes, please go ahead and recreate the connection. This could be due to a backend issue where the API hasn't accepted the request or the process is still in a queued state. Perform from Task 2 again to build the new connection.**
 
 
 ## Task 04: Query and view the mirrored data
@@ -99,7 +99,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
      ![](../media/Lab-04/results.png)
 
-## Task 05 : Getting started with iceberg in lakehouse
+## Task 05 : Getting started with iceberg in lakehouse 
 
 
 1. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
@@ -134,27 +134,53 @@ In the Properties Menu, copy the URL.
 
       ![](../media/Lab-04/id.png)
 
+ 1. Sign in to Snowflake by opening the browser, pasting the URL, and entering the username and password provided below:
+
+     - URL : `https://flutkda-rq11962.snowflakecomputing.com`
+
+     - USERNAME: `SNOWFLAKEUSER`
+
+     - PASSWORD: `Adminuser@12345`
+
+     ![](../media/Lab-04/snowflake-login.png)
+
+ 1. Select **SQL Worksheet** from the **+ Create** drop-down menu.
+
+      ![](../media/Lab-04/sql-ws.png)
+
+ 1. You can see the database already created in the left-hand pane that is **SNOWFLAKEQS**. You will be using this same database and schema to complete the upcoming tasks.
+ 
+    ![](../media/Lab-04/snowflakeqs.png)
+
+ 1. In the workspace sheet, select **SNOWFLAKEQS** as the **database** and **ICEBERGTESTS** as the **schema**.
+
+    ![](../media/Lab-04/iceberg-test.png)
+
+ 1. Choose the warehouse as **HOL-WH**
+
+      ![](../media/Lab-04/HOL-WH.png)
+
   1. Copy this query into Snowflake and fill in the parameters with the collected information.
 
-   ```
-   CREATE OR REPLACE EXTERNAL VOLUME FabricExVol
-   STORAGE_LOCATIONS =
-      (
-      (
-         NAME = 'FabricExVol'
-         STORAGE_PROVIDER = 'AZURE'
-         STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
-         AZURE_TENANT_ID = '<Tenant ID>'
-      )
-      );   
-   ```
+      ```
+      CREATE OR REPLACE EXTERNAL VOLUME FabricExVol
+      STORAGE_LOCATIONS =
+         (
+         (
+            NAME = 'FabricExVol1'
+            STORAGE_PROVIDER = 'AZURE'
+            STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
+            AZURE_TENANT_ID = '<Tenant ID>'
+         )
+         );   
+      ```
       
-   ![](../media/Lab-04/new-snowflake.png)
+      ![](../media/Lab-04/new-snowflake.png)
 
 1. Now you need to enable Snowflake permission to access your Fabric workspace.First run the following in Snowflake:
 
    ```
-   DESC EXTERNAL VOLUME FabricExVol;
+   DESC EXTERNAL VOLUME FabricExVol1;
    ```
 1. In the output for property_value of the storage location, in the json you will see a **AZURE_MULTI_TENANT_APP_NAME**. This value is the Service Principal that Snowflake uses to connect to Azure. Copy this value. You can remove the underscore and numbers at the end.
 
@@ -167,7 +193,7 @@ In the Properties Menu, copy the URL.
 
      ![](../media/Lab-04/01.png)
 
-1. Now open your workspace, click Manage access, then click Add people or groups.
+1. Now open **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click Manage access, then click Add people or groups.
 
 1. Search for the service principal from the previous step.
 
@@ -205,9 +231,9 @@ In the Properties Menu, copy the URL.
    - Find the location of your Iceberg table in storage. The Iceberg table folder contains a ‘metadata' folder.
 
 
-   ```
-   SELECT SYSTEM$GET_ICEBERG_TABLE_INFORMATION('dim_customer');
-   ```
+      ```
+      SELECT SYSTEM$GET_ICEBERG_TABLE_INFORMATION('dim_customer');
+      ```
 
 1. This will return a path to the metadata file for this table, which should show you which storage account contains the Iceberg table. For example, this is the relevant info to find the table:
 
@@ -217,7 +243,7 @@ In the Properties Menu, copy the URL.
 
    ```
 
-1. Open the workspace that contains your Fabric lakehouse object.
+1. Open the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace that contains your Fabric lakehouse object.
 
 1. Click Workspace settings.
 
@@ -225,7 +251,7 @@ In the Properties Menu, copy the URL.
 
      ![](../media/Lab-04/new-12.png)
 
-1. In your workspace, open your Fabric lakehouse object.
+1. In **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, open your Fabric lakehouse object.
 
 1. Click New shortcut from tables.
 
