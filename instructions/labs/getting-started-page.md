@@ -1,6 +1,6 @@
 # Microsoft Fabric Mirroring
 
-### Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 5 Hours
 
 ## Overview
 
@@ -118,6 +118,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Start Your Azure Journey](../media/sc900-image(3).png)
+![Start Your Azure Journey](../media/Lab-05/next-1.png)
 
 ## Happy Learning!!
