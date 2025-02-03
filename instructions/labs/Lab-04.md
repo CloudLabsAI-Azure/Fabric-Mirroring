@@ -186,11 +186,11 @@ In the Properties Menu, copy the URL.
   1. Copy this query into Snowflake and fill in the parameters with the collected information.
 
       ```
-      CREATE OR REPLACE EXTERNAL VOLUME FabricExVoldemo
+      CREATE OR REPLACE EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>
       STORAGE_LOCATIONS =
          (
          (
-            NAME = 'FabricExVoldemo'
+            NAME = 'FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>'
             STORAGE_PROVIDER = 'AZURE'
             STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
             AZURE_TENANT_ID = '<Tenant ID>'
@@ -200,12 +200,28 @@ In the Properties Menu, copy the URL.
       
       ![](../media/Lab-04/new-snowflake.png)
 
-1. Now you need to enable Snowflake permission to access your Fabric workspace.First run the following in Snowflake:
+      >**Note**: The Deployment ID is unique to each individual, making it a good practice to create different external locations.
+
+1. Now you need to enable Snowflake permission to access your Fabric workspace. First run the following in Snowflake:
 
    ```
-   DESC EXTERNAL VOLUME FabricExVoldemo;
+   DESC EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>;
    ```
-1. In the output for property_value of the storage location, in the json you will see a **AZURE_MULTI_TENANT_APP_NAME**. This value is the Service Principal that Snowflake uses to connect to Azure. Copy this value. You can remove the underscore and numbers at the end.
+
+1. In the output section, click on the **property value(1)** to open a larger view. From there, you can expand it or **copy it to a notepad(2)**.
+
+
+      ![](../media/Lab-04/vol2.png)
+
+1. Then copy the URL highlighted in the screenshot.
+
+   ![](../media/Lab-04/link.png)
+
+1. Open the browser and paste the URL and sign in with **Username: <inject key="AzureAdUserEmail"></inject>**
+
+1. A pop-up will appear asking for your confirmation. **Click on "Accept."**
+
+1. The value of **AZURE_MULTI_TENANT_APP_NAME** is highlighted in the screenshot and copy it.
 
    
     ![](../media/Lab-04/00.png)
@@ -216,11 +232,18 @@ In the Properties Menu, copy the URL.
 
      ![](../media/Lab-04/01.png)
 
-1. Now open **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click Manage access, then click Add people or groups.
+1. Now open the workspace, click **Manage access**
 
-1. Search for the service principal from the previous step.
+    ![](../media/Lab-04/manage-access.png)
 
-1. Add the service principal as a Contributor.
+1. Next, click on "+ Add people or groups."
+
+   ![](../media/Lab-04/manage-add.png)
+
+1. Paste the copied **service principal (1)**, select **admin (2)** from the **drop-down**, and then click **Add (3)**.
+
+    ![](../media/Lab-04/add_people.png)
+
 
 1. Back in Snowflake, run the following to create the Iceberg table and insert data from the sample dataset.
 
@@ -236,7 +259,7 @@ In the Properties Menu, copy the URL.
          C_MKTSEGMENT STRING,
          C_COMMENT STRING
       )
-      EXTERNAL_VOLUME = 'FabricExVoldemo'
+      EXTERNAL_VOLUME = 'FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>'
       CATALOG = snowflake
       BASE_LOCATION = 'dim_customer';
 
@@ -258,6 +281,8 @@ In the Properties Menu, copy the URL.
       
       ```
 
+      ![](../media/Lab-04/select-1.png)
+
 1. This will return a path to the metadata file for this table, which should show you which storage account contains the Iceberg table. For example, this is the relevant info to find the table:
 
    ```
@@ -266,25 +291,42 @@ In the Properties Menu, copy the URL.
 
    ```
 
-1. Open the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace that contains your Fabric lakehouse object.
+1. Open the workspace that contains your Fabric lakehouse object.
 
 1. Click Workspace settings.
 
-1. Under Delegated settings, click OneLake settings, and turn on the Authenticate with OneLake user-delegated SAS tokens setting. Note: This is a temporary step – we will remove this as a required step in the near future.
+    ![](../media/Lab-04/workspace-settings.png)
+
+1. Under Delegated settings, click OneLake settings, and turn on the Authenticate with OneLake user-delegated SAS tokens setting. 
 
      ![](../media/Lab-04/new-12.png)
 
-1. In **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, open your Fabric lakehouse object.
+1. In **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, open your Fabric lakehouse **snowflakeQS** .
 
-1. Click New shortcut from tables.
+1. Click the **ellipsis (1)** next to **Files** and then select **New shortcut (2)** from **Files**.
 
-1. Select a OneLake Shortcut.
+    ![](../media/Lab-04/image-1.png)
 
-1. Enter the connection information for your storage location.
+1. Select a **OneLake** Shortcut.
 
-1. Navigate the folder structure and select the checkbox next to your Iceberg table folder to select it as the shortcut target location. Do not select the checkboxes for "data" or "metadata" subfolders.
+    ![](../media/Lab-04/onelake.png)
 
-1. Click Next and Create your shortcut.
+1. Select **snowflakeQS (1)** lakehouse and then click **Next (2)**.
+
+   ![](../media/Lab-04/snowflake-1.png)
+
+1. Expand **Files(1)**, select **dim_customer(2)**, and click **Next(3)**.
+
+   ![](../media/Lab-04/dim-customer-1.png)
+
+1. In the "New Shortcut" window, click **Create**.
+
+   ![](../media/Lab-04/create.png)
+
+1. You can see the newly created shortcut.
+
+   ![](../media/Lab-04/new-short.png)
+
  
 ## Summary:
 
