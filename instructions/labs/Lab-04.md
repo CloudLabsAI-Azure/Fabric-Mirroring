@@ -35,6 +35,8 @@ In this task, you will create a mirrored database in Microsoft Fabric to enable 
 
 In this task, you will connect to your Snowflake instance hosted in any cloud to enable data integration and management.
 
+You will be Mirroring the pre-created iceberg table in the database.
+
 1. Select **Mirrored Snowflake** under get data.
 
    ![](../media/Lab-04/s14.png)
