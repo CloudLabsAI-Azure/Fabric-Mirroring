@@ -184,11 +184,11 @@ In the Properties Menu, copy the URL.
   1. Copy this query into Snowflake and fill in the parameters with the collected information.
 
       ```
-      CREATE OR REPLACE EXTERNAL VOLUME FabricExVol
+      CREATE OR REPLACE EXTERNAL VOLUME FabricExVoldemo
       STORAGE_LOCATIONS =
          (
          (
-            NAME = 'FabricExVol1'
+            NAME = 'FabricExVoldemo'
             STORAGE_PROVIDER = 'AZURE'
             STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
             AZURE_TENANT_ID = '<Tenant ID>'
@@ -201,7 +201,7 @@ In the Properties Menu, copy the URL.
 1. Now you need to enable Snowflake permission to access your Fabric workspace.First run the following in Snowflake:
 
    ```
-   DESC EXTERNAL VOLUME FabricExVol1;
+   DESC EXTERNAL VOLUME FabricExVoldemo;
    ```
 1. In the output for property_value of the storage location, in the json you will see a **AZURE_MULTI_TENANT_APP_NAME**. This value is the Service Principal that Snowflake uses to connect to Azure. Copy this value. You can remove the underscore and numbers at the end.
 
@@ -234,7 +234,7 @@ In the Properties Menu, copy the URL.
          C_MKTSEGMENT STRING,
          C_COMMENT STRING
       )
-      EXTERNAL_VOLUME = 'FabricExVol'
+      EXTERNAL_VOLUME = 'FabricExVoldemo'
       CATALOG = snowflake
       BASE_LOCATION = 'dim_customer';
 
