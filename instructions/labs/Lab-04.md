@@ -101,17 +101,141 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 ## Task 05 : Getting started with iceberg in lakehouse
 
-1. Create an external Voulme
 
 1. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-1. Create a New Item.
+1. Create a **New Item**.
+   
+   ![](../media/Lab-01/fabric-new.png)
 
 1. Select Lakehouse and name it **snowflakeQS**
 
-In the Explorer, click the elipses next to Files and then Properties.
+   ![](../media/Lab-04/snowflake11.png)
+
+1. In the Explorer, click the elipses next to Files and then Properties.In the Properties Menu, copy the URL.
+
+    ![](../media/Lab-04/new-0.png)
+
+1. In the Explorer, click the elipses next to Files and then Properties.
 In the Properties Menu, copy the URL.
 
+     ![](../media/Lab-04/url.png)
+
+
+1. You will need your Azure Tenant ID. To find this in Fabric UI:
+
+   - In the upper right click on the ? for **help & support(1)** and at the bottom click **About Fabric(2)**
+
+      ![](../media/Lab-04/help-support.png)
+
+   - Copy the Tenant URL. The Tenant ID is the UUID that follows ctid= and paste in the notepad.
+
+      ![](../media/Lab-04/tenanturl.png)
+
+      ![](../media/Lab-04/id.png)
+
+  1. Copy this query into Snowflake and fill in the parameters with the collected information.
+
+   ```
+   CREATE OR REPLACE EXTERNAL VOLUME FabricExVol
+   STORAGE_LOCATIONS =
+      (
+      (
+         NAME = 'FabricExVol'
+         STORAGE_PROVIDER = 'AZURE'
+         STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
+         AZURE_TENANT_ID = '<Tenant ID>'
+      )
+      );   
+   ```
+      
+   ![](../media/Lab-04/new-snowflake.png)
+
+1. Now you need to enable Snowflake permission to access your Fabric workspace.First run the following in Snowflake:
+
+   ```
+   DESC EXTERNAL VOLUME FabricExVol;
+   ```
+1. In the output for property_value of the storage location, in the json you will see a **AZURE_MULTI_TENANT_APP_NAME**. This value is the Service Principal that Snowflake uses to connect to Azure. Copy this value. You can remove the underscore and numbers at the end.
+
+   
+    ![](../media/Lab-04/00.png)
+
+ 1. In Fabric, grant the service principal access to your Fabric lakehouse.
+
+1. From the Fabric settings, click on the admin portal. Scroll down to Developer settings, and under Service Principals can use Fabric APIs, enable this setting.
+
+     ![](../media/Lab-04/01.png)
+
+1. Now open your workspace, click Manage access, then click Add people or groups.
+
+1. Search for the service principal from the previous step.
+
+1. Add the service principal as a Contributor.
+
+1. Back in Snowflake, run the following to create the Iceberg table and insert data from the sample dataset.
+
+   ```
+   --Create the Iceberg table in OneLake
+   CREATE OR REPLACE ICEBERG TABLE snowflakeQS.ICEBERGTEST.dim_customer (
+         C_CUSTKEY STRING,
+         C_NAME STRING,
+         C_ADDRESS STRING,
+         C_NATIONKEY STRING,
+         C_PHONE STRING,
+         C_ACCTBAL STRING,
+         C_MKTSEGMENT STRING,
+         C_COMMENT STRING
+      )
+      EXTERNAL_VOLUME = 'FabricExVol'
+      CATALOG = snowflake
+      BASE_LOCATION = 'dim_customer';
+
+   --Insert sample data
+   INSERT INTO SnowflakeQS.ICEBERGTEST.dim_customer
+      SELECT top 500 * FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.customer;
+
+   --Query the Iceberg table from Snowflake
+   Select * from SnowflakeQS.ICEBERGTEST.dim_customer
+
+   ```
+
+1. In order for Fabric to work on the Iceberg tables, you need to set up shortcuts to the data.
+
+   - Find the location of your Iceberg table in storage. The Iceberg table folder contains a ‘metadata' folder.
+
+
+   ```
+   SELECT SYSTEM$GET_ICEBERG_TABLE_INFORMATION('dim_customer');
+   ```
+
+1. This will return a path to the metadata file for this table, which should show you which storage account contains the Iceberg table. For example, this is the relevant info to find the table:
+
+   ```
+
+   {"metadataLocation":"azure://<storage_account_path>/<path within storage>/<table name>/metadata/00001-389700a2-977f-47a2-9f5f-7fd80a0d41b2.metadata.json","status":"success"}
+
+   ```
+
+1. Open the workspace that contains your Fabric lakehouse object.
+
+1. Click Workspace settings.
+
+1. Under Delegated settings, click OneLake settings, and turn on the Authenticate with OneLake user-delegated SAS tokens setting. Note: This is a temporary step – we will remove this as a required step in the near future.
+
+     ![](../media/Lab-04/new-12.png)
+
+1. In your workspace, open your Fabric lakehouse object.
+
+1. Click New shortcut from tables.
+
+1. Select a OneLake Shortcut.
+
+1. Enter the connection information for your storage location.
+
+1. Navigate the folder structure and select the checkbox next to your Iceberg table folder to select it as the shortcut target location. Do not select the checkboxes for "data" or "metadata" subfolders.
+
+1. Click Next and Create your shortcut.
 
    ## Review
    
