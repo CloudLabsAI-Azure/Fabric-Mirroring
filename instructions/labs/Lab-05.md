@@ -107,7 +107,7 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
 
 > **Note:** The process may take 2-5 minutes. Use Monitor replication to track the status.
 
->**Note:**If the tables and replication status are not visible immediately, wait a few seconds and refresh the panel.
+> **Note:** If the tables and replication status are not visible immediately, wait a few seconds and refresh the panel.
 
 1. Go back to the Storage explorer and Select **Upload (1)**, then from the drop-down menu, choose **Upload files (2)** to upload the files to the folder.
 
