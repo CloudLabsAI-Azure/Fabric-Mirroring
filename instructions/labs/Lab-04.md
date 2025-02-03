@@ -101,15 +101,14 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 ## Task 05 : Getting started with iceberg in lakehouse
 
-1. Create an Iceberg table in OneLake
-1. Create the External Volume
-Before you create an Iceberg table, you must have an external volume. An external volume is a Snowflake object that stores information about your cloud storage locations, and identity and access management (IAM) entities (in this case, your Entra ID Tenant). Snowflake uses an external volume to establish a connection with your cloud storage in order to access Iceberg metadata and Parquet data.
+1. Create an external Voulme
 
-You will need your OneLake Base URL. To find this in Fabric UI:
+1. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-Go into your Fabric Workspace.
-Create a New Item.
-Select Lakehouse and name it "snowflakeQS".
+1. Create a New Item.
+
+1. Select Lakehouse and name it **snowflakeQS**
+
 In the Explorer, click the elipses next to Files and then Properties.
 In the Properties Menu, copy the URL.
 
