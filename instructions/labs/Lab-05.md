@@ -1,8 +1,20 @@
 # Lab 05: Configure Microsoft Fabric open mirrored databases
 
-In this lab, you will learn how to configure Microsoft Fabric open mirrored databases. You will start by creating an open mirrored database within the Fabric environment. Then, you'll write change data into the landing zone to ensure synchronization. After that, you will initiate the mirroring process to enable data replication. Finally, you’ll monitor the mirroring process to ensure data consistency and resolve any issues that arise during synchronization.
+### Lab Scenario
+
+In this lab, you will configure open mirrored databases within Microsoft Fabric. Your goal is to set up data replication between different database environments, ensuring high availability and fault tolerance. By the end of this lab, you will have configured open mirrored databases in Microsoft Fabric, enabling seamless data synchronization, real-time access, and improved system reliability across regions or services.
+
+## Lab objectives
+In this lab, you will complete the following tasks:
+
+- Task 01: Create an Open mirrored database
+- Task 02: Write Change Data to the Landing Zone and Monitor the Replication Process
+
+## Estimated time: 30 minutes
 
 ## Task 01: Create an Open mirrored database 
+
+In this task, you will create an open mirrored database in Microsoft Fabric to enable real-time data synchronization and high availability across different environments.
 
 1. Navigate to the **Fabric portal** home.
 
@@ -27,6 +39,8 @@ In this lab, you will learn how to configure Microsoft Fabric open mirrored data
      ![](../media/Lab-05/landing-zone-1.png)
 
 ## Task 02: Write Change Data to the Landing Zone and Monitor the Replication Process.
+
+In this task, you will write change data to the landing zone and monitor the replication process to ensure data consistency and successful synchronization.
 
 1. In the Windows search bar, type **Azure Storage Explorer** and open the application.
 

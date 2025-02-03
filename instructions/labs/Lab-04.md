@@ -1,10 +1,24 @@
 # Lab 04: Mirroring Snowflake in Microsoft Fabric
 
-In this lab, you’ll create a mirrored database in Microsoft Fabric and connect to your Snowflake instance on any cloud platform. You’ll start the mirroring process to replicate the Snowflake database into Fabric. Finally, you’ll monitor and view the status of the Fabric Snowflake mirroring process to ensure successful replication and synchronization.
+## Lab Scenario
+
+In this lab, you will configure database mirroring for Snowflake within Microsoft Fabric. Your goal is to set up seamless data synchronization between Snowflake and Microsoft Fabric, ensuring high availability, disaster recovery, and low-latency data access across regions. By the end of this lab, you will have successfully mirrored your Snowflake database in Microsoft Fabric, enabling real-time replication and enhanced availability for your data-driven applications.
+
+## Lab objectives
+In this lab, you will complete the following tasks:
+
+- Task 01: Create a mirrored database in Microsoft Fabric 
+- Task 02: Connect to your Snowflake instance in any cloud 
+- Task 03: Initiate the mirroring process for the Snowflake database, and monitor and view the Snowflake Fabric mirroring.
+- Task 04: Query and view the mirrored data
+- Task 05: Getting started with iceberg in lakehouse
+
+## Estimated time: 75 minutes
+
 
 ## Task 01: Create a mirrored database in Microsoft Fabric 
 
-In this section, we'll provide a brief overview of how to create a new mirrored database to use with your mirrored Snowflake data source.
+In this task, you will create a mirrored database in Microsoft Fabric to enable high availability and real-time data synchronization across environments.
 
 1. Navigate to the **Fabric portal** home.
 
@@ -18,6 +32,8 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 
 ## Task 02: Connect to your Snowflake instance in any cloud 
+
+In this task, you will connect to your Snowflake instance hosted in any cloud to enable data integration and management.
 
 1. Select **Mirrored Snowflake** under get data.
 
@@ -59,6 +75,8 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
       
 ## Task 03: Initiate the mirroring process for the Snowflake database, and monitor and view the Snowflake Fabric mirroring.
 
+In this task, you will initiate the mirroring process for the Snowflake database, and monitor the synchronization and status of Snowflake Fabric mirroring to ensure data consistency and availability.
+
 1. The **Creation of mirrored database** begins.
 
     ![](../media/Lab-04/created-mirrored.png)
@@ -77,6 +95,8 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 
 ## Task 04: Query and view the mirrored data
+
+In this task, you will query and view the mirrored data to verify successful synchronization and consistency between the source and mirrored databases.
 
 1. Open **Query in T-SQL** by selecting it from the **Monitor Replication** window.
 
@@ -101,6 +121,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
 ## Task 05 : Getting started with iceberg in lakehouse 
 
+In this task, you will get started with Apache Iceberg in a Lakehouse environment to manage large-scale data with optimized storage and querying capabilities.
 
 1. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 

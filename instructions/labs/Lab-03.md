@@ -1,8 +1,21 @@
 # Lab 03: Configure Microsoft Fabric mirrored databases from Azure SQL Managed Instance (Preview)
 
-In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary and secondary and configure SAMI for mirroring. You will create a mirrored database on the primary instance, enable synchronization with the secondary, and start the mirroring process. Finally, you will monitor the mirroring status using Azure tools to ensure high availability.
+## Lab Scenario
+
+In this lab, you will configure mirrored databases within Microsoft Fabric using Azure SQL Managed Instance (Preview). Your goal is to set up a high-availability solution by replicating data across multiple Azure SQL Managed Instance instances. This will ensure low-latency access to data and provide disaster recovery capabilities. By the end of this lab, you will have successfully mirrored your Azure SQL Managed Instance databases in Microsoft Fabric, enabling seamless data synchronization, high availability, and improved fault tolerance.
+
+## Lab objectives
+In this lab, you will complete the following tasks:
+
+- Task 01: Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance.
+- Task 02: Create a Mirrored Azure SQL Managed Instance Database.
+- Task 03: Start the Mirroring Process and Monitor Fabric Mirroring
+
+## Estimated time: 50 minutes
 
 ### Task 01: Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
+
+In this task, you will enable the System Assigned Managed Identity (SAMI) for your Azure SQL Managed Instance to securely authenticate and access other Azure resources.
 
 
  1. Navigate to Azure portal and search for **SQL Managed Instance (1)** and select **SQL Managed Instance (2)**.
@@ -14,7 +27,6 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
  1. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On** and click on **Save**.
 
       ![](../media/Lab-05/sqlmi00.png)
-
 
 1. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later for creating the mirrored database in Fabric.
 
@@ -77,10 +89,9 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
    ```
 
-
-
-
 ## Task 02: Create a Mirrored Azure SQL Managed Instance Database
+
+In this task, you will create a mirrored database on your Azure SQL Managed Instance, enabling high availability and disaster recovery by replicating data. 
 
 1. Navigate to the **Fabric portal** home.
 
@@ -133,7 +144,10 @@ In this lab, you will set up two Azure SQL Managed Instances (SQLMI) as primary 
 
     ![](../media/Lab-03/connection-3.png)
 
-## Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
+## Task 03: Start the Mirroring Process and Monitor Fabric Mirroring
+
+In this task, you will initiate the database mirroring process and monitor the status and synchronization of the mirrored databases in Microsoft Fabric.
+
 
 1. The **Monitor Replication** screen will allow you to mirror all data in the database by default.
 
