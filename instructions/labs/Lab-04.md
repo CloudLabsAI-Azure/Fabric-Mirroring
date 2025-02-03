@@ -251,9 +251,9 @@ In the Properties Menu, copy the URL.
 
    - Find the location of your Iceberg table in storage. The Iceberg table folder contains a ‘metadata' folder.
 
-
       ```
       SELECT SYSTEM$GET_ICEBERG_TABLE_INFORMATION('dim_customer');
+      
       ```
 
 1. This will return a path to the metadata file for this table, which should show you which storage account contains the Iceberg table. For example, this is the relevant info to find the table:
