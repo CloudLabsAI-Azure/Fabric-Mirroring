@@ -102,3 +102,5 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
    ## Review
    
    In this lab, you have completed creating a mirrored database in Microsoft Fabric and connected it to your Snowflake instance. You successfully initiated the mirroring process to replicate the Snowflake database into Fabric. Additionally, you monitored and reviewed the status of the Fabric Snowflake mirroring process. This ensured that the database replication and synchronization were performed correctly.
+
+### Congratulations! You have successfully finished the lab. Click Next >> to Proceed to the next lab.
