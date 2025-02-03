@@ -1,8 +1,25 @@
 # Lab 02: Configure Microsoft Fabric Mirrored Database from Azure Cosmos DB
 
-In this lab, you will set up an Azure Cosmos DB account and configure a mirrored database in Azure Fabric for data replication. You will link Fabric to the source Cosmos DB and initiate the mirroring process while ensuring proper synchronization by tracking its progress. Once the mirroring process is completed, you will query the source database directly from Fabric. You will then examine the mirrored database to gain insights and verify the replication. Finally, you will explore how to use the mirrored data for reporting and analytics.
+## Lab Scenario
+
+In this lab, you will configure mirrored databases within Microsoft Fabric using Azure Cosmos DB. Your goal is to set up a multi-region, high-availability solution by replicating data across multiple Azure Cosmos DB instances. This will ensure low-latency access to data and provide disaster recovery capabilities. By the end of this lab, you will have successfully mirrored your Azure Cosmos DB databases in Microsoft Fabric, 
+allowing for seamless data synchronization and improved availability.
+
+## Lab objectives
+In this lab, you will complete the following tasks:
+
+- Task 01: Verify the Configuration of the Source Azure Cosmos DB Account
+- Task 02: Set Up a Mirrored Database
+- Task 03: Connect to the Source Database
+- Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
+- Task 05: Query the Source Database from Fabric
+- Task 06: Analyze the Target Mirrored Database
+
+## Estimated time: 40 minutes
 
 ### Task 01: Verify the Configuration of the Source Azure Cosmos DB Account
+
+In this task, you will confirm that the source Azure Cosmos DB account is correctly configured and ready for data mirroring in Microsoft Fabric.
 
 1. In the Azure portal, type **"Azure Cosmos DB"** in the search bar at the top of the page, and select the **Azure Cosmos DB account** from the search results.
 
@@ -42,8 +59,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
         ![](../media/Lab-02/s11.png)
 
-   
-## Task 02: Set Up a Mirrored Database
+### Task 02: Set Up a Mirrored Database
+
+In this task, you will configure a mirrored database in Microsoft Fabric, ensuring data replication from the source Azure Cosmos DB to a secondary instance for high availability and disaster recovery.
 
 1. Go to the **Fabric portal** home page of powerbi.
 
@@ -60,7 +78,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
    ![](../media/Lab-02/mirrored-1.png)
 
 
-## Task 03: Connect to the Source Database
+### Task 03: Connect to the Source Database
+
+In this task, you will establish a connection to the source Azure Cosmos DB database, allowing you to manage and verify data replication settings within Microsoft Fabric.
 
 1. In the **New Connection** section, choose **Azure Cosmos DB v2**.
 
@@ -79,9 +99,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
      
      - Click **Connect**. 
 
-       ![](../media/Lab-02/cosmos-db.png)
-
-   
+       ![](../media/Lab-02/cosmos-db.png)  
 
 3. Under the **Choose Data** section, click **Connect**.
 
@@ -92,12 +110,11 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
      ![](../media/Lab-02/mirrored-db-1.png)
 
       > **Note**: All containers within the selected database will be mirrored.
+    
 
-     
+### Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
 
-
-
-## Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
+In this task, you will initiate the mirroring process between the source and mirrored databases, then monitor the replication progress and status within Microsoft Fabric to ensure data synchronization is successful.
 
 1. Select **Monitor Replication**. Mirroring will now begin.
 
@@ -115,7 +132,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
      >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
 
-## Task 05: Query the Source Database from Fabric
+### Task 05: Query the Source Database from Fabric
+
+In this task, you will execute queries on the source database through Microsoft Fabric to verify data accessibility and ensure the connection is properly established for mirroring.
 
 1. Go to the mirrored database in the Fabric portal.
 
@@ -128,8 +147,9 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
   > **Note**: All read operations on the source database are routed to Azure and will consume Request Units (RUs) allocated to the account.
 
 
-## Task 06: Analyze the Target Mirrored Database
-
+### Task 06: Analyze the Target Mirrored Database
+ 
+In this task, you will examine the target mirrored database in Microsoft Fabric to ensure that data replication is functioning correctly and that the mirrored database is in sync with the source.
 
 1. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics Endpoint**.
 
@@ -138,8 +158,6 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 2. Each container from the source database will appear as a warehouse table in the SQL Analytics Endpoint.
 
 3. Select **Orderstatus**, open the context menu, and click on **New SQL Query**, then choose **Select Top 100**. The query will run and return the top 100 records from the selected table.
-
-
 
 4. Next, select **Orderitems**, click **New SQL Query**, and choose **Select Top 100**.
 
