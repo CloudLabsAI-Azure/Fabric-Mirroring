@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 - Task 05: Query the Source Database from Fabric
 - Task 06: Analyze the Target Mirrored Database
 
-## Estimated time: 40 minutes
+## Estimated time: 65 minutes
 
 ### Task 01: Verify the Configuration of the Source Azure Cosmos DB Account
 
