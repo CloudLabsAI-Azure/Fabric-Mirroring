@@ -39,10 +39,11 @@ Mirroring in Fabric allows users to enjoy a highly integrated, end-to-end, and e
     The entire database or individual tables can be mirrored into Fabric, making it available for analysis and reporting within the platform.
     The data is physically replicated, so you’ll have a copy of the data in Fabric, but it’s synchronized so changes in the source can be mirrored into Fabric.
 
-    **Use cases**:
+- **Use cases**:
 
- - Centralized Analytics: If you want to consolidate data from multiple sources into a single platform (like a data warehouse or lake) for reporting, querying, or machine learning.
- - Backup and Recovery: You can replicate databases for disaster recovery or high-availability purposes.
+    - Centralized Analytics: If you want to consolidate data from multiple sources into a single platform (like a data warehouse or lake) for reporting, querying, or machine learning.
+
+    - Backup and Recovery: You can replicate databases for disaster recovery or high-availability purposes.
 
 
 2. **Metadata Mirroring**:
@@ -53,10 +54,11 @@ Mirroring in Fabric allows users to enjoy a highly integrated, end-to-end, and e
     You create shortcuts to the original data, allowing you to access it from within Microsoft Fabric without having to replicate it physically.
     The original data remains in its source location (e.g., in a different database or cloud storage), but Fabric can access it in real time, making the data feel local.
 
-    **Use cases**:
+ - **Use cases**:
 
-- Cost-efficient access: If your data is large or stored in external sources (e.g., cloud storage or third-party databases), you can access it without duplicating it, which helps save storage and reduce costs.
-- Real-time updates: Because you're working directly with the metadata, any changes in the source data are reflected immediately.
+    - Cost-efficient access: If your data is large or stored in external sources (e.g., cloud storage or third-party databases), you can access it without duplicating it, which helps save storage and reduce costs.
+
+    - Real-time updates: Because you're working directly with the metadata, any changes in the source data are reflected immediately.
 
 3. **Open Mirroring**:
    
@@ -66,10 +68,10 @@ Mirroring in Fabric allows users to enjoy a highly integrated, end-to-end, and e
 
     Using Delta Lake format (which is widely supported across platforms), you can create open APIs for applications to write incremental data updates (like new records or changes) directly into the mirrored data structure in Fabric.
 
-    **Use cases**:
+- **Use cases**:
 
-- Change Data Capture (CDC): If your application generates frequent updates (like transactional systems), you can mirror and capture these changes directly into Fabric, which allows for up-to-date analytics.
-- Open-source integration: Open mirroring leverages open formats like Delta Lake, allowing it to work across various ecosystems and giving you more flexibility in how data is integrated.
+    - Change Data Capture (CDC): If your application generates frequent updates (like transactional systems), you can mirror and capture these changes directly into Fabric, which allows for up-to-date analytics.
+    - Open-source integration: Open mirroring leverages open formats like Delta Lake, allowing it to work across various ecosystems and giving you more flexibility in how data is integrated.
 
 
 ### Conclusion  
