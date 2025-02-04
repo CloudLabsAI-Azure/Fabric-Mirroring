@@ -125,11 +125,21 @@ In this task, you will query and view the mirrored data to verify successful syn
 
 In this task, you will get started with Apache Iceberg in a Lakehouse environment to manage large-scale data with optimized storage and querying capabilities.
 
-1. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
+1. Click on **My Workspace (1)** and select **+New Workspace (2)**.
+
+    ![](../media/Lab-04/new-fab.png)
+
+1. Create a new workspace and name it **snowflakefabric (1)** and Expand **Advanced (2)**.
+
+   ![](../media/Lab-04/new-workspace.png)
+
+1. Choose the **fabric capacity (1)**, select **snowflakefabric-WESTUS2 (2)** from the drop-down, and click **Apply (3)**.
+
+    ![](../media/Lab-04/capacity.png)
 
 1. Create a **New Item**.
    
-   ![](../media/Lab-01/fabric-new.png)
+    ![](../media/Lab-04/new-snow.png)
 
 1. Select Lakehouse and name it **snowflakeQS**
 
@@ -202,7 +212,7 @@ In the Properties Menu, copy the URL.
 
       >**Note**: The Deployment ID is unique to each individual, making it a good practice to create different external locations.
 
-1. Now you need to enable Snowflake permission to access your Fabric workspace. First run the following in Snowflake:
+1. Now you need to enable Snowflake permission to access **snowflakefabric** workspace. First run the following in Snowflake:
 
    ```
    DESC EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>;
@@ -226,7 +236,7 @@ In the Properties Menu, copy the URL.
    
     ![](../media/Lab-04/00.png)
 
- 1. In Fabric, grant the service principal access to your Fabric lakehouse.
+ 1. In Fabric, grant the service principal access to **snowflakeQS** Fabric lakehouse.
 
 1. From the Fabric settings, click on the admin portal. Scroll down to Developer settings, and under Service Principals can use Fabric APIs, enable this setting.
 
@@ -291,7 +301,7 @@ In the Properties Menu, copy the URL.
 
    ```
 
-1. Open the workspace that contains your Fabric lakehouse object.
+1. Open the **snowflakefabric** workspace that contains **snowflakeQS** Fabric lakehouse object.
 
 1. Click Workspace settings.
 
