@@ -153,7 +153,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
      ![](../media/Lab-04/create0.png)
 
-1. Click on **My Workspace (1)** and select **+New Workspace (2)**.
+1. On the **Fabric portal** ,Click on **My Workspace (1)** and select **+New Workspace (2)**.
 
     ![](../media/Lab-04/new-fab.png)
 
