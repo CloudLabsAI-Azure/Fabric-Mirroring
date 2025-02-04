@@ -59,7 +59,7 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
         ![](../media/Lab-02/s11.png)
 
->**Note**: Please wait until Backup&Restore is updated.
+      >**Note**: Please wait until Backup&Restore is updated.
 
 ### Task 02: Set Up a Mirrored Database
 
