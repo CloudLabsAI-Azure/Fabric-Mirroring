@@ -1,4 +1,4 @@
-## Overview of Microsoft Fabric Mirroring
+# Overview of Microsoft Fabric Mirroring
 
 Mirroring in Fabric is a low-cost and low-latency solution to bring data from various systems together into a single analytics platform. You can continuously replicate your existing data estate directly into Fabric's OneLake from a variety of Azure databases and external data sources.
 
@@ -74,6 +74,6 @@ Mirroring in Fabric allows users to enjoy a highly integrated, end-to-end, and e
     - Open-source integration: Open mirroring leverages open formats like Delta Lake, allowing it to work across various ecosystems and giving you more flexibility in how data is integrated.
 
 
-### Conclusion  
+## Conclusion  
 
 Microsoft Fabric's **mirroring** capabilities provide flexible data integration options to suit different needs. **Database mirroring** replicates entire databases for full data availability, while **metadata mirroring** syncs only schema information, reducing storage costs. **Open mirroring** supports real-time change data capture, enabling continuous data synchronization. These approaches help businesses centralize data, reduce duplication, and maintain up-to-date analytics. Ultimately, Fabric’s mirroring options empower seamless, scalable, and efficient data management across diverse systems.
