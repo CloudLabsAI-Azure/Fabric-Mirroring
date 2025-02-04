@@ -221,7 +221,7 @@ In the Properties Menu, copy the URL.
 1. In the output section, click on the **property value(1)** to open a larger view. From there, you can expand it or **copy it to a notepad(2)**.
 
 
-      ![](../media/Lab-04/vol2.png)
+   ![](../media/Lab-04/vol2.png)
 
 1. Then copy the URL highlighted in the screenshot.
 
