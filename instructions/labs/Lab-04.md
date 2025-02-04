@@ -125,6 +125,34 @@ In this task, you will query and view the mirrored data to verify successful syn
 
 In this task, you will get started with Apache Iceberg in a Lakehouse environment to manage large-scale data with optimized storage and querying capabilities.
 
+1. Search for **Microsoft Fabric** in the Azure portal and select it.
+
+    ![](../media/Lab-04/fabric-1.png)
+
+1. Click on **+ Create**.
+
+    ![](../media/Lab-04/create-1.png)
+
+1. Fill the following details as below:
+
+   - Resource Group : Choose from the drop-down and select **Fabric-<inject key="DeploymentID" enableCopy="false"/>**(1)
+
+   - Capacity name: **snowflakefabric**(2)
+
+   - Region : **WEST US2** (3)
+
+   - Size : **F2** (4)
+
+   - Fabric capacity administartor : **<inject key="AzureAdUserEmail"></inject>** (5)
+
+   - **Review + Create** (6)
+
+      ![](../media/Lab-04/fabric-2.png)
+
+1. Now, Click on **create** .
+
+     ![](../media/Lab-04/create0.png)
+
 1. Click on **My Workspace (1)** and select **+New Workspace (2)**.
 
     ![](../media/Lab-04/new-fab.png)
