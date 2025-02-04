@@ -140,9 +140,9 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 1. If you would like, you can enter a **Description** for the workspace. This is an optional field.
 
-1. Click on **Advanced** to expand the section and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> (2)** and click on **Apply (3)** to create and open the workspace.
+1. Click on **Advanced** to expand the section and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> EAST US (2)** and click on **Apply (3)** to create and open the workspace.
 
-    ![](../media/Lab-01/f4.png)
+    ![](../media/Lab-01/fab-1.png)
 
     >**Note:** If the **Introducing task flows** dialog opens, click on **Got it**.
 
