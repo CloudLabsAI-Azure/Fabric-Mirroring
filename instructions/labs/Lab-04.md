@@ -149,7 +149,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
       ![](../media/Lab-04/fabric-2.png)
 
-1. Now, Click on **create** .
+1. Now, Click on **Create** .
 
      ![](../media/Lab-04/create0.png)
 
