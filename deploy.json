@@ -89,6 +89,26 @@
             },
             "type": "Microsoft.Fabric/capacities"
         },
+       {
+            "apiVersion": "2022-07-01-preview",
+            "name": "snowflakefabric",
+            "location":  "West US 2",
+            "dependsOn": [
+                "WaitSection"
+            ],
+            "sku": {
+                "name": "F2",
+                "tier": "Fabric"
+            },
+            "properties": {
+                "administration": {
+                    "members": [
+                        "[parameters('azureUserName')]"
+                    ]
+                }
+            },
+            "type": "Microsoft.Fabric/capacities"
+        },
       {
         "name": "[variables('winvirtualMachineName')]",
         "type": "Microsoft.Compute/virtualMachines",
