@@ -59,6 +59,8 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
         ![](../media/Lab-02/s11.png)
 
+>**Note**: Please wait until Backup&Restore is updated.
+
 ### Task 02: Set Up a Mirrored Database
 
 In this task, you will configure a mirrored database in Microsoft Fabric, ensuring data replication from the source Azure Cosmos DB to a secondary instance for high availability and disaster recovery.
