@@ -4,7 +4,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
 
 ### Task 01: Verify the Configuration of the Source Azure Cosmos DB Account
 
-1. In the Azure portal, type **"Azure Cosmos DB"** in the search bar at the top of the page, and select the **Azure Cosmos DB account** from the search results.
+1. In the Azure portal, type **"Azure Cosmos DB" (1)** in the search bar at the top of the page, and select the **Azure Cosmos DB account (2)** from the search results.
 
    ![](../media/Lab-02/azure-cosmosdb.png)
 
