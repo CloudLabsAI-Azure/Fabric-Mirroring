@@ -1,6 +1,6 @@
 # Lab 01: Configure Microsoft Fabric mirrored databases from Azure SQL Database
 
-In this lab, the focus is on enabling System assigned managed identity (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS). You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
+In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) for Azure SQL Database to ensure high availability and disaster recovery. The lab guides you through the process of connecting to your Azure SQL logical server using SQL Server Management Studio (SSMS). You will configure a mirrored Azure SQL Database to provide a reliable failover solution. The mirroring setup ensures that your data is synchronized between the primary and mirrored databases, providing resilience in case of failure. By completing this lab, you gain practical knowledge of how to enhance the availability and security of your Azure SQL Database.
 
 ## Task 01:  Enable SAMI of your Azure SQL logical server
 
@@ -12,7 +12,7 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
    ![](../media/Lab-01/fbdb-1.png)
 
-1. In the resource menu, go to **Identity(1)** under the **Security** section, **ON(2)** the System Assigned Managed Identity (SAMI), and **Save(3)** the changes.
+1. In the resource menu, go to **Identity (1)** under the **Security** section, **ON (2)** the System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
 
    ![](../media/Lab-01/sami-on.png)
 
@@ -23,17 +23,17 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
     ![](../media/Lab-01/add_firewall.png)
 
 
-1. Fill the details as shown below:
+1. Fill in the details as shown below:
 
-   - Rule name : `Allowall`(1)
+   - Rule name : `Allowall` (1)
 
-   - Start IPV4 address : `0.0.0.0`(2)
+   - Start IPV4 address : `0.0.0.0` (2)
 
-   - End IPV4 address : `255.255.255.255`(3)
+   - End IPV4 address : `255.255.255.255` (3)
 
       ![](../media/Lab-01/allowall.png)
   
-1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database(1)** and **select it (2)**
+1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
 
      ![](../media/Lab-01/sqldb.png)
 
@@ -212,6 +212,6 @@ In this lab, the focus is on enabling System assigned managed identity (SAMI) fo
 
 # Review
 
-In this lab, you have learned how to enable System assigned managed identity (SAMI) by connecting via SQL Server Management Studio (SSMS). After connecting to the master database, you proceed to set up and configure a mirrored Azure SQL Database. This setup ensures high availability by creating a replica of the database for failover scenarios. The process involves configuring database mirroring to maintain data synchronization between the primary and mirrored databases. Overall, the lab helps you establish disaster recovery and resilience for your Azure SQL Database environments.
+In this lab, you have learned how to enable System Assigned Managed Identity (SAMI) by connecting via SQL Server Management Studio (SSMS). After connecting to the master database, you proceed to set up and configure a mirrored Azure SQL Database. This setup ensures high availability by creating a replica of the database for failover scenarios. The process involves configuring database mirroring to maintain data synchronization between the primary and mirrored databases. Overall, the lab helps you establish disaster recovery and resilience for your Azure SQL Database environments.
 
 
