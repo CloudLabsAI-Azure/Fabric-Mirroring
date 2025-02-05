@@ -1,6 +1,6 @@
 # Lab 04: Mirroring Snowflake in Microsoft Fabric
 
-In this lab, you’ll create a mirrored database in Microsoft Fabric and connect to your Snowflake instance on any cloud platform. You’ll start the mirroring process to replicate the Snowflake database into Fabric. Finally, you’ll monitor and view the status of the Fabric Snowflake mirroring process to ensure successful replication and synchronization.
+In this lab, you’ll create a mirrored database in Microsoft Fabric and connect it to your Snowflake instance on any cloud platform. You’ll start the mirroring process to replicate the Snowflake database into Fabric. Finally, you’ll monitor and view the status of the Fabric Snowflake mirroring process to ensure successful replication and synchronization.
 
 ## Task 01: Create a mirrored database in Microsoft Fabric 
 
@@ -28,7 +28,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
     ![](../media/Lab-04/snowflake.png)
 
 2. **Configure Connection Settings**
-   on the **New connection**, enter the following connection details and click on **Connect (6)**
+   on the **New connection**, enter the following connection details, and click on **Connect (6)**
 
    | Connection Setting | Description |
    |------------------------|-----------------|
@@ -48,12 +48,12 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
     ![](../media/Lab-04/new-con.png)
 
-  1. **Select all** from the choose data pane , then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
+  1. **Select all** from the choose data pane, then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
      
      ![](../media/Lab-04/table-1.png)
 
 
-1. Select **ICEBERG_DB (1)** database from dropdown list and click on **Connect mirrored database (2)**.
+1. Select **ICEBERG_DB (1)** database from the dropdown list and click on **Connect mirrored database (2)**.
 
       ![](../media/Lab-04/iceberg-demo-1.png)
       
@@ -85,7 +85,7 @@ In this section, we'll provide a brief overview of how to create a new mirrored 
 
      ![](../media/Lab-04/sales-1.png)
 
-1. From the ellipses on the **Sales (1)** table, **click** on it, **select New SQL Query(2)**, and choose **Show Top 100 (3)**.
+1. Click on the ellipses on the **Sales (1)** table, **select New SQL Query (2)**, and choose **Show Top 100 (3)**.
 
      ![](../media/Lab-04/selettop.png)
 
