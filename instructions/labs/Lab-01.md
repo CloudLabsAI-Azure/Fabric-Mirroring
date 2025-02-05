@@ -18,7 +18,7 @@ In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) fo
 
    >**Note**: **Please wait until SAMI is turned on; it might take some time.**
 
-1. Under **Security**, Choose **Networking (1)** and **add a firewall rule (2)**.
+1. Under **Security**, choose **Networking (1)**, and **add a firewall rule (2)**.
 
     ![](../media/Lab-01/add_firewall.png)
 
@@ -33,7 +33,7 @@ In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) fo
 
       ![](../media/Lab-01/allowall.png)
   
-1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
+1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**.
 
      ![](../media/Lab-01/sqldb.png)
 
@@ -80,7 +80,7 @@ In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) fo
 
 1. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
 
-   >**Note :** Provide the "strong password" as desired
+   >**Note :** Provide the "strong password" as desired.
 
      ```
      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
@@ -125,11 +125,11 @@ In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) fo
 
 1. If you would like, you can enter a **Description** for the workspace. This is an optional field.
 
-1. Click on **Advanced** to expand the section and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> (2)** and click on **Apply (3)** to create and open the workspace.
+1. Click on **Advanced** to expand the section and under **License mode**, select **Fabric capacity (1)**. Under **Capacity** select available **fabric<inject key="DeploymentID" enableCopy="false"/> (2)** and click on **Apply (3)** to create and open the workspace.
 
     ![](../media/Lab-01/f4.png)
 
-    >**Note:** If the **Introducing task flows** dialog opens, click on **Got it**.
+    >**Note:** If the **Introducing task flows** dialog box opens, click on **Got it**.
 
     ![](../media/Lab-01/image28.png)
 
@@ -145,7 +145,7 @@ In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) fo
 
    ![](../media/Lab-01/azure-sql-database.png)
 
-1. Select New connection, enter the connection details to the Azure SQL Database.
+1. Select **New connection**, and enter the connection details to the Azure SQL Database.
 
    - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
    - Database : **samplesqldb (2)**
@@ -178,9 +178,9 @@ In this lab, the focus is on enabling System Assigned Managed Identity (SAMI) fo
 
      ![](../media/Lab-01/sales-lt.png)
 
-   >**Note:** Click on Refresh to see the synchronized tables
+   >**Note:** Click on Refresh to see the synchronized tables.
 
-4. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
+4. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database to run the query.
 
 5. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
   
