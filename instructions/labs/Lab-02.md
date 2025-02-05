@@ -45,7 +45,7 @@ In this lab, you will set up an Azure Cosmos DB account and configure a mirrored
    
 ## Task 02: Set Up a Mirrored Database
 
-1. Go to the **Fabric portal** home page of PowerBI.
+1. Go to the **Fabric portal** home page of Power BI.
 
    ![](../media/Lab-01/power-bi.png)
 
