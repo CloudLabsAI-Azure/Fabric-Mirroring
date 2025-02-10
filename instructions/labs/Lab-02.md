@@ -130,9 +130,9 @@ In this task, you will establish a connection to the source Azure Cosmos DB data
 
 In this task, you will initiate the mirroring process between the source and mirrored databases, then monitor the replication progress and status within Microsoft Fabric to ensure data synchronization is successful.
 
-1. Select **Monitor Replication**. Mirroring will now begin.
+1. Creating your mirrored database.
 
-   ![](../media/Lab-02/monitor-replication.png)
+    ![](../media/Lab-01/mirrored-1.png)
 
    >**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
 
