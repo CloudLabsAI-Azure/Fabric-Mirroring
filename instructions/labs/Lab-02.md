@@ -81,7 +81,7 @@ In this task, you will configure a mirrored database in Microsoft Fabric, ensuri
 
 3. In the navigation menu, click on **+ New Item**.
 
-   ![](../media/Lab-01/fabric-new.png)
+   ![](../media/Lab-01/add-item.png)
 
 4. From the options, choose **Mirrored Azure Cosmos DB (Preview)**.
 
