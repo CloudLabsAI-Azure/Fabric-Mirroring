@@ -25,7 +25,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    ![](../media/Lab-01/fbdb-1.png)
 
-1. In the resource menu, go to **Identity(1)** under the **Security** section, **ON(2)** the System Assigned Managed Identity (SAMI), and **Save(3)** the changes.
+1. In the resource menu, go to **Identity (1)** under the **Security** section, **ON (2)** the System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
 
    ![](../media/Lab-01/sami-on.png)
 
@@ -36,17 +36,17 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
     ![](../media/Lab-01/add_firewall.png)
 
 
-1. Fill the details as shown below:
+1. Fill in the details as shown below:
 
-   - Rule name : `Allowall`(1)
+   - Rule name : `Allowall` (1)
 
-   - Start IPV4 address : `0.0.0.0`(2)
+   - Start IPV4 address : `0.0.0.0` (2)
 
-   - End IPV4 address : `255.255.255.255`(3)
+   - End IPV4 address : `255.255.255.255` (3)
 
       ![](../media/Lab-01/allowall.png)
   
-1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database(1)** and **select it (2)**
+1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
 
      ![](../media/Lab-01/sqldb.png)
 
