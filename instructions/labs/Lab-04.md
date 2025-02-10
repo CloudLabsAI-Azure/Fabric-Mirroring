@@ -46,7 +46,7 @@ You will be Mirroring the pre-created iceberg table in the database.
     ![](../media/Lab-04/snowflake.png)
 
 2. **Configure Connection Settings**
-   on the **New connection**, enter the following connection details and click on **Connect (6)**
+   on the **New connection**, enter the following connection details, and click on **Connect (6)**
 
    | Connection Setting | Description |
    |------------------------|-----------------|
