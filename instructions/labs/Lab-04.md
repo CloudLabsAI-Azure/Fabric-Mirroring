@@ -66,12 +66,12 @@ You will be Mirroring the pre-created iceberg table in the database.
 
     ![](../media/Lab-04/new-con.png)
 
-  1. **Select all** from the choose data pane , then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
+  1. **Select all** from the choose data pane, then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
      
      ![](../media/Lab-04/table-1.png)
 
 
-1. Select **ICEBERG_DB (1)** database from dropdown list and click on **Connect mirrored database (2)**.
+1. Select **ICEBERG_DB (1)** database from the dropdown list and click on **Connect mirrored database (2)**.
 
       ![](../media/Lab-04/iceberg-demo-1.png)
       
@@ -109,7 +109,7 @@ In this task, you will query and view the mirrored data to verify successful syn
 
      ![](../media/Lab-04/sales-1.png)
 
-1. From the ellipses on the **Sales (1)** table, **click** on it, **select New SQL Query(2)**, and choose **Show Top 100 (3)**.
+1. Click on the ellipses on the **Sales (1)** table, **select New SQL Query (2)**, and choose **Show Top 100 (3)**.
 
      ![](../media/Lab-04/selettop.png)
 
