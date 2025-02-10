@@ -205,9 +205,9 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
      ![](../media/Lab-02/merge-as-view.png)
 
-8. For the merge, select **Orderitems** from the right table and choose **id**, then click **OK**.
+8. For the merge, select **Orderstatus (1)** as the right table and choose **id (2)**. Select **id** for **Orderitems** as the left table. In the join kind, choose **Left Outer (4)**, then click **OK (5)**.
 
-      ![](../media/Lab-02/merge-query-011.png)
+      ![](../media/Lab-02/merge.png)
 
 9. Once merged, your visual query will appear as follows:
 
@@ -227,7 +227,7 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 11. When the pop-up appears displaying all available data, click **Continue**.
 
-      ![](../media/Lab-02/new-report.png)
+      ![](../media/Lab-02/continue.png)
 
 12. When the pop-up appears, select **Try Free** to upgrade to a paid Power BI license.
 
@@ -239,7 +239,7 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 12. Expand the **Data Pane** and select the **Sum of _ts**, **categoryid**, and **Sum of price**.
 
-     ![](../media/Lab-02/data.png)
+     ![](../media/Lab-02/merged-1.png)
 
 13. In the **Visualization Pane**, select the **Clustered Column Chart**.
 
