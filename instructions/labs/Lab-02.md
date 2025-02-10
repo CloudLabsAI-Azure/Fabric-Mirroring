@@ -165,13 +165,13 @@ In this task, you will execute queries on the source database through Microsoft 
  
 In this task, you will examine the target mirrored database in Microsoft Fabric to ensure that data replication is functioning correctly and that the mirrored database is in sync with the source.
 
-1. Switch from **Mirrored Azure Cosmos DB** to **SQL Analytics Endpoint**.
+1. Switch from **Mirrored database** to **SQL Analytics Endpoint**.
 
-     ![](../media/Lab-02/sql-endpoint.png)
+     ![](../media/Lab-02/sql-analytics.png)
 
 2. Each container from the source database will appear as a warehouse table in the SQL Analytics Endpoint.
 
-3. Select **Orderstatus**, open the context menu, and click on **New SQL Query**, then choose **Select Top 100**. The query will run and return the top 100 records from the selected table.
+3. Expand **OrderDB** > **Tables** and select **Orderstatus**. Right-click to open the context menu, then click on **New SQL Query** and choose **Select Top 100**. The query will execute and return the top 100 records from the selected table.
 
 4. Next, select **Orderitems**, click **New SQL Query**, and choose **Select Top 100**.
 
