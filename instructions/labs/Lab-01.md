@@ -81,9 +81,9 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    - Authentication : **SQL Server Authentication (2)**
 
-   - Login : **<inject key="SQL Server Username" enableCopy="false"/> (3)**
+   - Login : **<inject key="SQL Server Username" enableCopy="true"/> (3)**
 
-   - Password : **<inject key="SQL Server Password" enableCopy="false"/> (4)**
+   - Password : **<inject key="SQL Server Password" enableCopy="true"/> (4)**
 
      ![](../media/s1.png)
 
