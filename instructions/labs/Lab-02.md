@@ -109,12 +109,16 @@ In this task, you will establish a connection to the source Azure Cosmos DB data
      
      - Click **Connect**. 
 
-       ![](../media/Lab-02/cosmos-db.png)  
+       ![](../media/Lab-02/cosmos-db.png) 
 
-3. Under the **Choose Data** section, click **Connect**.
+3. In the new connection pane, select **OrderDB** and click **Connect**.
 
-    ![](../media/Lab-02/orderdb.png)
-  
+     ![](../media/Lab-02/new-1.png)  
+
+4. Under the **Choose Data** section, click **Connect**.
+     
+     ![](../media/Lab-02/connect-1.png)
+ 
 5. In the **Destination** section, enter the name **Mirrored-SampleDB** and click **Create mirrored database**.
 
      ![](../media/Lab-02/mirrored-db-1.png)
