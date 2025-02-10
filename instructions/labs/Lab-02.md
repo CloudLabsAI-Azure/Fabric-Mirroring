@@ -45,7 +45,7 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
    ![](../media/Lab-02/democosmos.png)
 
-8. Select **Keys** from the left-hand pane, then copy the **endpoint URL** and **primary key** and paste them in a notepad for use in the further steps.
+8. Select **Keys** from the left-hand pane, then copy the **endpoint URL** and **primary key** and paste them into a notepad for use in the further steps.
 
       ![](../media/Lab-02/s10.png)
 
@@ -65,7 +65,7 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
 In this task, you will configure a mirrored database in Microsoft Fabric, ensuring data replication from the source Azure Cosmos DB to a secondary instance for high availability and disaster recovery.
 
-1. Go to the **Fabric portal** home page of powerbi.
+1. Go to the **Fabric portal** home page of PowerBI.
 
    ![](../media/Lab-01/power-bi.png)
 
@@ -129,7 +129,7 @@ In this task, you will initiate the mirroring process between the source and mir
    ![](../media/Lab-02/mointor-replication.png)
 
 
-   - **Tip**: If you can't find the containers and the corresponding replication status, refresh the pane after a few seconds. In rare cases, transient error messages may appear; you can safely ignore them and refresh.
+   - **Tip**: If you can't find the containers and the corresponding replication status, refresh the page after a few seconds. In rare cases, transient error messages may appear; you can safely ignore them and refresh.
 
      >**Note**: When the mirroring finishes the initial copying of the containers, a date will appear in the **Last Refresh** column. If data was successfully replicated, the **Total Rows** column will show the number of items replicated.
 
@@ -181,7 +181,7 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
      ![](../media/Lab-02/results-1.png)
 
-5. Select **New Visual Query** to open the query editor from the tool bar.    
+5. Select **New Visual Query** to open the query editor from the toolbar.    
 
       ![](../media/Lab-02/new-visual-query.png)
 
@@ -201,11 +201,11 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
      ![](../media/Lab-02/order-final.png)
 
-10. On the query editor pane , select **save as view**.
+10. On the query editor pane, select **save as view**.
 
      ![](../media/Lab-02/save-as-view.png)
 
-11. In the **Save As** window, select **OrderDB (1)** as the schema and name the view as **Merged_orders (2)**,then click **OK (3)**.
+11. In the **Save As** window, select **OrderDB (1)** as the schema and name the view as **Merged_orders (2)**, then click **OK (3)**.
 
      ![](../media/Lab-02/save-as-1.png)
 
