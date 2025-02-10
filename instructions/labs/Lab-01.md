@@ -126,7 +126,13 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
  
 In this task, you will create a mirrored Azure SQL database by setting up replication between a source and target database, ensuring high availability and data redundancy within your Microsoft Fabric environment.
 
-1. Open the ```https://app.fabric.microsoft.com```, You will be navigated to the **Fabric Home**.
+1. Open the ```https://app.fabric.microsoft.com```.
+
+1. On the **Welcome to Fabric view** screen, click **Close**.
+
+    ![](../media/Lab-01/cancel.png)
+
+1. You will be directed to the **Fabric Home** page, where you can select **Power BI** from the bottom left.
 
     ![](../media/Lab-01/power-bi.png)
 
@@ -154,7 +160,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 1. Navigate to the workspace. Select the **+ New item** icon.
 
-    ![](../media/Lab-01/fabric-new.png)
+    ![](../media/Lab-01/add-item.png)
 
 1. Scroll to the Data Warehouse section and then select **Mirrored Azure SQL Database**.
 
@@ -162,7 +168,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 1. Select a Azure SQL Database under **choose a database connection to get started**.
 
-   ![](../media/Lab-01/azure-sql-database.png)
+   ![](../media/Lab-01/sql-db.png)
 
 1. Select New connection, enter the connection details to the Azure SQL Database.
 
