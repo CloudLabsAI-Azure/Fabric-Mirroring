@@ -44,7 +44,11 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    - End IPV4 address : `255.255.255.255` (3)
 
-      ![](../media/Lab-01/allowall.png)
+   - Click on `OK` (4)
+
+   - Now, Click on `Save` 
+
+      ![](../media/Lab-01/add-firewall.png)
   
 1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
 
