@@ -1,4 +1,4 @@
-# Lab 05: Configure Microsoft Fabric open mirrored databases
+# Lab 05: Configure Microsoft Fabric Open Mirrored Databases
 
 ### Lab Scenario
 
@@ -34,7 +34,7 @@ In this task, you will create an open mirrored database in Microsoft Fabric to e
 
       ![](../media/Lab-05/mirrored-1.png)
 
-1. Locate the **Landing zone URL** in the details section of the mirrored database home page and copy it 
+1. Locate the **Landing zone URL** in the details section of the mirrored database home page and copy it.
 
      ![](../media/Lab-05/landing-zone-1.png)
 
@@ -50,7 +50,7 @@ In this task, you will write change data to the landing zone and monitor the rep
 
    ![](../media/Lab-05/sign-in.png)
 
-3. In the **Which Azure environment would you like to sign in to?** window, select **Azure** and click on next
+3. In the **Which Azure environment would you like to sign in to?** window, select **Azure**, and click on **Next**.
 
     ![](../media/Lab-05/azure-signin.png)
 
@@ -75,11 +75,11 @@ In this task, you will write change data to the landing zone and monitor the rep
 
    ![](../media/Lab-05/select-cn.png)
 
-1. On the **Select Account & Tenant** window, choose the account **<inject key="AzureAdUserEmail"></inject>** and select **next**.
+1. On the **Select Account & Tenant** window, choose the account **<inject key="AzureAdUserEmail"></inject>** and click on **Next**.
 
     ![](../media/Lab-05/select-odluser-1.png)
 
-2.  In the **Enter Connection Info** window,name it as **Fabric_mirroring (1)** paste the **landing URL (2)** that you copied in Task 1 and click on **Next (3)**
+2.  In the **Enter Connection Info** window, name it **Fabric_mirroring (1)** paste the **landing URL (2)** that you copied in Task 1 and **click** on **Next (3)**.
 
     ![](../media/Lab-05/fabric-mirroring.png)
 
@@ -88,11 +88,11 @@ In this task, you will write change data to the landing zone and monitor the rep
      
      ![](../media/Lab-05/connect-1.png)
 
-1. Click on **Files(1)**, then select the **LandingZone(2)** folder.
+1. Click on **Files (1)**, then select the **LandingZone (2)** folder.
 
      ![](../media/Lab-05/landing_zone.png)
 
-1. From the toolbar, select **+New Folder (1)** and name it **source_employee (2)** and Click **Ok**.
+1. From the toolbar, select **+New Folder (1)**, name it **source_employee (2)** and Click **Ok**.
 
      ![](../media/Lab-05/landing_zone.png)
 
@@ -112,7 +112,7 @@ In this task, you will write change data to the landing zone and monitor the rep
 
      ![](../media/Lab-05/new-11.png)
 
-1. Navigate Back to **Mirrored Database_<inject key="DeploymentID" enableCopy="false"/>** in fabric portal .
+1. Navigate Back to the **Mirrored Database_<inject key="DeploymentID" enableCopy="false"/>** in fabric portal .
 
 1. In the **Monitor Replication** blade, **click on Refresh**. You will be able to see the **source_employee** folder that has been created but is yet to succeed. You can ignore the warning.
 
@@ -143,7 +143,7 @@ In this task, you will write change data to the landing zone and monitor the rep
      ![](../media/Lab-05/source-employee3.png)
 
 
-1. Now return to **Storage Explorer**, click **Upload** again to upload the **0000000....2.parquet** file. After the upload is complete  go to the **Monitor Replication** in Fabric, click **Refresh** and you should see the count increase. 
+1. Now return to **Storage Explorer** and click on **Upload** again to upload the **0000000....2.parquet** file. After the upload is complete  go to the **Monitor Replication** in Fabric, click **Refresh** and you should see the count increase. 
 
     ![](../media/Lab-05/monitor.png)
 
