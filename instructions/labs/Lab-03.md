@@ -18,17 +18,17 @@ In this lab, you will complete the following tasks:
 In this task, you will enable the System Assigned Managed Identity (SAMI) for your Azure SQL Managed Instance to securely authenticate and access other Azure resources.
 
 
- 1. Navigate to Azure portal and search for **SQL Managed Instance (1)** and select **SQL Managed Instance (2)**.
+ 1.  Navigate to the Azure Portal, search for **SQL Managed Instance (1)**, and select **SQL Managed Instance (2)**.
 
      ![](../media/Lab-05/sqlmi.png)
 
-1. Select **sqlmi-<inject key="DeploymentID" enableCopy="false"/>**
+ 1. Select **sqlmi-<inject key="DeploymentID" enableCopy="false"/>**
 
  1. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On** and click on **Save**.
 
       ![](../media/Lab-05/sqlmi00.png)
 
-1. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later for creating the mirrored database in Fabric.
+1. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
 
    ![](../media/Lab-03/endpoint.png)
 
@@ -48,7 +48,7 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
  
    ![](../media/Lab-01/s2.png)
 
-1. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor(1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
+1. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
@@ -115,17 +115,17 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
    >**Note**: You can't use existing connections of type "SQL Server". Only connections of type "SQL Managed Instance" are supported for mirroring Azure SQL Managed Instance data.
 
 
-9. Select **New connection**, enter the following details:
+9. Select **New connection**, and enter the following details:
 
      - **Server** : Paste the public endpoint that you copied and saved in the notepad during the previous steps (1)
 
-     - **Database**: `SampleDatabase`(2)
+     - **Database** : `SampleDatabase`(2)
 
-     - **Connection**: Create a new connection.
+     - **Connection** : Create a new connection.
 
-     - **Connection name**: `newconnection`(3)
+     - **Connection name** : `newconnection`(3)
         .
-     - **Authentication kind**: Basic 
+     - **Authentication kind** : Basic 
 
      - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**(4)
 
@@ -136,7 +136,7 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
        ![](../media/Lab-03/connection-1.png)
 
- 1. Review the available databases by selecting **Databases** from the list. You will see the database that is selected by default. Click on **connect**.
+ 1. Review the available databases by selecting **Databases** from the list. You will see the database that is selected by default. Click on **Connect**.
 
        ![](../media/Lab-03/connection-2.png)
 
@@ -151,7 +151,7 @@ In this task, you will initiate the database mirroring process and monitor the s
 
 1. The **Monitor Replication** screen will allow you to mirror all data in the database by default.
 
-    >**Note**:After 2-5 minutes, select **Monitor replication** to see the replication status.
+    >**Note**:After 2-5 minutes, select **Monitor Replication** to see the replication status.
 
     ![](../media/Lab-03/creating-mirrored-db.png)
 
