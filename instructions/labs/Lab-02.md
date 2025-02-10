@@ -31,25 +31,33 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
    ![](../media/Lab-02/launch-quick.png)
 
-4. Enter the Database ID as **OrderDB** and the Container ID as **Orderitems**. Leave all other settings at their default values, and click **OK** to proceed. Once the container is created, you will see the tables that were created.
+4. Enter the Database ID as **OrderDB (1)** and the Container ID as **Orderitems (2)**. Leave all other settings at their default values, and click **OK (3)** to proceed. Once the container is created, you will see the tables that were created.
 
-   ![](../media/Lab-02/ordersdb-new.png)
+   ![](../media/Lab-02/orderdb.png)
 
-5. Next, click on **Launch Quick Start** again and create another container with the ID **Orderstatus**. Select **Use Existing** and choose **OrderDB** from the dropdown menu. Then, click **OK**.
+   ![](../media/Lab-02/OK.png)
 
-   ![](../media/Lab-02/orderdb-exist.png)
+5. Next, click on **Launch Quick Start** again .
 
-6. Ensure that the networking options in the **Networking** tab are set to **Public network access for all networks**.
+     ![](../media/Lab-02/launch-qs.png)
 
-7. In the left panel, select **Identity (1)**, enable the system-assigned status by switching it to **On (2)**, and then click **Save (3)**. When prompted, click **Yes**.
+6. Select **Use Existing (1)** and choose **OrderDB (2)** and create another container with the ID **Orderstatus (3)**.  from the dropdown menu. Then, click **OK (4)**.
+
+   ![](../media/Lab-02/use-exe.png)
+
+   ![](../media/Lab-02/OK-1.png)
+
+7. Ensure that the networking options in the **Networking** tab are set to **Public network access for all networks**.
+
+8. In the left panel, select **Identity (1)**, enable the system-assigned status by switching it to **On (2)**, and then click **Save (3)**. When prompted, click **Yes**.
 
    ![](../media/Lab-02/democosmos.png)
 
-8. Select **Keys** from the left-hand pane, then copy the **endpoint URL** and **primary key** and paste them into a notepad for use in the further steps.
+9. Select **Keys** from the left-hand pane, then copy the **endpoint URL** and **primary key** and paste them into a notepad for use in the further steps.
 
       ![](../media/Lab-02/s10.png)
 
-9. Now select **Backup & Restore (1)** from the left-hand pane.
+10. Now select **Backup & Restore (1)** from the left-hand pane.
 
      - Click **Change (2)** to modify the Backup policy mode.
 
