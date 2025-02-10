@@ -57,9 +57,9 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 1. From the left pane, select the **Query Editor (Preview)** and log in to the SQL Server using server authentication.
 
-   - **Username : <inject key="SQL Server Username" enableCopy="false"/>**
+   - **Username : <inject key="SQL Server Username" enableCopy="true"/>**
 
-   - **Password : <inject key="SQL Server Password" enableCopy="false"/>**
+   - **Password : <inject key="SQL Server Password" enableCopy="true"/>**
 
      ![](../media/Lab-01/query-editor.png)
 
