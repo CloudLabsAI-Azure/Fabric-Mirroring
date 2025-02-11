@@ -50,7 +50,7 @@ You will be Mirroring the pre-created iceberg table in the database.
 
    | Connection Setting | Description |
    |------------------------|-----------------|
-   | **Server (1)**| flutkda-rq11962.snowflakecomputing.com|
+   | **Server (1)**| jcxsfvs-tv61584.snowflakecomputing.com|
    | **Warehouse (2)**| ICEBERG_WH |
    | **Connection**| Create new connection |
    | **Connection name** | SNOWFLAKE |
