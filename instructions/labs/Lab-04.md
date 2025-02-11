@@ -37,7 +37,7 @@ In this task, you will connect to your Snowflake instance hosted in any cloud to
 
 You will be Mirroring the pre-created iceberg table in the database.
 
-1. Select **Mirrored Snowflake** under get data.
+1. Select **Mirrored Snowflake** .
 
    ![](../media/Lab-04/s14.png)
 
