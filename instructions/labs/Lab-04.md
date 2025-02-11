@@ -198,7 +198,7 @@ In the Properties Menu, copy the URL.
 
  1. Sign in to Snowflake by opening the browser, pasting the URL, and entering the username and password provided below:
 
-     - URL : `https://flutkda-rq11962.snowflakecomputing.com`
+     - URL : `https://jcxsfvs-tv61584.snowflakecomputing.com`
 
      - USERNAME: `SNOWFLAKEUSER`
 
