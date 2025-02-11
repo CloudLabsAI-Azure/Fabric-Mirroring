@@ -55,7 +55,7 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 1. Expand the **SampleDatabase**, then right-click on it and select **New Query** to open a new query window.
 
 
-    ![](../media/Lab-03/sample-db.png)
+![](../media/Lab-03/sample-db.png)
 
 1. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
