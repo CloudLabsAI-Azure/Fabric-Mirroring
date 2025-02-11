@@ -69,7 +69,7 @@ You will be Mirroring the pre-created iceberg table in the database.
 
   1. **Select all** from the choose data pane, then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
      
-     ![](../media/Lab-04/table-1.png)
+     ![](../media/Lab-04/salesdemo-2.png)
 
 
 1. Select **ICEBERG_DB (1)** database from the dropdown list and click on **Connect mirrored database (2)**.
@@ -90,7 +90,7 @@ In this task, you will initiate the mirroring process for the Snowflake database
 
 1. Within a few minutes, the status will update to **Running**, indicating that the tables are being synchronized. Once the initial table copying is complete, a date will appear in the **Last Refresh** column.
 
-      ![](../media/Lab-04/iceberg-schema.png)
+      ![](../media/Lab-04/salesdemo-1.png)
 
 >**Note**: If the tables and replication status are not immediately visible, wait a few seconds and refresh the panel.
 
@@ -108,11 +108,11 @@ In this task, you will query and view the mirrored data to verify successful syn
 
 1. In the **Explorer** pane, expand **Iceberg_schema** > **Tables**, and you will see the **Sales** table.
 
-     ![](../media/Lab-04/sales-1.png)
+     ![](../media/Lab-04/salesdemo-0.png)
 
-1. Click on the ellipses on the **Sales (1)** table, **select New SQL Query (2)**, and choose **Show Top 100 (3)**.
+1. Click on the ellipses on the **Salesdemo (1)** table, **select New SQL Query (2)**, and choose **Select Top 100 (3)**.
 
-     ![](../media/Lab-04/selettop.png)
+     ![](../media/Lab-04/new-sql.png)
 
 1. Now, the query will run automatically.
 
