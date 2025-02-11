@@ -11,7 +11,7 @@ In this lab, you will complete the following tasks:
 - Task 02: Create a mirrored Azure SQL Database
 - Task 03: Initiate, Monitor, and Secure Microsoft Fabric Mirroring for Azure SQL Databases
 
-## Estimated time: 50 minutes
+## Estimated time: 40 minutes
 
 ### Task 01: Enable SAMI of your Azure SQL logical server
 

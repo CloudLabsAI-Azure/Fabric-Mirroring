@@ -1,6 +1,6 @@
 # Microsoft Fabric Mirroring
 
-### Overall Estimated Duration: 5 Hours
+####  Estimated Duration: 4 Hours
 
 ## Overview
 

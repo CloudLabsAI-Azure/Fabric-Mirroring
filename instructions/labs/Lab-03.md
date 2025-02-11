@@ -11,7 +11,7 @@ In this lab, you will complete the following tasks:
 - Task 02: Create a Mirrored Azure SQL Managed Instance Database
 - Task 03: Start the Mirroring Process and Monitor Fabric Mirroring
 
-## Estimated time: 50 minutes
+## Estimated time: 40 minutes
 
 ### Task 01: Enable System Assigned Managed Identity (SAMI) of Your Azure SQL Managed Instance
 

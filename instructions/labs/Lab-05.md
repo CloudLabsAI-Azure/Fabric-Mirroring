@@ -10,7 +10,7 @@ In this lab, you will complete the following tasks:
 - Task 01: Create an Open mirrored database
 - Task 02: Write Change Data to the Landing Zone and Monitor the Replication Process
 
-## Estimated time: 60 minutes
+## Estimated time: 50 minutes
 
 ## Task 01: Create an Open mirrored database 
 

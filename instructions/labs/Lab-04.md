@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 - Task 04: Query and view the mirrored data
 - Task 05: Getting started with iceberg in lakehouse
 
-## Estimated time: 75 minutes
+## Estimated time: 65 minutes
 
 
 ## Task 01: Create a mirrored database in Microsoft Fabric 
