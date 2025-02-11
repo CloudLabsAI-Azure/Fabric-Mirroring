@@ -158,7 +158,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
     ![](../media/Lab-04/new-fab.png)
 
-1. Create a new workspace and name it **snowflakefabric (1)** and Expand **Advanced (2)**.
+1. Create a new workspace and name it **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>** (1)** and Expand **Advanced (2)**.
 
    ![](../media/Lab-04/new-workspace.png)
 
@@ -224,20 +224,26 @@ In the Properties Menu, copy the URL.
 
   1. Copy this query into Snowflake and fill in the parameters with the collected information.
 
-      ```
-      CREATE OR REPLACE EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>
-      STORAGE_LOCATIONS =
-         (
-         (
-            NAME = 'FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>'
-            STORAGE_PROVIDER = 'AZURE'
-            STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
-            AZURE_TENANT_ID = '<Tenant ID>'
-         )
-         );   
-      ```
+      - Replace **FabricWorkspaceName** with snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>.
+
+      - Replace **FabricLakehouseName** with **snowflakeQS**.
       
-      ![](../media/Lab-04/new-snowflake.png)
+      - Replace **Tenant_ID** with the copied ID from Step 12.
+
+         ```
+         CREATE OR REPLACE EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>
+         STORAGE_LOCATIONS =
+            (
+            (
+               NAME = 'FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>'
+               STORAGE_PROVIDER = 'AZURE'
+               STORAGE_BASE_URL = 'azure://onelake.dfs.fabric.microsoft.com/<FabricWorkspaceName>>/<FabricLakehouseName>.Lakehouse/Files/'
+               AZURE_TENANT_ID = '<Tenant ID>'
+            )
+            );   
+         ```
+      
+         ![](../media/Lab-04/new-snowflake.png)
 
       >**Note**: The Deployment ID is unique to each individual, making it a good practice to create different external locations.
 
@@ -266,10 +272,6 @@ In the Properties Menu, copy the URL.
     ![](../media/Lab-04/00.png)
 
  1. In Fabric, grant the service principal access to **snowflakeQS** Fabric lakehouse.
-
-1. From the Fabric settings, click on the admin portal. Scroll down to Developer settings, and under Service Principals can use Fabric APIs, enable this setting.
-
-     ![](../media/Lab-04/01.png)
 
 1. Now open the workspace, click **Manage access**
 
