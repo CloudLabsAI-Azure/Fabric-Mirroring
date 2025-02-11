@@ -60,8 +60,9 @@ You will be Mirroring the pre-created iceberg table in the database.
   
 
       ![](../media/Lab-04/connection-1.png)
+ 
+    >**Note**: Ensure you remove any spaces when copying the credentials, make sure the spaces are removed from the password, and then paste them.Otherwise, it may result in invalid credentials.
 
-  
 1. In the **New connection** pane, select **ICEBERG_DB (1)** from the drop-down, then **click on Connect (2)**.
 
     ![](../media/Lab-04/new-con.png)
