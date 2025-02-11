@@ -106,7 +106,7 @@ In this task, you will query and view the mirrored data to verify successful syn
     ![](../media/Lab-03/query-1.png)
 
 
-1. In the **Explorer** pane, expand **Iceberg_schema** > **Tables**, and you will see the **Sales** table.
+1. In the **Explorer** pane, expand **Iceberg_schema** > **Tables**, and you will see the **Salesdemo** table.
 
      ![](../media/Lab-04/salesdemo-0.png)
 
