@@ -24,11 +24,11 @@ In this task, you will create a mirrored database in Microsoft Fabric to enable 
 
     ![](../media/Lab-01/power-bi.png)
 
-2. In the left-hand pane, click on **workspace (1)** and choose the existing workspace named **fabric-<inject key="DeploymentID" enableCopy="false"/>(2)**.
+1. In the left-hand pane, click on **workspace (1)** and choose the existing workspace named **fabric-<inject key="DeploymentID" enableCopy="false"/>(2)**.
 
    ![](../media/Lab-04/new-workspace.png)
 
-3. Select **+ New Item**.
+1. Select **+ New Item**.
 
    ![](../media/Lab-04/fab-new.png)
 
@@ -47,7 +47,7 @@ You will be Mirroring the pre-created iceberg table in the database.
 
     ![](../media/Lab-04/snowflake.png)
 
-2. **Configure Connection Settings**
+1. **Configure Connection Settings**
    on the **New connection**, enter the following connection details, and click on **Connect (6)**
 
    | Connection Setting | Description |
@@ -69,7 +69,7 @@ You will be Mirroring the pre-created iceberg table in the database.
 
     ![](../media/Lab-04/new-con.png)
 
-  1. **Select all** from the choose data pane, After that, **click on Connect**.
+1. **Select all** from the choose data pane, After that, **click on Connect**.
      
      ![](../media/Lab-04/salesdemo-2.png)
 
@@ -332,10 +332,16 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
    Select * from SnowflakeQS.ICEBERGTEST.dim_customer
 
    ```
-1. Paste the code, select it (1), and then click Run (2).
+1. Paste the code, **select it (1)**, and then click **Run (2)**.
 
    
    ![](../media/Lab-04/code-edit.png)
+
+>**Note** : If you encounter any issues while running the code, execute each block individually and check the outputs.
+
+1.  After running the code, you will be able to view the results, as shown in the screenshot below.
+
+      ![](../media/Lab-04/results-high.png)
 
 1. In order for Fabric to work on the Iceberg tables, you need to set up shortcuts to the data.
 
