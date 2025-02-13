@@ -337,7 +337,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
    
    ![](../media/Lab-04/code-edit.png)
 
->**Note** : If you encounter any issues while running the code, execute each block individually and check the outputs.
+   >**Note** : If you encounter any issues while running the code, execute each block individually and check the outputs.
 
 1.  After running the code, you will be able to view the results, as shown in the screenshot below.
 
