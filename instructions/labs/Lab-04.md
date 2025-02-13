@@ -175,7 +175,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 1. Create a **New Item**.
    
-    ![](../media/Lab-04/fab-new.png)
+    ![](../media/Lab-04/newitem.png)
 
 1. Select Lakehouse and name it **snowflakeQS**
 
@@ -192,7 +192,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 1. You will need your Azure Tenant ID. To find this in Fabric UI:
 
-      - In the upper right click on the ? for **help & support(1)** and at the bottom click **About Fabric(2)**
+      - In the upper right click on the ? for **help & support(1)** and at the bottom click **About Power BI (2)**
 
          ![](../media/Lab-04/powerbi-1.png)
 
