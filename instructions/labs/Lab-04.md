@@ -306,7 +306,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
     ![](../media/Lab-04/add_people.png)
 
 
-1. Return to the Snowflake session open in browser and run the following to create the Iceberg table and insert data from the sample dataset.
+1. Return to the Snowflake session opened in browser and run the following to create the Iceberg table and insert data from the sample dataset.
 
    ```
    --Create the Iceberg table in OneLake
@@ -332,8 +332,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
    Select * from SnowflakeQS.ICEBERGTEST.dim_customer
 
    ```
-1. 
+1. Paste the code, select it (1), and then click Run (2).
 
+   
    ![](../media/Lab-04/code-edit.png)
 
 1. In order for Fabric to work on the Iceberg tables, you need to set up shortcuts to the data.
@@ -357,7 +358,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
    ```
 
-1. Open the ****snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>**** workspace that contains **snowflakeQS** Fabric lakehouse object.
+1. Navigate back to Fabric and open the **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, which contains the **snowflakeQS** Fabric lakehouse object.
 
 1. Click Workspace settings.
 
