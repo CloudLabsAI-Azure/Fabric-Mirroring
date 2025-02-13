@@ -126,7 +126,7 @@ In this task, you will query and view the mirrored data to verify successful syn
 
 In this task, you will get started with Apache Iceberg in a Lakehouse environment to manage large-scale data with optimized storage and querying capabilities.
 
-1. Search for **Microsoft Fabric** in the Azure portal and select it.
+1. Go to `portal.azure.com` Search for **Microsoft Fabric** in the Azure portal and select it.
 
     ![](../media/Lab-04/fabric-1.png)
 
@@ -174,27 +174,26 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
    ![](../media/Lab-04/snowflake11.png)
 
-1. In the Explorer, click the elipses next to Files and then Properties.In the Properties Menu, copy the URL.
+1. In the Explorer, click the ellipses next to Files and then Properties.
 
     ![](../media/Lab-04/new-0.png)
 
-1. In the Explorer, click the elipses next to Files and then Properties.
-In the Properties Menu, copy the URL.
+1. In the Properties Menu, copy the URL.
 
      ![](../media/Lab-04/url.png)
 
 
 1. You will need your Azure Tenant ID. To find this in Fabric UI:
 
-   - In the upper right click on the ? for **help & support(1)** and at the bottom click **About Fabric(2)**
+      - In the upper right click on the ? for **help & support(1)** and at the bottom click **About Fabric(2)**
 
-      ![](../media/Lab-04/help-support.png)
+         ![](../media/Lab-04/help-support.png)
 
-   - Copy the Tenant URL. The Tenant ID is the UUID that follows ctid= and paste in the notepad.
+      - Copy the Tenant URL. The Tenant ID is the UUID that follows ctid= and paste in the notepad.
 
-      ![](../media/Lab-04/tenanturl.png)
+         ![](../media/Lab-04/tenanturl.png)
 
-      ![](../media/Lab-04/id.png)
+         ![](../media/Lab-04/id.png)
 
  1. Sign in to Snowflake by opening the browser, pasting the URL, and entering the username and password provided below:
 
@@ -204,7 +203,7 @@ In the Properties Menu, copy the URL.
 
      - PASSWORD: `Adminuser@12345`
 
-     ![](../media/Lab-04/snowflake-login.png)
+         ![](../media/Lab-04/snowflake-login.png)
 
  1. Select **SQL Worksheet** from the **+ Create** drop-down menu.
 
