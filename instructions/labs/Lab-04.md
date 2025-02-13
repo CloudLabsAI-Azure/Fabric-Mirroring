@@ -20,15 +20,17 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a mirrored database in Microsoft Fabric to enable high availability and real-time data synchronization across environments.
 
-1. Navigate to the **Fabric portal** home at `https://app.fabric.microsoft.com/`
+1. Go to the **Fabric portal** homepage at `https://app.fabric.microsoft.com/` and select **Power BI** from the bottom left pane.
 
     ![](../media/Lab-01/power-bi.png)
 
-2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
+2. In the left-hand pane, click on **workspace (1)** and choose the existing workspace named **fabric-<inject key="DeploymentID" enableCopy="false"/>(2)**.
 
-3. In the navigation menu, select **+ New Item**.
+   ![](../media/Lab-04/new-workspace.png)
 
-   ![](../media/Lab-01/fabric-new.png)
+3. Select **+ New Item**.
+
+   ![](../media/Lab-04/fab-new.png)
 
 
 ## Task 02: Connect to your Snowflake instance in any cloud 
@@ -67,7 +69,7 @@ You will be Mirroring the pre-created iceberg table in the database.
 
     ![](../media/Lab-04/new-con.png)
 
-  1. **Select all** from the choose data pane, then **click** on the table. You will be able to **see the preview** in the right pane. After that, **click on Connect**.
+  1. **Select all** from the choose data pane, After that, **click on Connect**.
      
      ![](../media/Lab-04/salesdemo-2.png)
 
@@ -110,7 +112,7 @@ In this task, you will query and view the mirrored data to verify successful syn
 
      ![](../media/Lab-04/salesdemo-0.png)
 
-1. Click on the ellipses on the **Salesdemo (1)** table, **select New SQL Query (2)**, and choose **Select Top 100 (3)**.
+1. Click on the ellipses on the **Salesdemo (1)** table, **Select New SQL Query (2)**, and choose **Select Top 100 (3)**.
 
      ![](../media/Lab-04/new-sql.png)
 
@@ -126,7 +128,7 @@ In this task, you will query and view the mirrored data to verify successful syn
 
 In this task, you will get started with Apache Iceberg in a Lakehouse environment to manage large-scale data with optimized storage and querying capabilities.
 
-1. Go to `portal.azure.com` Search for **Microsoft Fabric** in the Azure portal and select it.
+1. Navigate to `https://portal.azure.com` In the search bar, type **Microsoft Fabric** and select it from the results.
 
     ![](../media/Lab-04/fabric-1.png)
 
@@ -136,9 +138,10 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 1. Fill the following details as below:
 
-   - Resource Group : Choose from the drop-down and select **Fabric-<inject key="DeploymentID" enableCopy="false"/>**(1)
+   - Resource Group : Choose from the drop-down and select **Fabric-<inject key="DeploymentID" enableCopy="false"/>** (1)
 
-   - Capacity name: **snowflakefabric**(2)
+   - Capacity name: **snowflakefabric** 
+    (2)
 
    - Region : **WEST US2** (3)
 
@@ -154,13 +157,17 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
      ![](../media/Lab-04/create0.png)
 
-1. On the **Fabric portal** ,Click on **My Workspace (1)** and select **+New Workspace (2)**.
+1. In the **Fabric portal**, select **Power BI**.
+
+     ![](../media/Lab-01/power-bi.png)
+
+1. Click on **My Workspace (1)** and select **+New Workspace (2)**.
 
     ![](../media/Lab-04/new-fab.png)
 
-1. Create a new workspace and name it **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>** (1)** and Expand **Advanced (2)**.
+1. Create a new workspace and name it **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and Expand **Advanced (2)**.
 
-   ![](../media/Lab-04/new-workspace.png)
+   ![](../media/Lab-04/snowflakefabric-1.png)
 
 1. Choose the **fabric capacity (1)**, select **snowflakefabric-WESTUS2 (2)** from the drop-down, and click **Apply (3)**.
 
@@ -168,17 +175,17 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 1. Create a **New Item**.
    
-    ![](../media/Lab-04/new-snow.png)
+    ![](../media/Lab-04/fab-new.png)
 
 1. Select Lakehouse and name it **snowflakeQS**
 
    ![](../media/Lab-04/snowflake11.png)
 
-1. In the Explorer, click the ellipses next to Files and then Properties.
+1. In the Explorer, click the **ellipse** next to Files, then choose **Properties**.
 
     ![](../media/Lab-04/new-0.png)
 
-1. In the Properties Menu, copy the URL.
+1. In the Properties Menu, Copy the **URL**.
 
      ![](../media/Lab-04/url.png)
 
@@ -187,11 +194,11 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
       - In the upper right click on the ? for **help & support(1)** and at the bottom click **About Fabric(2)**
 
-         ![](../media/Lab-04/help-support.png)
+         ![](../media/Lab-04/powerbi-1.png)
 
-      - Copy the Tenant URL. The Tenant ID is the UUID that follows ctid= and paste in the notepad.
+      - Select and Copy the Tenant URL. The Tenant ID is the UUID that follows ctid= and paste in the notepad.
 
-         ![](../media/Lab-04/tenanturl.png)
+         ![](../media/Lab-04/powerbi-01.png)
 
          ![](../media/Lab-04/id.png)
 
@@ -223,11 +230,11 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
   1. Copy this query into Snowflake and fill in the parameters with the collected information.
 
-      - Replace **FabricWorkspaceName** with snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>.
+      - Replace `FabricWorkspaceName` with snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>.
 
-      - Replace **FabricLakehouseName** with **snowflakeQS**.
+      - Replace `FabricLakehouseName` with **snowflakeQS**.
       
-      - Replace **Tenant_ID** with the copied ID from Step 12.
+      - Replace `Tenant_ID` with the copied ID from Step 12.
 
          ```
          CREATE OR REPLACE EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>
@@ -242,17 +249,26 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
             );   
          ```
       
-         ![](../media/Lab-04/new-snowflake.png)
+1. Once all the parameters are filled in, the code should resemble the screenshot provided below. This is for reference only.
+
+   ![](../media/Lab-04/create00.png)
+
+1. Select the **code (1)** and click **Run (2)**.
+
+    ![](../media/Lab-04/external-vol.png)
 
       >**Note**: The Deployment ID is unique to each individual, making it a good practice to create different external locations.
 
-1. Now you need to enable Snowflake permission to access **snowflakefabric** workspace. First run the following in Snowflake:
+
+1. Select and run the following code.
 
    ```
    DESC EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>;
    ```
 
-1. In the output section, click on the **property value(1)** to open a larger view. From there, you can expand it or **copy it to a notepad(2)**.
+   ![](../media/Lab-04/desc-1-1.png)
+
+1. In the output section, click on the **property value(1)** to open a larger view. From there, you can expand it and **copy it to a notepad(2)**.
 
 
    ![](../media/Lab-04/vol2.png)
@@ -261,22 +277,27 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
    ![](../media/Lab-04/link.png)
 
-1. Open the browser and paste the URL and sign in with **Username: <inject key="AzureAdUserEmail"></inject>**
+1. The copied URL should appear as shown below; this is for reference only.
 
-1. A pop-up will appear asking for your confirmation. **Click on "Accept."**
+   `https://login.microsoftonline.com/25406093-1a74-42f7-9c55-70329f4f2934/oauth2/authorize?client_id=de3c7a34-4c5c-4a6e-a44c-8ee2c88d5bee&response_type=code`
 
-1. The value of **AZURE_MULTI_TENANT_APP_NAME** is highlighted in the screenshot and copy it.
+1. Open the browser, paste the URL, and in the **"Pick an account"** pane, select Username: <inject key="AzureAdUserEmail"></inject>.
 
-   
-    ![](../media/Lab-04/00.png)
+1. A pop-up will appear asking for your confirmation. Copy the **APP name(1)** and  Click on **Accept (2)**
 
- 1. In Fabric, grant the service principal access to **snowflakeQS** Fabric lakehouse.
+    ![](../media/Lab-04/permissions-1-1.png)
 
-1. Now open the workspace, click **Manage access**
+ 1. In Fabric, provide the service principal with access to the **snowflakeQS** Fabric lakehouse.
 
-    ![](../media/Lab-04/manage-access.png)
+1. Select **Workspaces (1)** from the left-hand pane, then choose the workspace **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>(2)**.
 
-1. Next, click on "+ Add people or groups."
+   ![](../media/Lab-04/choose-fabric.png)
+
+1. Click **Manage access**.
+
+   ![](../media/Lab-04/manage-access-1.png)
+
+1. Next, click on **+ Add people or groups under** Manage access.
 
    ![](../media/Lab-04/manage-add.png)
 
@@ -285,7 +306,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
     ![](../media/Lab-04/add_people.png)
 
 
-1. Back in Snowflake, run the following to create the Iceberg table and insert data from the sample dataset.
+1. Return to the Snowflake session open in browser and run the following to create the Iceberg table and insert data from the sample dataset.
 
    ```
    --Create the Iceberg table in OneLake
@@ -311,6 +332,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
    Select * from SnowflakeQS.ICEBERGTEST.dim_customer
 
    ```
+1. 
+
+   ![](../media/Lab-04/code-edit.png)
 
 1. In order for Fabric to work on the Iceberg tables, you need to set up shortcuts to the data.
 
@@ -323,15 +347,17 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
       ![](../media/Lab-04/select-1.png)
 
-1. This will return a path to the metadata file for this table, which should show you which storage account contains the Iceberg table. For example, this is the relevant info to find the table:
+1. This will return a path to the metadata file for this table, which should show you which storage account contains the Iceberg table. 
+
+   For example, this is the relevant info to find the table:
 
    ```
 
-   {"metadataLocation":"azure://<storage_account_path>/<path within storage>/<table name>/metadata/00001-389700a2-977f-47a2-9f5f-7fd80a0d41b2.metadata.json","status":"success"}
+   {"metadataLocation":"azure://onelake.blob.fabric.microsoft.com/snowflakefabric-1602338/snowflakeQS.Lakehouse/Files/dim_customer/metadata/00001-51ebd3eb-de39-43b4-8e3b-d7fde4ec7de1.metadata.json","status":"success"}
 
    ```
 
-1. Open the **snowflakefabric** workspace that contains **snowflakeQS** Fabric lakehouse object.
+1. Open the ****snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>**** workspace that contains **snowflakeQS** Fabric lakehouse object.
 
 1. Click Workspace settings.
 
@@ -341,7 +367,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
      ![](../media/Lab-04/new-12.png)
 
-1. In **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, open your Fabric lakehouse **snowflakeQS** .
+1. In **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, open your Fabric lakehouse **snowflakeQS** .
 
 1. Click the **ellipsis (1)** next to **Files** and then select **New shortcut (2)** from **Files**.
 
