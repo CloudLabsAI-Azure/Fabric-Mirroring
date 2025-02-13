@@ -72,7 +72,7 @@ You will be Mirroring the pre-created iceberg table in the database.
      ![](../media/Lab-04/salesdemo-2.png)
 
 
-1. Select **ICEBERG_DB (1)** database from the dropdown list and click on **Connect mirrored database (2)**.
+1. Leave the name as default and click on **Connect mirrored database (2)**.
 
       ![](../media/Lab-04/iceberg-demo-1.png)
       
