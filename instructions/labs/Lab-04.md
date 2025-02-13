@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a mirrored database in Microsoft Fabric to enable high availability and real-time data synchronization across environments.
 
-1. Navigate to the **Fabric portal** home.
+1. Navigate to the **Fabric portal** home at `https://app.fabric.microsoft.com/`
 
     ![](../media/Lab-01/power-bi.png)
 
