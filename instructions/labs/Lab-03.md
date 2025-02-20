@@ -29,19 +29,19 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
       ![](../media/Lab-05/sqlmi00.png)
 
 
-1. Navigate to **Networking** under **Security** section in the resource menu, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
+4. Navigate to **Networking** under **Security** section in the resource menu, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
 
    ![](../media/Lab-03/endpoint.png)
 
-1. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
+5. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
     ![](../media/Lab-03/ssms.png)
 
-1. Disconnect the previous connection from Object Explorer.
+6. Disconnect the previous connection from Object Explorer.
 
     ![](../media/Lab-03/disconnect.png)
 
-1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the database. 
+7. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the database. 
  Add the below creds :
 
 
@@ -57,25 +57,25 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
      
        ![](../media/Lab-01/sql-login.png)
 
-7. Click on **New Query** in the toolbar to run the query.
+8. Click on **New Query** in the toolbar to run the query.
  
    ![](../media/Lab-01/s2.png)
 
 
-1. Expand the **SampleDatabase (1)**, then right-click on it and select **New Query (2)** to open a new query window.
+9. Expand the **SampleDatabase (1)**, then right-click on it and select **New Query (2)** to open a new query window.
 
 
     ![](../media/Lab-03/sample-db.png)
 
-9. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
+10. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
-   ```
-   SELECT * FROM sys.dm_server_managed_identities;
-   ```
+    ```
+    SELECT * FROM sys.dm_server_managed_identities;
+    ```
 
-   ![](../media/Lab-03/sqlmi-mi-1.png)
+    ![](../media/Lab-03/sqlmi-mi-1.png)
 
-10. In the same query window, run the following command to create a `Sales` table in the `SampleDatabase`, which will be used for database mirroring.
+11. In the same query window, run the following command to create a `Sales` table in the `SampleDatabase`, which will be used for database mirroring.
 
     ```
     CREATE TABLE Sales (
@@ -84,10 +84,10 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
     QuantitySold INT,
     SaleDate DATE,
     SaleAmount DECIMAL(10, 2)
-   );
-   ```
+    );
+    ```
 
-11. You can insert 50 rows of data into the `Sales` table. Below is an example that generates sales data:
+12. You can insert 50 rows of data into the `Sales` table. Below is an example that generates sales data:
 
     ```
     DECLARE @i INT = 1;
@@ -105,8 +105,7 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
     SET @i = @i + 1;
     END
-
-   ```
+    ```
 
 ## Task 02: Create a Mirrored Azure SQL Managed Instance Database
 
@@ -156,11 +155,11 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
        ![](../media/Lab-03/connection-1.png)
 
 
- 1. Review the available databases by selecting **Databases (1)** from the list. You will see the database that is selected by default. Click on **Connect (2)**.
+ 7. Review the available databases by selecting **Databases (1)** from the list. You will see the database that is selected by default. Click on **Connect (2)**.
 
        ![](../media/Lab-03/connection-2.png)
 
-1. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
+8. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
 
 
     ![](../media/Lab-03/connection-3.png)
@@ -177,7 +176,7 @@ In this task, you will initiate the database mirroring process and monitor the s
     ![](../media/Lab-03/creating-mirrored-db.png)
 
 
-1. Click on **Refresh (1)**, the status should change to **Running (2)**, which means the tables are being synchronized.
+2. Click on **Refresh (1)**, the status should change to **Running (2)**, which means the tables are being synchronized.
 
 
     ![](../media/Lab-03/mirrored-db.png)
