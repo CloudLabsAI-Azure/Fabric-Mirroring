@@ -191,7 +191,6 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 11. Select Lakehouse, name it **snowflakeQS** and click on **Create**.
 
-
     ![](../media/Lab-04/snowflake11.png)
 
 12. In the Explorer, click the **ellipse** next to Files, then choose **Properties**.
