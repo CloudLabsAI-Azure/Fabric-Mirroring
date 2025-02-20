@@ -153,7 +153,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
    - Resource Group : Choose from the drop-down and select **Fabric-<inject key="DeploymentID" enableCopy="false"/>** (1)
 
-   - Capacity name: **snowflakefabric** 
+   - Capacity name: **snowflakefabric<inject key="DeploymentID" enableCopy="false"/>**** 
     (2)
 
    - Region : **WEST US 2** (3)
