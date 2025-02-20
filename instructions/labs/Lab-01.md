@@ -127,11 +127,12 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 15. In the same query, paste the code and execute the highlighted part.  
 
 
-     ```
-     CREATE USER fabric_user FOR LOGIN fabric_login;
-     ```
+      ```
+      CREATE USER fabric_user FOR LOGIN fabric_login;
+      
+      ```
 
-     ![](../media/Lab-01/create-user-1.png)
+    ![](../media/Lab-01/create-user-1.png)
 
 ### Task 02: Create a mirrored Azure SQL Database
  
@@ -148,10 +149,10 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
     ![](../media/Lab-01/power-bi.png)
 
 
-4.  Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
+4. Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
 
 
-     ![](../media/Lab-01/workspace-1.png)
+   ![](../media/Lab-01/workspace-1.png)
 
 5. Fill out the **Create a workspace** form with the following details:
 
@@ -183,7 +184,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 10. Select a Azure SQL Database under **choose a database connection to get started**.
 
-      ![](../media/Lab-01/sql-db.png)
+    ![](../media/Lab-01/sql-db.png)
 
 11. Select New connection, enter the connection details to the Azure SQL Database.
 
@@ -200,13 +201,12 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 
  12. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
- 
+
       > **NOTE:** Some tables might not be selected even if you try to choose them, Please ignore those tables.
  
      ![](../media/Lab-01/select-db.png)
 
  13. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
-
 
      ![](../media/Lab-01/sql-1-1.png)
 
