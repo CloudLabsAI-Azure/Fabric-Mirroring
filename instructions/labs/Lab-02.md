@@ -39,7 +39,7 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
 5. Next, click on **Launch Quick Start** again .
 
-     ![](../media/Lab-02/launch-qs.png)
+   ![](../media/Lab-02/launch-qs.png)
 
 6. Select **Use Existing (1)** and choose **OrderDB (2)** and create another container with the ID **Orderstatus (3)**.  from the dropdown menu. Then, click **OK (4)**.
 
@@ -49,7 +49,7 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
 7. Ensure that the networking options in the **Networking (1)** tab are set to **Public network access for all networks (2)**.
 
-     ![](../media/Lab-02/select-public-network.png)
+   ![](../media/Lab-02/select-public-network.png)
 
 8. In the left panel, select **Identity (1)**, enable the system-assigned status by switching it to **On (2)**, and then click **Save (3)**. When prompted, click **Yes**.
 
@@ -57,7 +57,7 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
 9. Select **Keys** from the left-hand pane, then copy the **endpoint URL (1)** and **primary key (2)** and paste them into a notepad for use in the further steps.
 
-      ![](../media/Lab-02/s10.png)
+    ![](../media/Lab-02/s10.png)
 
 10. Now select **Backup & Restore (1)** from the left-hand pane.
 
@@ -116,11 +116,11 @@ In this task, you will establish a connection to the source Azure Cosmos DB data
 
 3. In the new connection pane, select **OrderDB (1)** and click **Connect (2)**.
 
-     ![](../media/Lab-02/new-1.png)  
+   ![](../media/Lab-02/new-1.png)  
 
 4. Under the **Choose Data** section, click **Connect**.
      
-     ![](../media/Lab-02/connect-1.png)
+   ![](../media/Lab-02/connect-1.png)
  
 5. In the **Destination** section, enter the name **Mirrored-SampleDB (1)** and click **Create mirrored database (2)**.
 
@@ -138,7 +138,7 @@ In this task, you will initiate the mirroring process between the source and mir
 
 1. Creating your mirrored database.
 
-    ![](../media/Lab-01/mirrored-1.png)
+     ![](../media/Lab-01/mirrored-1.png)
 
    >**Note**: Wait for 2 to 5 minutes, then select **Monitor replication** to see the status of the replication action.
 
@@ -158,13 +158,13 @@ In this task, you will execute queries on the source database through Microsoft 
 
 1. Go to the mirrored database in the Fabric portal.
 
-    ![](../media/Lab-02/mirrored-db02-1.png)
+   ![](../media/Lab-02/mirrored-db02-1.png)
 
 2. Click on **View**, then select **Source Database**. This will open the Azure Cosmos DB data explorer in a read-only mode for the source database.
 
     ![](../media/Lab-02/source-explorer-query.png)
 
-  > **Note**: All read operations on the source database are routed to Azure and will consume Request Units (RUs) allocated to the account.
+     >**Note**: All read operations on the source database are routed to Azure and will consume Request Units (RUs) allocated to the account.
 
 
 ### Task 06: Analyze the Target Mirrored Database
@@ -173,7 +173,7 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 1. Switch from **Mirrored database** to **SQL Analytics Endpoint**.
 
-     ![](../media/Lab-02/sql-analytics-1.png)
+   ![](../media/Lab-02/sql-analytics-1.png)
 
 2. Each container from the source database will appear as a warehouse table in the SQL Analytics Endpoint.
 
@@ -201,7 +201,7 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 5. Select **New Visual Query** to open the query editor from the toolbar.    
 
-      ![](../media/Lab-02/new-visual-query.png)
+     ![](../media/Lab-02/new-visual-query.png)
 
 6. Drag and drop both the **Orderstatus** and **Orderitems** tables into the query editor.
 
@@ -213,19 +213,19 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 8. For the merge, select **Orderstatus (1)** as the right table and choose **id (2)**. Select **id** for **Orderitems** as the left table. In the join kind, choose **Left Outer (4)**, then click **OK (5)**.
 
-      ![](../media/Lab-02/merge.png)
+     ![](../media/Lab-02/merge.png)
 
 9. Once merged, your visual query will appear as follows:
 
-     ![](../media/Lab-02/order-final.png)
+   ![](../media/Lab-02/order-final.png)
 
 10. On the query editor pane, select **save as view**.
 
-     ![](../media/Lab-02/save-as-view.png)
+    ![](../media/Lab-02/save-as-view.png)
 
 11. In the **Save As** window, select **OrderDB (1)** as the schema and name the view as **Merged_orders (2)**, then click **OK (3)**.
 
-     ![](../media/Lab-02/save-as-1.png)
+    ![](../media/Lab-02/save-as-1.png)
 
 12. From the toolbar, go to the **Reporting** tab and click on **New Report**.
 
@@ -233,23 +233,23 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 13. When the pop-up appears displaying all available data, click **Continue**.
 
-      ![](../media/Lab-02/continue.png)
+     ![](../media/Lab-02/continue.png)
 
 14. When the pop-up appears, select **Try Free** to upgrade to a paid Power BI license.
 
-      ![](../media/Lab-02/powerbi.png)
+     ![](../media/Lab-02/powerbi.png)
 
 15. Click on **Got it**.
 
-      ![](../media/Lab-02/powerbi0.png)
+     ![](../media/Lab-02/powerbi0.png)
 
 16. Expand the **Data Pane** and select the **Sum of _ts**, **categoryid**, and **Sum of price**.
 
-     ![](../media/Lab-02/merged-1.png)
+    ![](../media/Lab-02/merged-1.png)
 
 17. In the **Visualization Pane**, select the **Clustered Column Chart**.
 
-     ![](../media/Lab-02/choosevis.png)
+    ![](../media/Lab-02/choosevis.png)
 
 18. Finally, the generated report for **OrderDB** will be displayed. Save the report as **Orders-reports**.
 
