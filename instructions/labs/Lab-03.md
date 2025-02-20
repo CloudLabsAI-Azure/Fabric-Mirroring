@@ -22,21 +22,21 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
      ![](../media/Lab-05/sqlmi.png)
 
- 1. Select **sqlmi-<inject key="DeploymentID" enableCopy="false"/>**
+ 2. Select **sqlmi-<inject key="DeploymentID" enableCopy="false"/>**
 
- 1. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On** and click on **Save**.
+ 3. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On** and click on **Save**.
 
       ![](../media/Lab-05/sqlmi00.png)
 
-1. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
+4. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
 
    ![](../media/Lab-03/endpoint.png)
 
-1. Open SQL Server Management Studio (SSMS) and disconnect the previous connection from Object Explorer.
+5. Open SQL Server Management Studio (SSMS) and disconnect the previous connection from Object Explorer.
 
     ![](../media/Lab-03/disconnect.png)
 
-1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the  database add the below creds :
+6. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the  database add the below creds :
 
    - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (3)**
 
@@ -48,16 +48,16 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
      
        ![](../media/Lab-01/sql-login.png)
 
-1. Click on **New Query** in the toolbar to run the query.
+7. Click on **New Query** in the toolbar to run the query.
  
    ![](../media/Lab-01/s2.png)
 
-1. Expand the **SampleDatabase**, then right-click on it and select **New Query** to open a new query window.
+8. Expand the **SampleDatabase**, then right-click on it and select **New Query** to open a new query window.
 
 
 ![](../media/Lab-03/sample-db.png)
 
-1. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
+9. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
@@ -65,7 +65,7 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
    ![](../media/Lab-03/sqlmi-mi-1.png)
 
-1. In the same query window, run the following command to create a `Sales` table in the `SampleDatabase`, which will be used for database mirroring.
+10. In the same query window, run the following command to create a `Sales` table in the `SampleDatabase`, which will be used for database mirroring.
 
     ```
     CREATE TABLE Sales (
@@ -77,7 +77,7 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
    );
    ```
 
-1. You can insert 50 rows of data into the `Sales` table. Below is an example that generates sales data:
+11. You can insert 50 rows of data into the `Sales` table. Below is an example that generates sales data:
 
     ```
     DECLARE @i INT = 1;
@@ -112,11 +112,11 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
    ![](../media/Lab-01/fabric-new.png)
 
-5. Select **Mirrored Azure SQL Managed Instance (Preview)**.
+4. Select **Mirrored Azure SQL Managed Instance (Preview)**.
 
     ![](../media/Lab-03/sqlmi-1-1.png)
 
-7. Under **New sources**, select **Azure SQL Managed Instance**.
+5. Under **New sources**, select **Azure SQL Managed Instance**.
 
     ![](../media/Lab-03/sqlmi-1.png)
 
@@ -124,7 +124,7 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
    >**Note**: You can't use existing connections of type "SQL Server". Only connections of type "SQL Managed Instance" are supported for mirroring Azure SQL Managed Instance data.
 
 
-9. Select **New connection**, and enter the following details:
+6. Select **New connection**, and enter the following details:
 
      - **Server** : Paste the public endpoint that you copied and saved in the notepad during the previous steps (1)
 
@@ -145,11 +145,11 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
        ![](../media/Lab-03/connection-1.png)
 
- 1. Review the available databases by selecting **Databases** from the list. You will see the database that is selected by default. Click on **Connect**.
+ 7. Review the available databases by selecting **Databases** from the list. You will see the database that is selected by default. Click on **Connect**.
 
        ![](../media/Lab-03/connection-2.png)
 
-1. Under the destination tab, leave the name as default and select the option to create mirrored databases.
+8. Under the destination tab, leave the name as default and select the option to create mirrored databases.
 
     ![](../media/Lab-03/connection-3.png)
 
@@ -164,11 +164,11 @@ In this task, you will initiate the database mirroring process and monitor the s
 
     ![](../media/Lab-03/creating-mirrored-db.png)
 
-1. The status should change to **Running**, which means the tables are being synchronized.
+2. The status should change to **Running**, which means the tables are being synchronized.
 
     ![](../media/Lab-03/mirrored-db.png)
 
-1. Replicating Status:
+3. Replicating Status:
    
       - **Running** – Replication is currently running, bringing snapshot and change data into OneLake.
       - **Running with warning** – Replication is running with transient errors.
@@ -176,22 +176,22 @@ In this task, you will initiate the database mirroring process and monitor the s
       - **Error** – Fatal error in replication that can't be recovered.
     >**Note**: If you don't see the tables and corresponding replication status, wait a few seconds and refresh the pane.
 
-1. When the initial copying of the tables is finished, a date will appear in the **Last refresh** column.
+4. When the initial copying of the tables is finished, a date will appear in the **Last refresh** column.
 
-1. Choose **Query in T-SQL**.
+5. Choose **Query in T-SQL**.
 
     ![](../media/Lab-03/query-1.png)
 
-1. Navigate to the query and expand the **dbo** schema. Then, expand the **Tables** section and select the **Sales** table in the query editor pane to view the data preview.
+6. Navigate to the query and expand the **dbo** schema. Then, expand the **Tables** section and select the **Sales** table in the query editor pane to view the data preview.
  
      ![](../media/Lab-03/sales-preview.png)
 
 
-1. Open a **New SQL query** window from the toolbar.
+7. Open a **New SQL query** window from the toolbar.
 
      ![](../media/Lab-03/new-sql-1.png)
 
-1. Run the sample query to determine the number of rows that have been replicated and the time of the last ingestion.
+8. Run the sample query to determine the number of rows that have been replicated and the time of the last ingestion.
 
     ```
     -- Query to get the number of rows and the last ingestion date

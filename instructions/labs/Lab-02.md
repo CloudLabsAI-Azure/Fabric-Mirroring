@@ -221,31 +221,31 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
      ![](../media/Lab-02/save-as-1.png)
 
-10. From the toolbar, go to the **Reporting** tab and click on **New Report**.
+12. From the toolbar, go to the **Reporting** tab and click on **New Report**.
 
      ![](../media/Lab-02/new-report-1.png)
 
-11. When the pop-up appears displaying all available data, click **Continue**.
+13. When the pop-up appears displaying all available data, click **Continue**.
 
       ![](../media/Lab-02/continue.png)
 
-12. When the pop-up appears, select **Try Free** to upgrade to a paid Power BI license.
+14. When the pop-up appears, select **Try Free** to upgrade to a paid Power BI license.
 
       ![](../media/Lab-02/powerbi.png)
 
-13. Click on **Got it**.
+15. Click on **Got it**.
 
       ![](../media/Lab-02/powerbi0.png)
 
-12. Expand the **Data Pane** and select the **Sum of _ts**, **categoryid**, and **Sum of price**.
+16. Expand the **Data Pane** and select the **Sum of _ts**, **categoryid**, and **Sum of price**.
 
      ![](../media/Lab-02/merged-1.png)
 
-13. In the **Visualization Pane**, select the **Clustered Column Chart**.
+17. In the **Visualization Pane**, select the **Clustered Column Chart**.
 
      ![](../media/Lab-02/choosevis.png)
 
-14. Finally, the generated report for **OrderDB** will be displayed. Save the report as **Orders-reports**.
+18. Finally, the generated report for **OrderDB** will be displayed. Save the report as **Orders-reports**.
 
     ![](../media/Lab-02/final-report.png)
 
