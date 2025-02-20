@@ -244,7 +244,6 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
     [Column2] INT NULL,                -- Example column
     [Column3] DATETIME DEFAULT GETDATE() -- Example column with default value
     );
-
     ```
 
     ![](../media/Lab-01/create-table-1.png)
