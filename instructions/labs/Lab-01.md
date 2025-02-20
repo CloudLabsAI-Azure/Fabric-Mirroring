@@ -21,9 +21,10 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    
    ![](../media/Lab-01/sql-servers.png)
 
-1. Select the SQL servers **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
+2. Select the SQL servers **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
 
    ![](../media/Lab-01/fbdb-1.png)
+
 
 1. In the resource menu, under the **Security** section, select **Identity (1)**. Change the status to **ON (2)** for System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
 
@@ -31,13 +32,13 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    >**Note**: **Please wait until SAMI is turned on; it might take some time.**
 
-1. Under **Security**, Choose **Networking (1)** and **add a firewall rule (2)**.
+4. Under **Security**, Choose **Networking (1)** and **add a firewall rule (2)**.
 
     ![](../media/Lab-01/add_firewall.png)
 
 
-
 1. Fill in the details as shown below:
+
 
    - Rule name : `Allowall` (1)
 
@@ -51,16 +52,18 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
       ![](../media/Lab-01/add-firewall.png)
   
-1. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
+6. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
 
      ![](../media/Lab-01/sqldb.png)
 
 
-1. Select the **samplesqldb** database.
+7. Select the **samplesqldb** database.
 
      ![](../media/Lab-01/sampledb-1.png)
 
+
 1. From the left pane, select the **Query Editor (Preview)(1)** and log in to the SQL Server using server authentication using below provided **Username(2)** and **Password(3)**, then click on **OK(4)**.
+
 
    - **Username : <inject key="SQL Server Username" enableCopy="true"/>**
 
@@ -68,7 +71,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
      ![](../media/Lab-01/query-editor.png)
 
-1. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
+9. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
@@ -76,11 +79,12 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    ![](../media/Lab-01/add-1.png)
 
+
 1. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
     ![](../media/Lab-01/ssms.png)
  
-1. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
+11. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
    - Server name : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
 
@@ -92,22 +96,26 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
      ![](../media/s1.png)
 
-1. Click on **New Query** in the toolbar to run the query.
+12. Click on **New Query** in the toolbar to run the query.
  
-   ![](../media/Lab-01/s2.png)
+      ![](../media/Lab-01/s2.png)
 
-1. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
+13. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
+
 
    >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
+
 
      ```
      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
      ```
 
+
    ![](../media/Lab-01/sql-query-1-1.png)
 
-1. You will be able to see a **fabric_login** login account that's been created under **logins**. 
+
+14. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
     ![](../media/Lab-01/fabric-login.png)
 
@@ -115,7 +123,9 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
      ![](../media/Lab-01/s3.png)
 
+
 1. In the same query, paste the code and execute the highlighted part.  
+
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
@@ -129,19 +139,21 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 1. Open the ```https://app.fabric.microsoft.com```.
 
-1. On the **Welcome to Fabric view** screen, click **Close**.
+2. On the **Welcome to Fabric view** screen, click **Close**.
 
     ![](../media/Lab-01/cancel.png)
 
-1. You will be directed to the **Fabric Home** page, where you can select **Power BI** from the bottom left.
+3. You will be directed to the **Fabric Home** page, where you can select **Power BI** from the bottom left.
 
     ![](../media/Lab-01/power-bi.png)
 
+
 1.  Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
+
 
      ![](../media/Lab-01/workspace-1.png)
 
-1. Fill out the **Create a workspace** form with the following details:
+5. Fill out the **Create a workspace** form with the following details:
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -149,9 +161,9 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
    
       >**Note**: The user ID will be unique for each user, and the workspace name must also be unique. Ensure that a green check mark with **"This name is available"** appears below the Name field.
 
-1. If you would like, you can enter a **Description** for the workspace. This is an optional field.
+6. If you would like, you can enter a **Description** for the workspace. This is an optional field.
 
-1. Click on **Advanced** to expand the section and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> EAST US (2)** and click on **Apply (3)** to create and open the workspace.
+7. Click on **Advanced** to expand the section and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> EAST US (2)** and click on **Apply (3)** to create and open the workspace.
 
     ![](../media/Lab-01/fab-1.png)
 
@@ -159,19 +171,21 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
     ![](../media/Lab-01/image28.png)
 
+
 1. Navigate to the **fabric<inject key="DeploymentID" enableCopy="false"/> (1)** workspace. Select the **+ New item (2)** icon.
 
     ![](../media/Lab-01/add-item.png)
 
 1. Search for **Mirrored Azure SQL Database (2)** in **Filter by item type (1)** bar and select it.
 
+
    ![](../media/Lab-01/s5-1.png)
 
-1. Select a Azure SQL Database under **choose a database connection to get started**.
+10. Select a Azure SQL Database under **choose a database connection to get started**.
 
-   ![](../media/Lab-01/sql-db.png)
+      ![](../media/Lab-01/sql-db.png)
 
-1. Select New connection, enter the connection details to the Azure SQL Database.
+11. Select New connection, enter the connection details to the Azure SQL Database.
 
    - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
    - Database : **samplesqldb (2)**
@@ -184,12 +198,14 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
      ![](../media/Lab-01/s6.png)
 
+
  1. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
       > **NOTE:** Some tables might not be selected even if you try to choose them, Please ignore those tables.
  
      ![](../media/Lab-01/select-db.png)
 
  1. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
+
 
      ![](../media/Lab-01/sql-1-1.png)
 
@@ -203,15 +219,17 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
    >**Note**: Please wait for 2 to 5 minutes. 
 
-1. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
+2. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
 
      ![](../media/Lab-01/sales-lt.png)
 
    >**Note:** Click on Refresh to see the synchronized tables
 
+
 1. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
 
 1. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
+
   
    ![](../media/Lab-01/s8.png)
   
