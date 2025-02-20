@@ -26,7 +26,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    ![](../media/Lab-01/fbdb-1.png)
 
 
-1. In the resource menu, under the **Security** section, select **Identity (1)**. Change the status to **ON (2)** for System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
+3. In the resource menu, under the **Security** section, select **Identity (1)**. Change the status to **ON (2)** for System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
 
    ![](../media/Lab-01/sami-on.png)
 
@@ -37,7 +37,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
     ![](../media/Lab-01/add_firewall.png)
 
 
-1. Fill in the details as shown below:
+5. Fill in the details as shown below:
 
 
    - Rule name : `Allowall` (1)
@@ -62,7 +62,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
      ![](../media/Lab-01/sampledb-1.png)
 
 
-1. From the left pane, select the **Query Editor (Preview)(1)** and log in to the SQL Server using server authentication using below provided **Username(2)** and **Password(3)**, then click on **OK(4)**.
+8. From the left pane, select the **Query Editor (Preview)(1)** and log in to the SQL Server using server authentication using below provided **Username(2)** and **Password(3)**, then click on **OK(4)**.
 
 
    - **Username : <inject key="SQL Server Username" enableCopy="true"/>**
@@ -80,7 +80,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    ![](../media/Lab-01/add-1.png)
 
 
-1. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
+10. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
     ![](../media/Lab-01/ssms.png)
  
@@ -106,11 +106,11 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
 
 
-     ```
-     CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
-     ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
-     ```
-
+   ```
+   CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
+   ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
+      
+   ```
 
    ![](../media/Lab-01/sql-query-1-1.png)
 
@@ -148,7 +148,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
     ![](../media/Lab-01/power-bi.png)
 
 
-1.  Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
+4.  Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
 
 
      ![](../media/Lab-01/workspace-1.png)
@@ -172,11 +172,11 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
     ![](../media/Lab-01/image28.png)
 
 
-1. Navigate to the **fabric<inject key="DeploymentID" enableCopy="false"/> (1)** workspace. Select the **+ New item (2)** icon.
+8. Navigate to the **fabric<inject key="DeploymentID" enableCopy="false"/> (1)** workspace. Select the **+ New item (2)** icon.
 
     ![](../media/Lab-01/add-item.png)
 
-1. Search for **Mirrored Azure SQL Database (2)** in **Filter by item type (1)** bar and select it.
+9. Search for **Mirrored Azure SQL Database (2)** in **Filter by item type (1)** bar and select it.
 
 
    ![](../media/Lab-01/s5-1.png)
@@ -199,12 +199,12 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
      ![](../media/Lab-01/s6.png)
 
 
- 1. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
+ 12. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
       > **NOTE:** Some tables might not be selected even if you try to choose them, Please ignore those tables.
  
      ![](../media/Lab-01/select-db.png)
 
- 1. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
+ 13. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
 
 
      ![](../media/Lab-01/sql-1-1.png)
@@ -226,9 +226,9 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
    >**Note:** Click on Refresh to see the synchronized tables
 
 
-1. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
+3. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
 
-1. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
+4. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
 
   
    ![](../media/Lab-01/s8.png)
