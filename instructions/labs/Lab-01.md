@@ -82,7 +82,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 10. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
-   ![](../media/Lab-01/ssms.png)
+      ![](../media/Lab-01/ssms.png)
  
 11. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
