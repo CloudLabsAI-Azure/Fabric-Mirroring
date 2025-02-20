@@ -159,7 +159,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
    - Click on **Review + Create** (6)
 
-      ![](../media/Lab-04/fabric-2.png)
+     ![](../media/Lab-04/fabric-2.png)
 
 4. Now, Click on **Create** .
 
@@ -293,7 +293,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 24. In the output section, click on the **property value(1)** to open a larger view. From there, you can expand it and **copy it to a notepad(2)**.
 
 
-      ![](../media/Lab-04/vol2.png)
+    ![](../media/Lab-04/vol2.png)
 
 25. Then copy the URL highlighted in the screenshot.
 
@@ -308,17 +308,17 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 28. A pop-up will appear asking for your confirmation. Copy the **APP name(1)** and paste it in notepad, then Click on **Accept (2)**.
 
 
-      ![](../media/Lab-04/permissions-1-1.png)
+    ![](../media/Lab-04/permissions-1-1.png)
 
 29. In Fabric, provide the service principal with access to the **snowflakeQS** Fabric lakehouse.
 
 30. Select **Workspaces (1)** from the left-hand pane, then choose the workspace **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>(2)**.
 
-      ![](../media/Lab-04/choose-fabric.png)
+    ![](../media/Lab-04/choose-fabric.png)
 
 31. Click on **Manage access (1)**.
 
-      ![](../media/Lab-04/manage-access-1.png)
+    ![](../media/Lab-04/manage-access-1.png)
 
 32. Next, click on **+ Add people or groups under** Manage access.
 
