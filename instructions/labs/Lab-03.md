@@ -178,7 +178,7 @@ In this task, you will initiate the database mirroring process and monitor the s
 2. Click on **Refresh (1)**, the status should change to **Running (2)**, which means the tables are being synchronized.
 
 
-    ![](../media/Lab-03/mirrored-db.png)
+   ![](../media/Lab-03/mirrored-db.png)
 
 3. Replicating Status:
    
