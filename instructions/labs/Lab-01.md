@@ -98,21 +98,21 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 12. Click on **New Query** in the toolbar to run the query.
  
-      ![](../media/Lab-01/s2.png)
+    ![](../media/Lab-01/s2.png)
 
 13. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
 
 
-   >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
+      >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
 
 
-   ```
-   CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
-   ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
-      
-   ```
+      ```
+      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
+      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
+         
+      ```
 
-   ![](../media/Lab-01/sql-query-1-1.png)
+      ![](../media/Lab-01/sql-query-1-1.png)
 
 
 14. You will be able to see a **fabric_login** login account that's been created under **logins**. 
@@ -124,7 +124,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
      ![](../media/Lab-01/s3.png)
 
 
-1. In the same query, paste the code and execute the highlighted part.  
+15. In the same query, paste the code and execute the highlighted part.  
 
 
      ```
@@ -200,6 +200,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 
  12. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
+ 
       > **NOTE:** Some tables might not be selected even if you try to choose them, Please ignore those tables.
  
      ![](../media/Lab-01/select-db.png)
