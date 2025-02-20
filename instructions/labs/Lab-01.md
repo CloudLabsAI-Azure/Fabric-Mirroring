@@ -105,21 +105,21 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
     >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
 
-     ```
+      ```
       CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
       ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;  
-     ```
+      ```
 
       ![](../media/Lab-01/sql-query-1-1.png)
 
 
 14. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
-      ![](../media/Lab-01/fabric-login.png)
+    ![](../media/Lab-01/fabric-login.png)
 
-      >**Note :** If you are unable to see the fabric_login just refresh the pane.
+    >**Note :** If you are unable to see the fabric_login just refresh the pane.
 
-      ![](../media/Lab-01/s3.png)
+    ![](../media/Lab-01/s3.png)
 
 
 15. In the same query, paste the code and execute the highlighted part.  
