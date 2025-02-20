@@ -34,7 +34,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 4. Under **Security**, Choose **Networking (1)** and **add a firewall rule (2)**.
 
-    ![](../media/Lab-01/add_firewall.png)
+   ![](../media/Lab-01/add_firewall.png)
 
 
 5. Fill in the details as shown below:
@@ -54,12 +54,12 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
   
 6. In the **Search resources, services, and docs** bar in Azure, search for **SQL database (1)** and **select it (2)**
 
-     ![](../media/Lab-01/sqldb.png)
+   ![](../media/Lab-01/sqldb.png)
 
 
 7. Select the **samplesqldb** database.
 
-     ![](../media/Lab-01/sampledb-1.png)
+   ![](../media/Lab-01/sampledb-1.png)
 
 
 8. From the left pane, select the **Query Editor (Preview)(1)** and log in to the SQL Server using server authentication using below provided **Username(2)** and **Password(3)**, then click on **OK(4)**.
@@ -82,7 +82,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 10. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
-    ![](../media/Lab-01/ssms.png)
+   ![](../media/Lab-01/ssms.png)
  
 11. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
@@ -105,7 +105,6 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
       >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
 
-
       ```
       CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
       ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;  
@@ -116,11 +115,11 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 14. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
-    ![](../media/Lab-01/fabric-login.png)
+      ![](../media/Lab-01/fabric-login.png)
 
-    >**Note :** If you are unable to see the fabric_login just refresh the pane.
+      >**Note :** If you are unable to see the fabric_login just refresh the pane.
 
-     ![](../media/Lab-01/s3.png)
+      ![](../media/Lab-01/s3.png)
 
 
 15. In the same query, paste the code and execute the highlighted part.  
@@ -140,15 +139,14 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 2. On the **Welcome to Fabric view** screen, click **Close**.
 
-    ![](../media/Lab-01/cancel.png)
+   ![](../media/Lab-01/cancel.png)
 
 3. You will be directed to the **Fabric Home** page, where you can select **Power BI** from the bottom left.
 
-    ![](../media/Lab-01/power-bi.png)
+   ![](../media/Lab-01/power-bi.png)
 
 
 4. Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
-
 
    ![](../media/Lab-01/workspace-1.png)
 
@@ -221,13 +219,13 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
 1. Creating your mirrored database.
 
-    ![](../media/Lab-01/mirrored-1.png)
+   ![](../media/Lab-01/mirrored-1.png)
 
    >**Note**: Please wait for 2 to 5 minutes. 
 
 2. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
 
-     ![](../media/Lab-01/sales-lt.png)
+   ![](../media/Lab-01/sales-lt.png)
 
    >**Note:** Click on Refresh to see the synchronized tables
 
@@ -253,11 +251,11 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
 5. The newly created table will appear in the list of tables in the Database Explorer.
 
-      ![](../media/Lab-01/new-table-1.png)
+    ![](../media/Lab-01/new-table-1.png)
 
-      > **NOTE:** If the database name is not showing up, just refresh the pane.
+    > **NOTE:** If the database name is not showing up, just refresh the pane.
 
-      ![](../media/Lab-01/s3.png)
+    ![](../media/Lab-01/s3.png)
 
 6. Go back to the Fabric environment, navigate to the mirrored database, and refresh the view. The newly created table should now appear.
 
