@@ -108,8 +108,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
       ```
       CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
-      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
-         
+      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;  
       ```
 
       ![](../media/Lab-01/sql-query-1-1.png)
@@ -127,12 +126,11 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 15. In the same query, paste the code and execute the highlighted part.  
 
 
-      ```
-      CREATE USER fabric_user FOR LOGIN fabric_login;
-      
-      ```
+   ```
+   CREATE USER fabric_user FOR LOGIN fabric_login;
+   ```
 
-    ![](../media/Lab-01/create-user-1.png)
+   ![](../media/Lab-01/create-user-1.png)
 
 ### Task 02: Create a mirrored Azure SQL Database
  
@@ -189,12 +187,19 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 11. Select New connection, enter the connection details to the Azure SQL Database.
 
    - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
+
    - Database : **samplesqldb (2)**
+
    - Connection: Create new connection.
+   
    - Connection name: **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net;samplesqldb (3)**
+
    - Authentication kind: **Basic (SQL Authentication) (4)**
+
    - Username : **<inject key="SQL Server Username" enableCopy="false"/> (5)**
+
    - Password : **<inject key="SQL Server Password" enableCopy="false"/> (6)**
+   
    - Select **Connect (7)**.
 
      ![](../media/Lab-01/s6.png)
