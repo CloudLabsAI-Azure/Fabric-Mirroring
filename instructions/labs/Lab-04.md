@@ -201,6 +201,8 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
          ![](../media/Lab-04/powerbi-01.png)
 
+         > NOTE: Make sure to copy only Tenant URL as highlighted below.
+
          ![](../media/Lab-04/id.png)
 
  1. Sign in to Snowflake by opening the browser, pasting the URL, and entering the username and password provided below:
