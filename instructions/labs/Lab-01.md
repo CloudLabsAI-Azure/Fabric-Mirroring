@@ -124,12 +124,11 @@ Run the T-SQL script in the **master** database by clicking **Execute**.
 
 15. In the same query, paste the code and execute the highlighted part.  
 
+      ```
+      CREATE USER fabric_user FOR LOGIN fabric_login;
+      ```
 
-   ```
-   CREATE USER fabric_user FOR LOGIN fabric_login;
-   ```
-
-   ![](../media/Lab-01/create-user-1.png)
+      ![](../media/Lab-01/create-user-1.png)
 
 ### Task 02: Create a mirrored Azure SQL Database
  
