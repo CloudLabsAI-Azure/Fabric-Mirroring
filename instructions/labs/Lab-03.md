@@ -55,10 +55,10 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
    - Click on **Connect (5)**.
      
-       ![](../media/Lab-01/sql-login.png)
+     ![](../media/Lab-01/sql-login.png)
 
 8. Click on **New Query** in the toolbar to run the query.
- 
+
    ![](../media/Lab-01/s2.png)
 
 
