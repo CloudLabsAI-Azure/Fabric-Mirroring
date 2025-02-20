@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 In this task, you will enable the System Assigned Managed Identity (SAMI) for your Azure SQL Managed Instance to securely authenticate and access other Azure resources.
 
 
- 1.  In the **Search resources, services, and docs** bar in Azure, search for **SQL Managed Instance (1)**, and select **SQL Managed Instance (2)**.
+ 1. In the **Search resources, services, and docs** bar in Azure, search for **SQL Managed Instance (1)**, and select **SQL Managed Instance (2)**.
 
      ![](../media/Lab-05/sqlmi.png)
 
@@ -26,7 +26,7 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
  3. Navigate to **Identity** under the **Security** section in the resource menu. Then, under **System-assigned managed identity**, set the **Status** to **On** and click on **Save**.
 
-      ![](../media/Lab-05/sqlmi00.png)
+    ![](../media/Lab-05/sqlmi00.png)
 
 
 4. Navigate to **Networking** under **Security** section in the resource menu, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
@@ -64,8 +64,8 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
 9. Expand the **SampleDatabase (1)**, then right-click on it and select **New Query (2)** to open a new query window.
 
+   ![](../media/Lab-03/sample-db.png)
 
-    ![](../media/Lab-03/sample-db.png)
 
 10. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
@@ -123,11 +123,11 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
 4. Select **Mirrored Azure SQL Managed Instance (Preview)**.
 
-    ![](../media/Lab-03/sqlmi-1-1.png)
+   ![](../media/Lab-03/sqlmi-1-1.png)
 
 5. Under **New sources**, select **Azure SQL Managed Instance**.
 
-    ![](../media/Lab-03/sqlmi-1.png)
+   ![](../media/Lab-03/sqlmi-1.png)
 
 
    >**Note**: You can't use existing connections of type "SQL Server". Only connections of type "SQL Managed Instance" are supported for mirroring Azure SQL Managed Instance data.
@@ -135,21 +135,21 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
 6. Select **New connection**, and enter the following details:
 
-     - **Server** : Paste the public endpoint that you copied and saved in the notepad during the previous steps (1)
+    - **Server** : Paste the public endpoint that you copied and saved in the notepad during the previous steps (1)
 
-     - **Database** : `SampleDatabase`(2)
+    - **Database** : `SampleDatabase`(2)
 
-     - **Connection** : Create a new connection.
+    - **Connection** : Create a new connection.
 
-     - **Connection name** : `newconnection`(3)
+    - **Connection name** : `newconnection`(3)
         .
-     - **Authentication kind** : Basic 
+    - **Authentication kind** : Basic 
 
-     - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**(4)
+    - **Username** : **<inject key="Sqlmi administrator login" enableCopy="false"/>**(4)
 
-     - **Password** : **<inject key="Sqlmi administrator password" enableCopy="false"/>**(5)
+    - **Password** : **<inject key="Sqlmi administrator password" enableCopy="false"/>**(5)
        
-     - Select **Connect**(6)
+    - Select **Connect**(6)
        
 
         ![](../media/Lab-03/connection-1.png)
@@ -160,7 +160,6 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
     ![](../media/Lab-03/connection-2.png)
 
 8. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
-
 
     ![](../media/Lab-03/connection-3.png)
 
@@ -198,12 +197,12 @@ In this task, you will initiate the database mirroring process and monitor the s
 
 6. Navigate to the query and expand the **dbo** schema. Then, expand the **Tables** section and select the **Sales** table in the query editor pane to view the data preview.
  
-    ![](../media/Lab-03/sales-preview.png)
+   ![](../media/Lab-03/sales-preview.png)
 
 
 7. Open a **New SQL query** window from the toolbar.
 
-    ![](../media/Lab-03/new-sql-1.png)
+   ![](../media/Lab-03/new-sql-1.png)
 
 8. Run the sample query to determine the number of rows that have been replicated and the time of the last ingestion.
 
