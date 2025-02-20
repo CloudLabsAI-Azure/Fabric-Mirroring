@@ -93,18 +93,18 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 12. Click on **New Query** in the toolbar to run the query.
  
-   ![](../media/Lab-01/s2.png)
+      ![](../media/Lab-01/s2.png)
 
 13. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
 
-   >**Note :** Provide the "strong password" as desired
+      >**Note :** Provide the "strong password" as desired
 
      ```
      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
      ```
 
-   ![](../media/Lab-01/sql-query-1.png)
+      ![](../media/Lab-01/sql-query-1.png)
 
 14. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
@@ -168,7 +168,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 10. Select a Azure SQL Database under **choose a database connection to get started**.
 
-   ![](../media/Lab-01/sql-db.png)
+      ![](../media/Lab-01/sql-db.png)
 
 11. Select New connection, enter the connection details to the Azure SQL Database.
 
