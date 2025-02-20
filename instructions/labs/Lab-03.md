@@ -44,7 +44,6 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 7. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the database. 
  Add the below creds :
 
-
    - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (1)**
 
    - Authentication : **SQL Server Authentication (2)**
