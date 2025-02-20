@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 In this task, you will enable the System Assigned Managed Identity (SAMI) for your Azure SQL Managed Instance to securely authenticate and access other Azure resources.
 
 
- 1.  Navigate to the Azure Portal, search for **SQL Managed Instance (1)**, and select **SQL Managed Instance (2)**.
+ 1.  In the **Search resources, services, and docs** bar in Azure, search for **SQL Managed Instance (1)**, and select **SQL Managed Instance (2)**.
 
      ![](../media/Lab-05/sqlmi.png)
 
@@ -28,23 +28,32 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
       ![](../media/Lab-05/sqlmi00.png)
 
-4. On the **Networking** page, under **Security**, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
+
+1. Navigate to **Networking** under **Security** section in the resource menu, **Copy the public endpoint** and paste it into a notepad. You will need it later to create the mirrored database in Fabric.
 
    ![](../media/Lab-03/endpoint.png)
 
-5. Open SQL Server Management Studio (SSMS) and disconnect the previous connection from Object Explorer.
+1. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
+
+    ![](../media/Lab-03/ssms.png)
+
+1. Disconnect the previous connection from Object Explorer.
 
     ![](../media/Lab-03/disconnect.png)
 
-6. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the  database add the below creds :
+1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio (SSMS) and connect to the database. 
+ Add the below creds :
 
-   - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (3)**
+
+   - Server name : **<inject key="SqlmI-URL" enableCopy="false"/> (1)**
 
    - Authentication : **SQL Server Authentication (2)**
 
    - Login : **<inject key="Sqlmi administrator login" enableCopy="false"/> (3)**
 
    - Password : **<inject key="Sqlmi administrator password" enableCopy="false"/> (4)**
+
+   - Click on **Connect (5)**.
      
        ![](../media/Lab-01/sql-login.png)
 
@@ -52,10 +61,11 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
  
    ![](../media/Lab-01/s2.png)
 
-8. Expand the **SampleDatabase**, then right-click on it and select **New Query** to open a new query window.
+
+1. Expand the **SampleDatabase (1)**, then right-click on it and select **New Query (2)** to open a new query window.
 
 
-![](../media/Lab-03/sample-db.png)
+    ![](../media/Lab-03/sample-db.png)
 
 9. Ensure that SAMI is set as the primary identity. To verify, run the following T-SQL query: **Paste the query into the editor (1)**, click **Execute (2)**, and check the results pane to confirm that the primary identity is set to 1. This is essential for database mirroring.
 
@@ -102,13 +112,13 @@ In this task, you will enable the System Assigned Managed Identity (SAMI) for yo
 
 In this task, you will create a mirrored database on your Azure SQL Managed Instance, enabling high availability and disaster recovery by replicating data. 
 
-1. Navigate to the **Fabric portal** home.
+1. Navigate to the **Fabric portal** home, and select Power BI from bottom left pane.
 
     ![](../media/Lab-01/power-bi.png)
 
-2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>**
+2. Open an existing workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-3. In the navigation menu, select **+ New Item**.
+3. In the navigation menu, select **+ New Item (2)**.
 
    ![](../media/Lab-01/fabric-new.png)
 
@@ -145,11 +155,13 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
        ![](../media/Lab-03/connection-1.png)
 
- 7. Review the available databases by selecting **Databases** from the list. You will see the database that is selected by default. Click on **Connect**.
+
+ 1. Review the available databases by selecting **Databases (1)** from the list. You will see the database that is selected by default. Click on **Connect (2)**.
 
        ![](../media/Lab-03/connection-2.png)
 
-8. Under the destination tab, leave the name as default and select the option to create mirrored databases.
+1. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
+
 
     ![](../media/Lab-03/connection-3.png)
 
@@ -164,7 +176,9 @@ In this task, you will initiate the database mirroring process and monitor the s
 
     ![](../media/Lab-03/creating-mirrored-db.png)
 
-2. The status should change to **Running**, which means the tables are being synchronized.
+
+1. Click on **Refresh (1)**, the status should change to **Running (2)**, which means the tables are being synchronized.
+
 
     ![](../media/Lab-03/mirrored-db.png)
 
@@ -174,6 +188,7 @@ In this task, you will initiate the database mirroring process and monitor the s
       - **Running with warning** – Replication is running with transient errors.
       - **Stopping/Stopped** – Replication is stopped.
       - **Error** – Fatal error in replication that can't be recovered.
+
     >**Note**: If you don't see the tables and corresponding replication status, wait a few seconds and refresh the pane.
 
 4. When the initial copying of the tables is finished, a date will appear in the **Last refresh** column.

@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create an open mirrored database in Microsoft Fabric to enable real-time data synchronization and high availability across different environments.
 
-1. Navigate to the **Fabric portal** home.
+1. Navigate to the **Fabric portal** home, and select Power BI from bottom left pane.
 
     ![](../media/Lab-01/power-bi.png)
 
@@ -42,7 +42,7 @@ In this task, you will create an open mirrored database in Microsoft Fabric to e
 
 In this task, you will write change data to the landing zone and monitor the replication process to ensure data consistency and successful synchronization.
 
-1. In the Windows search bar, type **Azure Storage Explorer** and open the application.
+1. In the Windows search bar, type **Azure Storage Explorer (1)** and open the application **Microsoft Azure Storage Explorer (2)**.
 
    ![](../media/Lab-05/storage-explorer.png)
 
@@ -110,7 +110,7 @@ In this task, you will write change data to the landing zone and monitor the rep
 
 17. Go to the path**C:\Downloads\Labfiles**, **select** the **`metadata.json`(1)** file, and **open(2)** it to upload.
 
-     ![](../media/Lab-05/new-11.png)
+     ![](../media/Lab-05/new34.png)
 
 18. Navigate Back to the **Mirrored Database_<inject key="DeploymentID" enableCopy="false"/>** in fabric portal .
 
@@ -128,7 +128,7 @@ In this task, you will write change data to the landing zone and monitor the rep
 
 21. In the **Upload Files** pane, **select** the **"..."** (ellipsis) to browse for files. Then, go to **C:\Downloads\Labfiles**, **select** the **`00000000....1.parquet`** file, and **open** it to upload.
    
-     ![](../media/Lab-05/new34.png)
+     ![](../media/Lab-05/new-11.png)
 
 22. Leave all the settings as default in the **Upload Files** pane and click **Upload**.
 

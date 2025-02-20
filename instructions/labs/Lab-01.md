@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will enable the **System assigned managed Identity (SAMI)** feature on your Azure SQL logical server to allow automatic scaling and management of your database instances within the Microsoft Fabric environment.
 
-1. In the Azure portal, search for **SQL servers (1)** and choose **SQL servers (2)**.
+1. In the **Search resources, services, and docs** bar in Azure, search for **SQL servers (1)** and choose **SQL servers (2)**.
    
    ![](../media/Lab-01/sql-servers.png)
 
@@ -25,7 +25,8 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    ![](../media/Lab-01/fbdb-1.png)
 
-3. In the resource menu, go to **Identity (1)** under the **Security** section, **ON (2)** the System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
+
+1. In the resource menu, under the **Security** section, select **Identity (1)**. Change the status to **ON (2)** for System Assigned Managed Identity (SAMI), and **Save (3)** the changes.
 
    ![](../media/Lab-01/sami-on.png)
 
@@ -36,7 +37,8 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
     ![](../media/Lab-01/add_firewall.png)
 
 
-5. Fill in the details as shown below:
+1. Fill in the details as shown below:
+
 
    - Rule name : `Allowall` (1)
 
@@ -59,7 +61,9 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
      ![](../media/Lab-01/sampledb-1.png)
 
-8. From the left pane, select the **Query Editor (Preview)** and log in to the SQL Server using server authentication.
+
+1. From the left pane, select the **Query Editor (Preview)(1)** and log in to the SQL Server using server authentication using below provided **Username(2)** and **Password(3)**, then click on **OK(4)**.
+
 
    - **Username : <inject key="SQL Server Username" enableCopy="true"/>**
 
@@ -75,7 +79,8 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
    ![](../media/Lab-01/add-1.png)
 
-10. In the Windows VM search bar, type **SSMS** and select **SQL Server Management Studio (SSMS)** to open it.
+
+1. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
     ![](../media/Lab-01/ssms.png)
  
@@ -97,14 +102,18 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 13. Create a SQL-authenticated login named **fabric_login** with a strong password. Run the T-SQL script in the master database by clicking **Execute**. 
 
-      >**Note :** Provide the "strong password" as desired
+
+   >**Note :** Please use a password which you can remember and replace in the script in the place of "< strong password >".
+
 
      ```
      CREATE LOGIN fabric_login WITH PASSWORD = '<strong password>';
      ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER fabric_login;
      ```
 
-      ![](../media/Lab-01/sql-query-1.png)
+
+   ![](../media/Lab-01/sql-query-1-1.png)
+
 
 14. You will be able to see a **fabric_login** login account that's been created under **logins**. 
 
@@ -114,13 +123,15 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
      ![](../media/Lab-01/s3.png)
 
-15. In the same query, paste the code, highlight it, and execute the highlighted section. 
+
+1. In the same query, paste the code and execute the highlighted part.  
+
 
      ```
      CREATE USER fabric_user FOR LOGIN fabric_login;
      ```
 
-     ![](../media/Lab-01/create-user.png)
+     ![](../media/Lab-01/create-user-1.png)
 
 ### Task 02: Create a mirrored Azure SQL Database
  
@@ -136,7 +147,9 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
     ![](../media/Lab-01/power-bi.png)
 
-4.  Now, select **Workspaces** and click on **+ New workspace**:
+
+1.  Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
+
 
      ![](../media/Lab-01/workspace-1.png)
 
@@ -158,13 +171,15 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
     ![](../media/Lab-01/image28.png)
 
-8. Navigate to the workspace. Select the **+ New item** icon.
+
+1. Navigate to the **fabric<inject key="DeploymentID" enableCopy="false"/> (1)** workspace. Select the **+ New item (2)** icon.
 
     ![](../media/Lab-01/add-item.png)
 
-9. Scroll to the Data Warehouse section and then select **Mirrored Azure SQL Database**.
+1. Search for **Mirrored Azure SQL Database (2)** in **Filter by item type (1)** bar and select it.
 
-   ![](../media/Lab-01/s5.png)
+
+   ![](../media/Lab-01/s5-1.png)
 
 10. Select a Azure SQL Database under **choose a database connection to get started**.
 
@@ -183,11 +198,14 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
      ![](../media/Lab-01/s6.png)
 
- 12. On the **Choose Data (2)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (3)**.
+
+ 1. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
+      > **NOTE:** Some tables might not be selected even if you try to choose them, Please ignore those tables.
  
      ![](../media/Lab-01/select-db.png)
 
- 13. On the Destination pane, ensure **samplesqdb (1)** database is present and click on **Create mirrored database (2)**.
+ 1. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
+
 
      ![](../media/Lab-01/sql-1-1.png)
 
@@ -207,14 +225,16 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
    >**Note:** Click on Refresh to see the synchronized tables
 
-3. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
 
-4. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
+1. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
+
+1. Right-click on your database and select **New Query**. Paste the following code and execute it by clicking the **Execute** button.
+
   
    ![](../media/Lab-01/s8.png)
   
    ```
-   CREATE TABLE [dbo].[YourNewTableName] (
+   CREATE TABLE [dbo].[New-table1] (
     [Id] INT IDENTITY(1,1) PRIMARY KEY, -- Auto-increment primary key
     [Column1] NVARCHAR(100) NOT NULL,  -- Example column
     [Column2] INT NULL,                -- Example column
@@ -228,6 +248,10 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 5. The newly created table will appear in the list of tables in the Database Explorer.
 
       ![](../media/Lab-01/new-table-1.png)
+
+      > **NOTE:** If the database name is not showing up, just refresh the pane.
+
+      ![](../media/Lab-01/s3.png)
 
 6. Go back to the Fabric environment, navigate to the mirrored database, and refresh the view. The newly created table should now appear.
 

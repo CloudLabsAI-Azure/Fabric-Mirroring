@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will confirm that the source Azure Cosmos DB account is correctly configured and ready for data mirroring in Microsoft Fabric.
 
-1. In the Azure portal, type **"Azure Cosmos DB"** in the search bar at the top of the page, and select the **Azure Cosmos DB account** from the search results.
+1. In the **Search resources, services, and docs** bar in Azure, type **"Azure Cosmos DB" (1)**, and select the **Azure Cosmos DB (2)** from the search results.
 
    ![](../media/Lab-02/azure-cosmosdb.png)
 
@@ -47,13 +47,15 @@ In this task, you will confirm that the source Azure Cosmos DB account is correc
 
    ![](../media/Lab-02/OK-1.png)
 
-7. Ensure that the networking options in the **Networking** tab are set to **Public network access for all networks**.
+7. Ensure that the networking options in the **Networking (1)** tab are set to **Public network access for all networks (2)**.
+
+     ![](../media/Lab-02/select-public-network.png)
 
 8. In the left panel, select **Identity (1)**, enable the system-assigned status by switching it to **On (2)**, and then click **Save (3)**. When prompted, click **Yes**.
 
    ![](../media/Lab-02/democosmos.png)
 
-9. Select **Keys** from the left-hand pane, then copy the **endpoint URL** and **primary key** and paste them into a notepad for use in the further steps.
+9. Select **Keys** from the left-hand pane, then copy the **endpoint URL (1)** and **primary key (2)** and paste them into a notepad for use in the further steps.
 
       ![](../media/Lab-02/s10.png)
 
@@ -98,20 +100,21 @@ In this task, you will establish a connection to the source Azure Cosmos DB data
 
 2. Enter the credentials for your Azure Cosmos DB for NoSQL account, including the following details:
 
-     - **Azure Cosmos DB endpoint**: Paste the endpoint URL that you save in the notepad earlier.
+     - **Azure Cosmos DB endpoint (1)**: Paste the endpoint URL that you save in the notepad earlier.
 
-     - **Connection name**: A unique name for this connection.
+     - **Connection (2)**: Select **Create new connection**.
 
-     - **Authentication kind**: Select
-     **Account key**.
+     - **Connection name (3)**: A unique name for this connection.
 
-     - **Account Key**: Paste the account key that you saved in the notepad earlier.
+     - **Authentication kind (4)**: Select  **Account key**.
+
+     - **Account Key (5)**: Paste the account key that you saved in the notepad earlier.
      
-     - Click **Connect**. 
+     - Click **Connect (6)**. 
 
-       ![](../media/Lab-02/cosmos-db.png) 
+       ![](../media/Lab-02/cosmos-db-1.png) 
 
-3. In the new connection pane, select **OrderDB** and click **Connect**.
+3. In the new connection pane, select **OrderDB (1)** and click **Connect (2)**.
 
      ![](../media/Lab-02/new-1.png)  
 
@@ -119,12 +122,15 @@ In this task, you will establish a connection to the source Azure Cosmos DB data
      
      ![](../media/Lab-02/connect-1.png)
  
-5. In the **Destination** section, enter the name **Mirrored-SampleDB** and click **Create mirrored database**.
+5. In the **Destination** section, enter the name **Mirrored-SampleDB (1)** and click **Create mirrored database (2)**.
+
+     > **Note**: All containers within the selected database will be mirrored.
 
      ![](../media/Lab-02/mirrored-db-1.png)
-
-      > **Note**: All containers within the selected database will be mirrored.
     
+     > **NOTE:** If you get error message as mentioned below, wait for some time and try again.
+
+     ![](../media/Lab-02/mirrored-db-error.png)     
 
 ### Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
 
@@ -152,7 +158,7 @@ In this task, you will execute queries on the source database through Microsoft 
 
 1. Go to the mirrored database in the Fabric portal.
 
-    ![](../media/Lab-02/mirrored-db02.png)
+    ![](../media/Lab-02/mirrored-db02-1.png)
 
 2. Click on **View**, then select **Source Database**. This will open the Azure Cosmos DB data explorer in a read-only mode for the source database.
 
@@ -167,7 +173,7 @@ In this task, you will examine the target mirrored database in Microsoft Fabric 
 
 1. Switch from **Mirrored database** to **SQL Analytics Endpoint**.
 
-     ![](../media/Lab-02/sql-analytics.png)
+     ![](../media/Lab-02/sql-analytics-1.png)
 
 2. Each container from the source database will appear as a warehouse table in the SQL Analytics Endpoint.
 

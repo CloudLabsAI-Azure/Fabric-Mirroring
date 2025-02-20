@@ -39,11 +39,13 @@ In this task, you will connect to your Snowflake instance hosted in any cloud to
 
 You will be Mirroring the pre-created iceberg table in the database.
 
-1. Select **Mirrored Snowflake** .
+1. In filter by item type, search for **Mirrored Snowflake**.
 
    ![](../media/Lab-04/s14.png)
 
-2. Select **Snowflake** under **Choose a database connection**. 
+
+1. Select **Snowflake** under **Choose a database connection to get started**. 
+
 
     ![](../media/Lab-04/snowflake.png)
 
@@ -55,26 +57,31 @@ You will be Mirroring the pre-created iceberg table in the database.
    | **Server (1)**| jcxsfvs-tv61584.snowflakecomputing.com|
    | **Warehouse (2)**| ICEBERG_WH |
    | **Connection**| Create new connection |
-   | **Connection name** | SNOWFLAKE |
-   | **Authentication kind (3)** | Snowflake |
-   | **Username (4)**| SNOWFLAKEUSER |
-   | **Password (5)**| Adminuser@12345 |
-  
+   | **Connection name (3)** | SNOWFLAKE |
+   | **Authentication kind (4)** | Snowflake |
+   | **Username (5)**| SNOWFLAKEUSER |
+   | **Password (6)**| Adminuser@12345 |
 
-      ![](../media/Lab-04/connection-1.png)
+   Click on **Connect (7)**.
+
+      ![](../media/Lab-04/connection-1-1.png)
  
     >**Note**: Ensure you remove any spaces when copying the credentials, make sure the spaces are removed from the password, and then paste them.Otherwise, it may result in invalid credentials.
 
-4. In the **New connection** pane, select **ICEBERG_DB (1)** from the drop-down, then **click on Connect (2)**.
+
+1. In the **New connection** pane, select **ICEBERG_DB (1)** from the drop-down, then click on **Connect (2)**.
 
     ![](../media/Lab-04/new-con.png)
 
-5. **Select all** from the choose data pane, After that, **click on Connect**.
+1. **Select all** from the choose data pane, After that, click on **Connect**.
+
      
      ![](../media/Lab-04/salesdemo-2.png)
 
 
-6. Leave the name as default and click on **Connect mirrored database (2)**.
+
+1. Leave the name as **ICEBERG_DB (1)** and click on **Connect mirrored database (2)**.
+
 
       ![](../media/Lab-04/iceberg-demo-1.png)
       
@@ -82,7 +89,7 @@ You will be Mirroring the pre-created iceberg table in the database.
 
 In this task, you will initiate the mirroring process for the Snowflake database, and monitor the synchronization and status of Snowflake Fabric mirroring to ensure data consistency and availability.
 
-1. The **Creation of mirrored database** begins.
+1. In the previous task, you clicked on **"Create Mirrored Database,"** and now the process of creating the mirrored database will begin.
 
     ![](../media/Lab-04/created-mirrored.png)
 
@@ -90,7 +97,9 @@ In this task, you will initiate the mirroring process for the Snowflake database
 
    > **Note:** Allow 2-5 minutes, then click Monitor replication to check the status.
 
-3. Within a few minutes, the status will update to **Running**, indicating that the tables are being synchronized. Once the initial table copying is complete, a date will appear in the **Last Refresh** column.
+
+1. Within a few minutes, the status will update to **Running**, indicating that the tables are being synchronized. Once the initial table copying is complete, a date will appear in the **Last completed** column.
+
 
       ![](../media/Lab-04/salesdemo-1.png)
 
@@ -112,7 +121,9 @@ In this task, you will query and view the mirrored data to verify successful syn
 
      ![](../media/Lab-04/salesdemo-0.png)
 
-3. Click on the ellipses on the **Salesdemo (1)** table, **Select New SQL Query (2)**, and choose **Select Top 100 (3)**.
+
+1. Click on the ellipses on the **Salesdemo (1)** table, Select **New SQL Query (2)**, and choose **Select Top 100 (3)**.
+
 
      ![](../media/Lab-04/new-sql.png)
 
@@ -128,28 +139,30 @@ In this task, you will query and view the mirrored data to verify successful syn
 
 In this task, you will get started with Apache Iceberg in a Lakehouse environment to manage large-scale data with optimized storage and querying capabilities.
 
-1. Navigate to `https://portal.azure.com` In the search bar, type **Microsoft Fabric** and select it from the results.
+1. In the **Search resources, services, and docs** bar in Azure, type **Microsoft Fabric (1)** and select **Microsoft Fabric (2)** from the results.
 
     ![](../media/Lab-04/fabric-1.png)
 
-2. Click on **+ Create**.
+
+1. From **Microsoft Fabric** resource page, click on **+ Create**.
 
     ![](../media/Lab-04/create-1.png)
 
-3. Fill the following details as below:
+1. Fill the following details as provided below:
+
 
    - Resource Group : Choose from the drop-down and select **Fabric-<inject key="DeploymentID" enableCopy="false"/>** (1)
 
    - Capacity name: **snowflakefabric** 
     (2)
 
-   - Region : **WEST US2** (3)
+   - Region : **WEST US 2** (3)
 
-   - Size : **F2** (4)
+   - Size : Click on **change size** and select **F2** from the list provided. (4)
 
    - Fabric capacity administartor : **<inject key="AzureAdUserEmail"></inject>** (5)
 
-   - **Review + Create** (6)
+   - Click on **Review + Create** (6)
 
       ![](../media/Lab-04/fabric-2.png)
 
@@ -157,11 +170,12 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
      ![](../media/Lab-04/create0.png)
 
-5. In the **Fabric portal**, select **Power BI**.
+1. Navigate back to **Fabric portal** home page and select **Power bi** from bottom pane.
 
      ![](../media/Lab-01/power-bi.png)
 
-6. Click on **My Workspace (1)** and select **+New Workspace (2)**.
+1. Click on **My Workspace (1)** from the left pane and select **+New Workspace (2)**.
+
 
     ![](../media/Lab-04/new-fab.png)
 
@@ -169,15 +183,21 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
    ![](../media/Lab-04/snowflakefabric-1.png)
 
-8. Choose the **fabric capacity (1)**, select **snowflakefabric-WESTUS2 (2)** from the drop-down, and click **Apply (3)**.
+
+1. On the create new workspace page, Choose the **fabric capacity (1)** under License mode, select **snowflakefabric-WESTUS2 (2)** from the drop-down, and click **Apply (3)**.
 
     ![](../media/Lab-04/capacity.png)
 
-9. Create a **New Item**.
+1. Now the page will be redirected to new workspace that is been created, choose **+New item** from that workspace.
    
     ![](../media/Lab-04/newitem.png)
 
-10. Select Lakehouse and name it **snowflakeQS**
+1. Search for **Lakehouse** in **Filter for item type** bar and select it.
+
+   ![]()
+
+1. Select Lakehouse, name it **snowflakeQS** and click on **Create**.
+
 
    ![](../media/Lab-04/snowflake11.png)
 
@@ -185,7 +205,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
     ![](../media/Lab-04/new-0.png)
 
-12. In the Properties Menu, Copy the **URL**.
+
+1. In the Properties Menu, Copy the **URL** and paste it in notepad as it will used in further steps.
+
 
      ![](../media/Lab-04/url.png)
 
@@ -200,19 +222,25 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
          ![](../media/Lab-04/powerbi-01.png)
 
+         > NOTE: Make sure to copy only Tenant URL as highlighted below.
+
          ![](../media/Lab-04/id.png)
 
  14. Sign in to Snowflake by opening the browser, pasting the URL, and entering the username and password provided below:
 
-     - URL : `https://jcxsfvs-tv61584.snowflakecomputing.com`
+     - **URL (1)** : `https://jcxsfvs-tv61584.snowflakecomputing.com`
 
-     - USERNAME: `SNOWFLAKEUSER`
+     - **USERNAME (2)** : `SNOWFLAKEUSER`
 
-     - PASSWORD: `Adminuser@12345`
+     - **PASSWORD (3)**: `Adminuser@12345`
+
+     - Click on **Sign in (4)**. 
 
          ![](../media/Lab-04/snowflake-login.png)
 
- 15. Select **SQL Worksheet** from the **+ Create** drop-down menu.
+
+ 1.  In the Snowflake home page, in the top right corner, click on **+ Create** and a drop-down menu will appear, then select **SQL Worksheet**.
+
 
       ![](../media/Lab-04/sql-ws.png)
 
@@ -220,15 +248,17 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
  
      ![](../media/Lab-04/snowflakeqs.png)
 
- 17. In the workspace sheet, select **SNOWFLAKEQS** as the **database** and **ICEBERGTESTS** as the **schema**.
+
+ 1. Go to **workspace sheet (1)**, select **SNOWFLAKEQS (2)** as the **database** and **ICEBERGTESTS (3)** as the **schema**.
 
      ![](../media/Lab-04/iceberg-test.png)
 
- 18. Choose the warehouse as **HOL-WH**
+
+ 1. In the workspace, at the top right corner, choose **Account admin** and select warehouse as **HOL-WH**.
 
       ![](../media/Lab-04/HOL-WH.png)
 
- 19. Copy this query into Snowflake and fill in the parameters with the collected information.
+1. Copy this query into Snowflake and fill in the parameters with the collected information.
 
       - Replace `FabricWorkspaceName` with snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>.
 
@@ -260,7 +290,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
       >**Note**: The Deployment ID is unique to each individual, making it a good practice to create different external locations.
 
 
-22. Select and run the following code.
+
+1. Copy and paste the below code, select it and click on run.
+
 
       ```
       DESC EXTERNAL VOLUME FabricExVoldemo<inject key="DeploymentID" enableCopy="false"/>;
@@ -283,7 +315,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 26. Open the browser, paste the URL, and in the **"Pick an account"** pane, select Username: <inject key="AzureAdUserEmail"></inject>.
 
-27. A pop-up will appear asking for your confirmation. Copy the **APP name(1)** and  Click on **Accept (2)**
+
+1. A pop-up will appear asking for your confirmation. Copy the **APP name(1)** and paste it in notepad, then Click on **Accept (2)**.
+
 
     ![](../media/Lab-04/permissions-1-1.png)
 
@@ -293,7 +327,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
       ![](../media/Lab-04/choose-fabric.png)
 
-30. Click **Manage access**.
+
+1. Click on **Manage access (1)**.
+
 
       ![](../media/Lab-04/manage-access-1.png)
 
@@ -301,12 +337,15 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
       ![](../media/Lab-04/manage-add.png)
 
-32. Paste the copied **service principal (1)**, select **admin (2)** from the **drop-down**, and then click **Add (3)**.
+
+1. Paste the copied **App name (1)**, select **admin (2)** from the **drop-down**, and then click **Add (3)**.
+
 
      ![](../media/Lab-04/add_people.png)
 
 
-33. Return to the Snowflake session opened in browser and run the following to create the Iceberg table and insert data from the sample dataset.
+1. Return to the Snowflake session opened in browser and run the following to create the Iceberg table and insert data from the sample dataset.
+
 
    ```
    --Create the Iceberg table in OneLake
