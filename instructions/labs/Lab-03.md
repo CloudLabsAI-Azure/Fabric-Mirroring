@@ -152,12 +152,12 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
      - Select **Connect**(6)
        
 
-       ![](../media/Lab-03/connection-1.png)
+        ![](../media/Lab-03/connection-1.png)
 
 
  7. Review the available databases by selecting **Databases (1)** from the list. You will see the database that is selected by default. Click on **Connect (2)**.
 
-       ![](../media/Lab-03/connection-2.png)
+    ![](../media/Lab-03/connection-2.png)
 
 8. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
 
@@ -183,10 +183,10 @@ In this task, you will initiate the database mirroring process and monitor the s
 
 3. Replicating Status:
    
-      - **Running** – Replication is currently running, bringing snapshot and change data into OneLake.
-      - **Running with warning** – Replication is running with transient errors.
-      - **Stopping/Stopped** – Replication is stopped.
-      - **Error** – Fatal error in replication that can't be recovered.
+    - **Running** – Replication is currently running, bringing snapshot and change data into OneLake.
+    - **Running with warning** – Replication is running with transient errors.
+    - **Stopping/Stopped** – Replication is stopped.
+    - **Error** – Fatal error in replication that can't be recovered.
 
     >**Note**: If you don't see the tables and corresponding replication status, wait a few seconds and refresh the pane.
 
@@ -198,12 +198,12 @@ In this task, you will initiate the database mirroring process and monitor the s
 
 6. Navigate to the query and expand the **dbo** schema. Then, expand the **Tables** section and select the **Sales** table in the query editor pane to view the data preview.
  
-     ![](../media/Lab-03/sales-preview.png)
+    ![](../media/Lab-03/sales-preview.png)
 
 
 7. Open a **New SQL query** window from the toolbar.
 
-     ![](../media/Lab-03/new-sql-1.png)
+    ![](../media/Lab-03/new-sql-1.png)
 
 8. Run the sample query to determine the number of rows that have been replicated and the time of the last ingestion.
 
