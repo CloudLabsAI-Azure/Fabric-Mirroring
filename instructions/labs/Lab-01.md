@@ -171,7 +171,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 10. Select a Azure SQL Database under **choose a database connection to get started**.
 
-    ![](../media/Lab-01/sql-db.png)
+     ![](../media/Lab-01/sql-db.png)
 
 11. Select New connection, enter the connection details to the Azure SQL Database.
 
