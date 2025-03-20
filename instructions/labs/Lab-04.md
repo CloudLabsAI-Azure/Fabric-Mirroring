@@ -331,10 +331,12 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
     Select * from SnowflakeQS.ICEBERGTEST.dim_customer
     ```
 
-35. Paste the code, **select it (1)** else the excution might fail, and then click **Run (2)**.
+35. Paste the code, **select it (1)**, and then click **Run (2)**.
 
     ![](../media/Lab-04/code-edit.png)
 
+    >**Note**: Select the entire code before running it; otherwise, it may fail.
+    
     > **Note**: If you encounter any issues while running the code, execute each block individually and check the outputs.
 
 36. After running the code, you will be able to view the results, as shown in the screenshot below.
