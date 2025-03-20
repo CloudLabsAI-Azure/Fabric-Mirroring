@@ -156,11 +156,11 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
  7. Review the available databases by selecting **Databases (1)** from the list. You will see the database that is selected by default. Click on **Connect (2)**.
 
-    ![](../media/Lab-03/connection-2.png)
+    ![](../media/Lab-03/dbo-sales1.png)
 
 8. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
 
-    ![](../media/Lab-03/connection-3.png)
+    ![](../media/Lab-03/dbo-sales.png)
 
 ## Task 03: Start the Mirroring Process and Monitor Fabric Mirroring
 
