@@ -331,7 +331,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
     Select * from SnowflakeQS.ICEBERGTEST.dim_customer
     ```
 
-35. Paste the code, **select it (1)**, and then click **Run (2)**.
+35. Paste the code, **select it (1)** else the excution might fail, and then click **Run (2)**.
 
     ![](../media/Lab-04/code-edit.png)
 
@@ -371,9 +371,9 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 
 42. In **snowflakefabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, open your Fabric lakehouse **snowflakeQS**.
 
-43. Click the **ellipsis (1)** next to **Files** and then select **New shortcut (2)** from **Files**.
+43. Click the **ellipsis (1)** next to **tables** and then select **New shortcut (2)**.
 
-    ![](../media/Lab-04/image-1.png)
+    ![](../media/Lab-04/new-shortcut-1.png)
 
 44. Select a **OneLake** Shortcut.
 
