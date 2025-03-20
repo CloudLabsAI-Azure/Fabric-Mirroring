@@ -21,7 +21,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    
    ![](../media/Lab-01/sql-servers.png)
 
-2. Select the SQL servers **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
+2. Select **sqlserver-<inject key="DeploymentID" enableCopy="false"/>**  
 
    ![](../media/Lab-01/fbdb-1.png)
 
