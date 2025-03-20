@@ -62,8 +62,9 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    ![](../media/Lab-01/sampledb-1.png)
 
 
-8. From the left pane, select the **Query Editor (Preview)(1)** and log in to the SQL Server using server authentication using below provided **Username(2)** and **Password(3)**, then click on **OK(4)**.
+8. From the left pane, select the **Query Editor (Preview)(1)**.
 
+9. Log in to the SQL Server using server authentication with the provided details below, then click **OK (4)**.
 
    - **Username : <inject key="SQL Server Username" enableCopy="true"/>**
 
@@ -71,7 +72,7 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
      ![](../media/Lab-01/query-editor.png)
 
-9. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
+11. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
 
    ```
    SELECT * FROM sys.dm_server_managed_identities;
@@ -80,11 +81,11 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
    ![](../media/Lab-01/add-1.png)
 
 
-10. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
+11. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
 
       ![](../media/Lab-01/ssms.png)
  
-11. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
+12. In the Connect to Server pane, log in to the SQL Server using the credentials below, and click **Connect (5)** :
 
    - Server name : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
 
