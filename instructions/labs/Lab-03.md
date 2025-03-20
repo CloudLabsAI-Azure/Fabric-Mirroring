@@ -160,7 +160,7 @@ In this task, you will create a mirrored database on your Azure SQL Managed Inst
 
 8. Under the destination tab, leave the name as **SampleDatabase (1)** and select the option to **Create mirrored databases (2)**.
 
-    ![](../media/Lab-03/dbo-sales.png)
+    ![](../media/Lab-03/connection-3.png)
 
 ## Task 03: Start the Mirroring Process and Monitor Fabric Mirroring
 
@@ -177,7 +177,7 @@ In this task, you will initiate the database mirroring process and monitor the s
 2. Click on **Refresh (1)**, the status should change to **Running (2)**, which means the tables are being synchronized.
 
 
-   ![](../media/Lab-03/mirrored-db.png)
+   ![](../media/Lab-03/dbo-sales.png)
 
 3. Replicating Status:
    
