@@ -218,7 +218,7 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
    ![](../media/Lab-01/sales-lt.png)
 
-   >**Note:** Click on **Refresh** twice or thrice to view the replicating tables.
+   >**Note:** Click on Refresh to see the synchronized tables
 
 
 3. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
