@@ -175,32 +175,32 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 11. Select New connection, enter the connection details to the Azure SQL Database.
 
-   - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
+      - Server : **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (1)**
 
-   - Database : **samplesqldb (2)**
+      - Database : **samplesqldb (2)**
 
-   - Connection: Create new connection.
+      - Connection: Create new connection.
    
-   - Connection name: **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net;samplesqldb (3)**
+      - Connection name: **sqlserver-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net;samplesqldb (3)**
 
-   - Authentication kind: **Basic (SQL Authentication) (4)**
+      - Authentication kind: **Basic (SQL Authentication) (4)**
 
-   - Username : **<inject key="SQL Server Username" enableCopy="false"/> (5)**
+      - Username : **<inject key="SQL Server Username" enableCopy="false"/> (5)**
 
-   - Password : **<inject key="SQL Server Password" enableCopy="false"/> (6)**
+      - Password : **<inject key="SQL Server Password" enableCopy="false"/> (6)**
    
-   - Select **Connect (7)**.
+      - Select **Connect (7)**.
 
-     ![](../media/Lab-01/s6.png)
+         ![](../media/Lab-01/s6.png)
 
 
- 12. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
+ 10. On the **Choose Data (1)** pane, verify that all checkboxes are selected by default. Once confirmed, click on **Connect (2)**.
 
       > **NOTE:** Some tables might not be selected even if you try to choose them, Please ignore those tables.
  
      ![](../media/Lab-01/select-db.png)
 
- 13. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
+ 11. On the Destination pane, ensure **samplesqldb (1)** database is present and click on **Create mirrored database (2)**.
 
      ![](../media/Lab-01/sql-1-1.png)
 
