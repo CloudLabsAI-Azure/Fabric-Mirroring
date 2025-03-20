@@ -74,11 +74,11 @@ In this task, you will enable the **System assigned managed Identity (SAMI)** fe
 
 11. Ensure that the SAMI is set as the primary identity. Verify this by running the following T-SQL query:
 
-   ```
-   SELECT * FROM sys.dm_server_managed_identities;
-   ```
+      ```
+      SELECT * FROM sys.dm_server_managed_identities;
+      ```
 
-   ![](../media/Lab-01/add-1.png)
+      ![](../media/Lab-01/add-1.png)
 
 
 11. In the Windows VM search bar, type **SSMS (1)** and select **SQL Server Management Studio 20 (2)** to open it.
@@ -141,7 +141,18 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
    ![](../media/Lab-01/power-bi.png)
 
+3. Click on **Profile (1)** in the top right corner, then select **Free Trial (2)**.
 
+   ![](../media/Lab-01/free-trail.png)
+
+4. On the **Activate your 60-day free Fabric trial capacity** pane, click **Activate**.
+
+    ![](../media/Lab-01/Activate-1.png)
+
+5. Once the upgrade to **Microsoft Fabric** is successful, click **Got it**.
+
+    ![](../media/Lab-01/got-it.png)
+       
 4. Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
 
    ![](../media/Lab-01/workspace-1.png)
