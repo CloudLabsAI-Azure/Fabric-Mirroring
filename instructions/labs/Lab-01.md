@@ -141,22 +141,6 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
    ![](../media/Lab-01/power-bi.png)
 
-3. Click on **Profile (1)** in the top right corner, then select **Free Trial (2)**.
-
-   ![](../media/Lab-01/free-trail.png)
-
-4. On the **Activate your 60-day free Fabric trial capacity** pane, click **Activate**.
-
-    ![](../media/Lab-01/Activate-1.png)
-
-5. Once the upgrade to **Microsoft Fabric** is successful, click **Got it**.
-
-    ![](../media/Lab-01/got-it.png)
-       
-4. Now, select **Workspaces (1)** and click on **+ New workspace (2)** 
-
-   ![](../media/Lab-01/workspace-1.png)
-
 5. Fill out the **Create a workspace** form with the following details:
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
