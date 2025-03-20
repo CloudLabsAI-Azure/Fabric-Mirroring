@@ -137,7 +137,7 @@ In this task, you will create a mirrored Azure SQL database by setting up replic
 
 1. Open the ```https://app.fabric.microsoft.com```.
 
-3. You will be directed to the **Fabric Home** page, where you can select **Power BI** from the bottom left.
+2. On the **Fabric Home** page, navigate to the bottom left and select **Power BI**..
 
    ![](../media/Lab-01/power-bi.png)
 
