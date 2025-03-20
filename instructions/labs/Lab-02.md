@@ -128,10 +128,11 @@ In this task, you will establish a connection to the source Azure Cosmos DB data
 
      ![](../media/Lab-02/mirrored-db-1.png)
     
-     > **NOTE:** If you get error message as mentioned below, wait for some time and try again.
+     > **Note:** If you receive the following error message, the backend and policy are still being updated. Please wait for the update to complete and try again.
 
      ![](../media/Lab-02/mirrored-db-error.png)     
 
+   
 ### Task 04: Start the Mirroring Process and Monitor Fabric Mirroring
 
 In this task, you will initiate the mirroring process between the source and mirrored databases, then monitor the replication progress and status within Microsoft Fabric to ensure data synchronization is successful.
