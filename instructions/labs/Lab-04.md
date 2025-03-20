@@ -151,7 +151,7 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
    - **Fabric capacity administrator**: **<inject key="AzureAdUserEmail"></inject>** (5)
    - Click on **Review + Create** (6)
 
-   ![](../media/Lab-04/fabric-2.png)
+        ![](../media/Lab-04/fabric-2.png)
 
 4. Now, click on **Create**.
 
@@ -215,6 +215,10 @@ In this task, you will get started with Apache Iceberg in a Lakehouse environmen
 16. In the Snowflake home page, in the top right corner, click on **+ Create** and a drop-down menu will appear, then select **SQL Worksheet**.
 
       ![](../media/Lab-04/sql-ws.png)
+
+    > **Note:** If a pop-up appears, click **Skip for now**.
+
+      ![](../media/Lab-04/skipfornow.png)
 
 17. You can see the database already created in the left-hand pane that is **SNOWFLAKEQS**. You will be using this same database and schema to complete the upcoming tasks.
 
