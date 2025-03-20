@@ -214,11 +214,11 @@ In this task, you will start the mirroring process for Azure SQL databases, moni
 
    >**Note**: Please wait for 2 to 5 minutes. 
 
-2. After a few moments, the status will change to Running, indicating that the tables are being synchronized.
+2. After a few moments, the status will change to Running, indicating that the tables are being synchronized. 
 
    ![](../media/Lab-01/sales-lt.png)
 
-   >**Note:** Click on Refresh to see the synchronized tables
+   >**Note:** Click on **Refresh** twice or thrice to view the replicating tables.
 
 
 3. Navigate back to the SQL Server Management Studio (SSMS) that is already connected to the database, to run the query.
