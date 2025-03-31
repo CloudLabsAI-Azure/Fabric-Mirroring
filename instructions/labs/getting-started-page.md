@@ -1,4 +1,4 @@
-# Fabric Database Mirroring
+# Microsoft Fabric Database Mirroring
 
 ####  Estimated Duration: 4 Hours
 
@@ -22,7 +22,7 @@ The objective of this training is to provide participants with comprehensive kno
 
 ## Getting Started with the Lab
 
-Welcome to the "**Microsoft Fabric Mirroring**" lab. In this lab, you'll learn how to configure and manage mirrored databases using Microsoft Fabric across various platforms like Azure SQL, Azure Cosmos DB, SQL Managed Instance, and Snowflake. You'll gain hands-on experience in setting up, monitoring, and securing database mirroring processes. By the end, you'll have the skills to ensure data availability and synchronization across your systems.
+Welcome to the "**Microsoft Fabric Database Mirroring**" lab. In this lab, you'll learn how to configure and manage mirrored databases using Microsoft Fabric across various platforms like Azure SQL, Azure Cosmos DB, SQL Managed Instance, and Snowflake. You'll gain hands-on experience in setting up, monitoring, and securing database mirroring processes. By the end, you'll have the skills to ensure data availability and synchronization across your systems.
 
 ## Accessing Your Lab Environment
  
