@@ -28,7 +28,7 @@ Welcome to the "**Microsoft Fabric Mirroring**" lab. In this lab, you'll learn h
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/env-2.png)
+![Access Your VM and Lab Guide](../media/labguide-page.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -38,13 +38,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/env-1.png)
+![Explore Lab Resources](../media/env-page.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/spl.png)
+![Use the Split Window Feature](../media/split-window.png)
  
 ## Managing Your Virtual Machine
  
