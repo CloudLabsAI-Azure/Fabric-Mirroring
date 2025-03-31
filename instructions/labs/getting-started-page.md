@@ -1,4 +1,4 @@
-# Microsoft Fabric Mirroring
+# Fabric Database Mirroring
 
 ####  Estimated Duration: 4 Hours
 
